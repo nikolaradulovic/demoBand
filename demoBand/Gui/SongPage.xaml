@@ -26,13 +26,14 @@
                     <Button Content="Record" Background="DodgerBlue" HorizontalAlignment="Stretch" x:Name="btnRecord" Click="btnRecord_Click"  />
                     <Button Content="Pause" Background="DodgerBlue" x:Name="btnPause" HorizontalAlignment="Stretch" Click="btnPause_Click" Margin="0,15,0,0" />
                     <Button Content="Stop" Background="DodgerBlue" x:Name="btnStop" HorizontalAlignment="Stretch" Click="btnStop_Click" Margin="0,15,0,0"/>
+                    <Button Content="Listen" Background="DodgerBlue"  x:Name="btnListen" HorizontalAlignment="Stretch" Click="btnListen_Click" Margin="0,15,0,0"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Stretch" Height="300" x:Name="slideContainer" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1" Grid.Column="0" />
                 <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Bottom" Orientation="Horizontal">
                     <TextBlock x:Name="txtProgres"  FontSize="20" Text="0:00" />
                     <TextBlock x:Name="txtSlash"  FontSize="20" Text=" / "/>
                     <TextBlock x:Name="txtDuration" Text="" FontSize="20"/>
-
+                    <MediaElement x:Name="mediaRecording" AutoPlay="False"/>
                 </StackPanel>
             </Grid>
             <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="2"/>

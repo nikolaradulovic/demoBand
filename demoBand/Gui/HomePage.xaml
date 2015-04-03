@@ -98,6 +98,12 @@
                     </StackPanel>
                 </DataTemplate>
             </HubSection>
+            
         </Hub>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Content="Logout" x:Name="btnLogout" Click="btnLogout_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

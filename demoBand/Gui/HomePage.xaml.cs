@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using demoBand.Model;
+using Parse;
 
 // The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=321224
 
@@ -130,6 +131,14 @@ namespace demoBand.Gui
             Frame.Navigate(typeof(SongPage));
         }
 
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            ParseUser.LogOut();
+            var currentUser = ParseUser.CurrentUser;
+            Frame.Navigate(typeof(MainPage));
+        }
+
+      
 
     }
 }

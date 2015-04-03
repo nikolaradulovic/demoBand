@@ -1,6 +1,7 @@
 ﻿using demoBand.Component;
 using demoBand.Domen;
 using demoBand.Model;
+using demoBand.Util;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,12 +33,10 @@ namespace demoBand.Gui
     public sealed partial class SongPage : Page
     {
         private type instrument;
-        private IRandomAccessStream audioStream; 
-        private MediaCapture captureMedia;
-
-
         DispatcherTimer mediaTimer;
         private Dictionary<type, Player> players;
+        private Recorder recorder;
+
         public SongPage()
         {
             this.InitializeComponent();
@@ -88,7 +87,6 @@ namespace demoBand.Gui
                 ply.Value.pause();
 
             }
-
             mediaTimer.Stop();
         }
 
@@ -102,6 +100,13 @@ namespace demoBand.Gui
 
             progressBar.Value = 0;
             mediaTimer.Stop();
+            if (recorder.Active)
+            {
+                recorder.stopRecording();
+                mediaRecording.SetSource(recorder.AudioStream,"audio/mpeg");
+            }
+                
+            
         }
 
         private void progressBar_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -153,55 +158,35 @@ namespace demoBand.Gui
           
             mediaTimer.Tick += timer_Tick;
             mediaTimer.Start();
-        }
+            recorder = new Recorder();
+            recorder.startRecording();
 
-
-        public async void startRecording()
-        {
-            MediaEncodingProfile encodingProfile = null;
-            encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.High);
-
-            audioStream = new InMemoryRandomAccessStream();
-            captureMedia.AudioDeviceController.VolumePercent = 90;
-            await captureMedia.StartRecordToStreamAsync(encodingProfile, audioStream);
 
         }
 
-
-        private async Task InitMediaCapture()
+        private void btnListen_Click(object sender, RoutedEventArgs e)
         {
-            captureMedia = new MediaCapture();
-            var captureInitSettings = new MediaCaptureInitializationSettings();
-
-            //captureInitSettings.AudioDeviceId = "";
-            // CaptureMedia.AudioDeviceController.Muted = true;
-            captureInitSettings.StreamingCaptureMode = StreamingCaptureMode.Audio;
-            await captureMedia.InitializeAsync(captureInitSettings);
-
-            //CaptureMedia.MediaCaptureSettings.AudioDeviceId
-            captureMedia.Failed += MediaCaptureOnFailed;
-            captureMedia.RecordLimitationExceeded += MediaCaptureOnRecordLimitationExceeded;
-        }
-
-
-        private async void MediaCaptureOnRecordLimitationExceeded(MediaCapture sender)
-        {
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+            foreach (KeyValuePair<type, Player> ply in players)
             {
-                await sender.StopRecordAsync();
-                var warningMessage = new MessageDialog("The media recording has been stopped because you exceeded the maximum recording length.", "Recording Stoppped");
-                await warningMessage.ShowAsync();
-            });
+                ply.Value.start();
+
+            }
+               
+          
+
+            mediaTimer = new DispatcherTimer();
+            mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+
+            mediaTimer.Tick += timer_Tick;
+            mediaTimer.Start();
+
+            mediaRecording.Play();
+            
+            
         }
 
-        private async void MediaCaptureOnFailed(MediaCapture sender, MediaCaptureFailedEventArgs errorEventArgs)
-        {
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
-            {
-                var warningMessage = new MessageDialog(String.Format("The media capture failed: {0}", errorEventArgs.Message), "Capture Failed");
-                await warningMessage.ShowAsync();
-            });
-        }
+
+    
 
 
     }

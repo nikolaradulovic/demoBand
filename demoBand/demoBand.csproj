@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="Model\Session.cs" />
     <Compile Include="Util\Converter.cs" />
+    <Compile Include="Util\Recorder.cs" />
     <Compile Include="ViewModel\MenuView.cs" />
     <Compile Include="ViewModel\PracticeView.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
