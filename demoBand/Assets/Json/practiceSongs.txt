@@ -1,0 +1,175 @@
+[
+    {
+        "Name": "Otherside",
+        "Author": "RHCP",
+        "Length": "255",
+	   "ImagePath": "../Assets/Images/Covers/img19.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 0,
+                "Path": "ms-appx:///Assets/Songs/RedHotChiliPeppers'1999-Otherside(acapella).mp3"
+            },
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx:///Assets/Songs/RHCP-Otherside(Guitar).mp3"
+            },
+			{
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx:///Assets/Songs/RHCP-Otherside(Drums).mp3"
+            }
+        ]
+    },
+    
+    {
+        "Name": "Radioactive",
+        "Author": "Imagine Dragons",
+        "Length": "147",
+		"ImagePath": "../Assets/Images/Covers/img16.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 3,
+                "Path": "ms-appx:///Assets/Songs/cImagineDragons-Radioactive(piano cover)(mp3cut.net)(2).mp3"
+            },
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx:///Assets/Songs/cRadioactive(Imagine Dragons)-FingerstyleGuitar(mp3cut.net).mp3"
+            }
+        ]
+    },
+    {
+        "Name": "Get Lucky",
+        "Author": "Daft Punk",
+        "Length": "192",
+		"ImagePath": "../Assets/Images/Covers/img14.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 0,
+                "Path": "ms-appx: ///Assets/Songs/Get Lucky - Daft Punk ft. Pharrell Williams & Nile Rodgers (cover) Jess Greenberg.mp3"
+            },
+            {
+                "TypeOfInstrument": 3,
+                "Path": "ms-appx: ///Assets/Songs/3Daft Punk - Get Lucky ft. Pharrell Williams (piano cover) (mp3cut.net).mp3"
+            }
+        ]
+    },
+    {
+        "Name": "Clocks",
+        "Author": "Coldplay",
+        "Length": "219",
+		"ImagePath": "../Assets/Images/Covers/img12.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (Guitar Track) (mp3cut.net).mp3"
+            },
+            {
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (Drum Track).mp3"
+            },
+            {
+                "TypeOfInstrument": 3,
+                "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (piano cover) improved version.mp3"
+            }
+        ]
+    },
+    {
+        "Name": "We Are Young",
+        "Author": "Fun",
+        "Length": "216",
+		"ImagePath": "../Assets/Images/Covers/img13.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 0,
+                "Path": "ms-appx:///Assets/Songs/1FUN. - We Are Young (Studio Acapella) (mp3cut.net).mp3"
+            },
+            {
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx:///Assets/Songs/2F.U.N - We are Young (Drum Track) (mp3cut.net).mp3"
+            }
+        ]
+    },
+	{
+        "Name": "TNT",
+        "Author": "AC/DC",
+        "Length": "216",
+		"ImagePath": "../Assets/Images/Covers/img11.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx: ///Assets/Songs/ACDC - TNT Guitar Cover.mp3"
+            },
+            {
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx: ///Assets/Songs/TNT - drums (mp3cut.net).mp3"
+            }
+        ]
+    },
+	 {
+        "Name": "Numb",
+        "Author": "Linkin Park",
+        "Length": "180",
+		"ImagePath": "../Assets/Images/Covers/img17.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 0,
+                "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Acapella Vocals Only).mp3"
+            },
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Guitar Track).mp3"
+            },
+            {
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Guitar Track).mp3"
+            },
+            {
+                "TypeOfInstrument": 3,
+                "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Piano Track).mp3"
+            }
+        ]
+    },
+    {
+        "Name": "The House of the Rising Sun",
+        "Author": "The Animals",
+        "Length": "46",
+		"ImagePath": "../Assets/Images/Covers/img15.jpg",
+        "Instruments": [
+            {
+                "TypeOfInstrument": 1,
+                "Path": "ms-appx: ///Assets/Songs/house of the rising sun gt.mp3"
+            },
+            {
+                "TypeOfInstrument": 2,
+                "Path": "ms-appx: ///Assets/Songs/house of the rising sun dr.mp3"
+            }
+        ]
+    },
+	
+      {
+        "Name": "Nothing but the beat",
+        "Author": "David Guetta",
+		"ImagePath": "../Assets/Images/Covers/img4.jpg",
+        "Length": "256"
+    },
+	 {
+        "Name": "I see fire",
+        "Author": "Ed Sheeran",
+		"ImagePath": "../Assets/Images/Covers/img7.jpg",
+        "Length": "189"
+    },
+    {
+        "Name": "Recovery",
+        "Author": "Eminem",
+		"ImagePath": "../Assets/Images/Covers/img5.jpg",
+        "Length": "209"
+    },
+
+    {
+        "Name": "Waka waka",
+        "Author": "Shakira",
+		"ImagePath": "../Assets/Images/Covers/img10.jpg",
+        "Length": "256"
+    }
+	
+	
+]

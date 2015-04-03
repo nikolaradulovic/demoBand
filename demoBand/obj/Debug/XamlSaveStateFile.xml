@@ -1,0 +1,8 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\nikolar\documents\visual studio 2013\projects\demoband\demoband\obj\debug\intermediatexaml\demoband.exe" HashGuid="de9f213e-370a-e165-86f5-63b3687c24a5" />
+    <ReferenceAssembly PathName="c:\users\nikolar\git\demoband\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
+    <ReferenceAssembly PathName="c:\users\nikolar\git\demoband\packages\parse.1.4.0\lib\netcore45\parse.dll" HashGuid="e779c56c-fcd3-5572-d956-2bf476d33855" />
+    <ReferenceAssembly PathName="c:\users\nikolar\git\demoband\packages\parse.1.4.0\lib\netcore45\parse.winrt.dll" HashGuid="58057c55-37cd-c40b-e5ca-f306eae0cc3c" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

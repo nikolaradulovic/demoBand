@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="demoBand.Register.Registration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:demoBand.Register"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#1D1D1D">
+        <Grid Grid.ColumnSpan="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.RowSpan="14" Grid.Column="3" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="lblRegistration" Foreground="DodgerBlue"  Grid.Row="1" FontSize="40" />
+                <TextBlock x:Name="lblUser" Foreground="DodgerBlue" VerticalAlignment="Center" Grid.Row="2" Text="Username:"  FontSize="20" />
+                <TextBox x:Name="txtUser"  VerticalAlignment="Center" Grid.Row="3" FontSize="20"  />
+                <TextBlock Foreground="DodgerBlue" Text="Email" VerticalAlignment="Center" Grid.Row="4" FontSize="20" />
+                <TextBox x:Name="txtEmail" Text="Enter your email" VerticalAlignment="Center" Grid.Row="5" FontSize="20"/>
+                <TextBlock x:Name="lblPass" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="6" Text="Password:"  FontSize="20"/>
+                <PasswordBox x:Name="txtPassword" VerticalAlignment="Center" Grid.Row="7" FontSize="20" />
+                <TextBlock x:Name="lblPass2" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="8" Text="Retype Password:"  FontSize="20"/>
+                <PasswordBox x:Name="txtPassword2" VerticalAlignment="Center" Grid.Row="9" FontSize="20" />
+                <TextBlock x:Name="lblLogin" Tapped="lblLogin_Tapped"  Foreground="DodgerBlue" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="11" Text="Login" FontSize="20" />
+                <Button x:Name="btnCreate" Background="DodgerBlue" Content="Create account" Grid.Row="11" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnCreate_Click"  />
+                <TextBlock x:Name="lblStatus" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" Grid.Row="12"/>
+            </Grid>
+            <Grid Grid.RowSpan="5" Grid.Column="1" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" x:Name="lblTitle" Foreground="DodgerBlue" FontSize="60" Text="Pick and Jam" />
+                <Image x:Name="imgLogo" Grid.Column="0" Source="../Assets/Images/logo.jpg" Grid.Row="2" />
+                <TextBlock x:Name="lblMessage" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="3" Text="Dream. Create. Record." Foreground="DodgerBlue" FontSize="40" />
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

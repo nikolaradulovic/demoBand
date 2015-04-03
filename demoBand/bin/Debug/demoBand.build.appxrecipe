@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>NIKOLA</Machine>
+    <WindowsUser>Nikola</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>09b5dbff-bf47-459b-8ac4-52566512595c</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.exe">
+      <PackagePath>demoBand.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Parse.1.4.0\lib\netcore45\Parse.dll">
+      <PackagePath>Parse.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Parse.1.4.0\lib\netcore45\Parse.WinRT.dll">
+      <PackagePath>Parse.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img10.jpg">
+      <PackagePath>Assets\Images\Covers\img10.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img11.jpg">
+      <PackagePath>Assets\Images\Covers\img11.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img12.jpg">
+      <PackagePath>Assets\Images\Covers\img12.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img13.jpg">
+      <PackagePath>Assets\Images\Covers\img13.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img14.jpg">
+      <PackagePath>Assets\Images\Covers\img14.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img15.jpg">
+      <PackagePath>Assets\Images\Covers\img15.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img16.jpg">
+      <PackagePath>Assets\Images\Covers\img16.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img17.jpg">
+      <PackagePath>Assets\Images\Covers\img17.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img19.jpg">
+      <PackagePath>Assets\Images\Covers\img19.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img4.jpg">
+      <PackagePath>Assets\Images\Covers\img4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img5.jpg">
+      <PackagePath>Assets\Images\Covers\img5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img7.jpg">
+      <PackagePath>Assets\Images\Covers\img7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\logo.jpg">
+      <PackagePath>Assets\Images\logo.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Json\practiceSongs.txt">
+      <PackagePath>Assets\Json\practiceSongs.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\1FUN. - We Are Young %28Studio Acapella%29 %28mp3cut.net%29.mp3">
+      <PackagePath>Assets\Songs\1FUN. - We Are Young %28Studio Acapella%29 %28mp3cut.net%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3">
+      <PackagePath>Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3">
+      <PackagePath>Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3">
+      <PackagePath>Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3">
+      <PackagePath>Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RHCP-Otherside%28Drums%29.mp3">
+      <PackagePath>Assets\Songs\RHCP-Otherside%28Drums%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RHCP-Otherside%28Guitar%29.mp3">
+      <PackagePath>Assets\Songs\RHCP-Otherside%28Guitar%29.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\HomePage.xbf">
+      <PackagePath>Gui\HomePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\SongPage.xbf">
+      <PackagePath>Gui\SongPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Register\Registration.xbf">
+      <PackagePath>Register\Registration.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.xr.xml">
+      <PackagePath>demoBand.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,110 @@
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\App.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\MainPage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\demoBand.xr.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\demoBand.exe
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\demoBand.pdb
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\resources.pri
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\AppxManifest.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\demoBand.build.appxrecipe
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\App.g.i.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\App.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\MainPage.g.i.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\MainPage.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\XamlTypeInfo.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\App.xaml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\App.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\XamlSaveStateFile.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\MainPage.xaml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\MainPage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\demoBand.exe
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\demoBand.pdb
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\priconfig.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\priconfig.xml.intermediate
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\layout.resfiles
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\layout.resfiles.intermediate
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\resources.resfiles
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\resources.resfiles.intermediate
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\pri.resfiles
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\pri.resfiles.intermediate
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\qualifiers.txt
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\qualifiers.txt.intermediate
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\ProjectArchitectures.txt
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Parse.dll
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Parse.WinRT.dll
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Parse.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Parse.WinRT.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\demoBand.csproj.GenerateResource.Cache
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Register\Registration.g.i.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Register\Registration.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Register\Registration.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Register\Registration.xaml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Register\Registration.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\HomePage.g.i.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\HomePage.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\HomePage.xaml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\HomePage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Gui\HomePage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Newtonsoft.Json.dll
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Newtonsoft.Json.xml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\bin\Debug\Gui\SongPage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\SongPage.g.i.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\SongPage.g.cs
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\SongPage.xaml
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\Gui\SongPage.xbf
+c:\users\nikolar\documents\visual studio 2013\Projects\demoBand\demoBand\obj\Debug\demoBand.csprojResolveAssemblyReference.cache
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\App.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\HomePage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\SongPage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\MainPage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Register\Registration.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.xr.xml
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.exe
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.pdb
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\resources.pri
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\AppxManifest.xml
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.build.appxrecipe
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Newtonsoft.Json.dll
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Parse.dll
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Parse.WinRT.dll
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Newtonsoft.Json.xml
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Parse.xml
+C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Parse.WinRT.xml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\demoBand.csprojResolveAssemblyReference.cache
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\App.g.i.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\App.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\HomePage.g.i.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\HomePage.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\SongPage.g.i.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\SongPage.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\MainPage.g.i.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\MainPage.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Register\Registration.g.i.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Register\Registration.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\App.xaml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\HomePage.xaml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\SongPage.xaml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\MainPage.xaml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Register\Registration.xaml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\App.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\HomePage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Gui\SongPage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\MainPage.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\Register\Registration.xbf
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\XamlSaveStateFile.xml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\demoBand.exe
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\demoBand.pdb
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\demoBand.csproj.GenerateResource.Cache
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\priconfig.xml
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\priconfig.xml.intermediate
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\layout.resfiles
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\layout.resfiles.intermediate
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\resources.resfiles
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\resources.resfiles.intermediate
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\pri.resfiles
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\pri.resfiles.intermediate
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\qualifiers.txt
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\qualifiers.txt.intermediate
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\ProjectArchitectures.txt
