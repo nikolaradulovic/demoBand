@@ -1,4 +1,5 @@
-﻿using demoBand.ViewModel;
+﻿using demoBand.SongDescription;
+using demoBand.ViewModel;
 using Parse;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,10 @@ namespace demoBand
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
+          //  ParseObject.RegisterSubclass<Strophe>();
             ParseClient.Initialize("KQ5RI9Ynh0cHYluckolZbqt7rOQExQHFfvIk2Jdp", "c4EuB9A78rDs4j3NpAbFNcfRkezKiUTRnPQhqA9D");
+            
+            
         }
 
         /// <summary>

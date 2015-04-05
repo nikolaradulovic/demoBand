@@ -6,39 +6,164 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="ListViewItemStyle1" TargetType="ListViewItem">
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="TabNavigation" Value="Local"/>
+            <Setter Property="IsHoldingEnabled" Value="True"/>
+            <Setter Property="Margin" Value="0,0,18,2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter CheckHintBrush="{ThemeResource ListViewItemCheckHintThemeBrush}" CheckBrush="{ThemeResource ListViewItemCheckThemeBrush}" ContentMargin="4" ContentTransitions="{TemplateBinding ContentTransitions}" CheckSelectingBrush="{ThemeResource ListViewItemCheckSelectingThemeBrush}" DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" FocusBorderBrush="{ThemeResource ListViewItemFocusBorderThemeBrush}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" PointerOverBackgroundMargin="1" PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" PointerOverBackground="{ThemeResource ListViewItemPointerOverBackgroundThemeBrush}" ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}" SelectedPointerOverBorderBrush="{ThemeResource ListViewItemSelectedPointerOverBorderThemeBrush}" SelectionCheckMarkVisualEnabled="True" SelectedForeground="{ThemeResource ListViewItemSelectedForegroundThemeBrush}" SelectedPointerOverBackground="{ThemeResource ListViewItemSelectedPointerOverBackgroundThemeBrush}" SelectedBorderThickness="{ThemeResource ListViewItemCompactSelectedBorderThemeThickness}" SelectedBackground="{ThemeResource ListViewItemSelectedBackgroundThemeBrush}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid Grid.RowSpan="2">
+    <Grid >
+        <Grid Grid.RowSpan="4">
             <Grid.RowDefinitions>
-                <RowDefinition Height="7*" ></RowDefinition>
-                <RowDefinition Height="4*" ></RowDefinition>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="23*" />
                 <RowDefinition Height="1*" />
+                <RowDefinition Height="18*" />
             </Grid.RowDefinitions>
-            <Grid Grid.Row="1" Grid.ColumnSpan="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="7*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
 
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Orientation="Vertical" Grid.Row="1" Grid.Column="2">
-                    <Button Content="Record" Background="DodgerBlue" HorizontalAlignment="Stretch" x:Name="btnRecord" Click="btnRecord_Click"  />
-                    <Button Content="Pause" Background="DodgerBlue" x:Name="btnPause" HorizontalAlignment="Stretch" Click="btnPause_Click" Margin="0,15,0,0" />
-                    <Button Content="Stop" Background="DodgerBlue" x:Name="btnStop" HorizontalAlignment="Stretch" Click="btnStop_Click" Margin="0,15,0,0"/>
-                    <Button Content="Listen" Background="DodgerBlue"  x:Name="btnListen" HorizontalAlignment="Stretch" Click="btnListen_Click" Margin="0,15,0,0"/>
-                </StackPanel>
-                <StackPanel VerticalAlignment="Stretch" Height="300" x:Name="slideContainer" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="1" Grid.Column="0" />
-                <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Bottom" Orientation="Horizontal">
-                    <TextBlock x:Name="txtProgres"  FontSize="20" Text="0:00" />
-                    <TextBlock x:Name="txtSlash"  FontSize="20" Text=" / "/>
-                    <TextBlock x:Name="txtDuration" Text="" FontSize="20"/>
-                    <MediaElement x:Name="mediaRecording" AutoPlay="False"/>
-                </StackPanel>
+            <StackPanel Grid.Row="0" Background="#303030">
+                <AppBarButton Icon="Back" x:Name="btnBack" Click="btnBack_Click"></AppBarButton>
+            </StackPanel>
+            <Grid Grid.Row="1" Background="#303030" Margin="0,6,0,10" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="txtTitleComment" Text="Comments:" Margin="20,0,0,0" FontSize="20"/>
+                    <ListView  x:Name="lstComments" Grid.Row="1" FontSize="20" Margin="20,0,0,0"
+                               SelectionChanged="lstComments_SelectionChanged" BorderBrush="White" >
+                        <ListView.Resources>
+                            <Style x:Key="ListViewItemStyle2" TargetType="ListViewItem">
+                                <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+                                <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="TabNavigation" Value="Local"/>
+                                <Setter Property="IsHoldingEnabled" Value="True"/>
+                                <Setter Property="Margin" Value="0,0,18,2"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                <Setter Property="VerticalContentAlignment" Value="Top"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <ListViewItemPresenter ContentMargin="4" ContentTransitions="{TemplateBinding ContentTransitions}" DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" FocusBorderBrush="{ThemeResource ListViewItemFocusBorderThemeBrush}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" PointerOverBackgroundMargin="1" PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" PointerOverBackground="{ThemeResource ListViewItemPointerOverBackgroundThemeBrush}" ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}" SelectionCheckMarkVisualEnabled="True" SelectedForeground="{ThemeResource ListViewItemSelectedForegroundThemeBrush}" SelectedBorderThickness="{ThemeResource ListViewItemCompactSelectedBorderThemeThickness}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" d:DesignWidth="190.672">
+                                                <ListViewItemPresenter.Resources>
+                                                    <Style x:Key="ListViewItemPresenterStyle1" TargetType="ListViewItemPresenter"/>
+                                                </ListViewItemPresenter.Resources>
+                                                <ListViewItemPresenter.Style>
+                                                    <StaticResource ResourceKey="ListViewItemPresenterStyle1"/>
+                                                </ListViewItemPresenter.Style>
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup x:Name="CommonStates">
+                                                        <VisualStateGroup.Transitions>
+                                                            <VisualTransition From="Normal" GeneratedDuration="0" To="Pressed"/>
+                                                        </VisualStateGroup.Transitions>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </ListViewItemPresenter>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.ItemContainerStyle>
+                            <StaticResource ResourceKey="ListViewItemStyle2"/>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                    <TextBox KeyUp="txtComment_KeyUp" Foreground="White" Background="#303030"  x:Name="txtComment" Grid.Row="2" FontSize="20"/>
+                </Grid>
+                <Grid x:Name="gridMain" Grid.Column="1">
+                    
+                </Grid>
             </Grid>
+            
+            <Grid Grid.Row="3" Background="#1D1D1D" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="9*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnRecord" Click="btnRecord_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0008_Rec.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnStop" Click="btnStop_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0006_Stop.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button  Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnPause" Click="btnPause_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0007_Pause.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button  Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnListen" Click="btnListen_Click">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="../Assets/Images/Dashboard/Buttons/play.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+                <StackPanel x:Name="slideContainer"  Orientation="Horizontal" Grid.Column="3" />
+                <TextBlock x:Name="txtCounter" FontSize="30" Height="100" Width="100"  Grid.Column="2" />
+                <MediaElement x:Name="mediaRecording" AutoPlay="False"/>
+            </Grid>
+            <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock x:Name="txtProgres"  FontSize="20" Text="0:00" />
+                <TextBlock x:Name="txtSlash"  FontSize="20" Text=" / "/>
+                <TextBlock x:Name="txtDuration" Text="" FontSize="20"/>
+            </StackPanel>
             <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="2"/>
         </Grid>
-
-
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar Background="White">
+            <AppBarButton Icon="Save" x:Name="btnSave"  Click="btnSave_Click" Foreground="Black" Background="Black" Content="Save song" HorizontalAlignment="Left"/>
+            <AppBarButton Icon="Add" Foreground="Black" Content="New song" HorizontalAlignment="Left"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

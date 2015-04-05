@@ -46,6 +46,14 @@ namespace demoBand.Domen
             set { instruments = value; }
         }
 
+        private string songViewPath;
+
+        public string SongViewPath
+        {
+            get { return songViewPath; }
+            set { songViewPath = value; }
+        }
+
         public Song() { }
     }
 }

@@ -16,6 +16,7 @@ using Parse;
 using demoBand.Register;
 using demoBand.Gui;
 using demoBand.Model;
+using Windows.System;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,21 +32,13 @@ namespace demoBand
         {
             
             this.InitializeComponent();
-            //var curretntUser = ParseUser.CurrentUser;
-            //if (ParseUser.CurrentUser != null)
-            //{
-            //    Frame.Navigate(typeof(Registration));
-            //}
-            //else
-            //{
-            //    // show the signup or login screen
-            //}
-
            
+
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            
 
             string username = txtUser.Text;
             string password = txtPassword.Password;
@@ -65,6 +58,18 @@ namespace demoBand
         private void lblAccount_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(Registration));            
+        }
+
+    
+
+        private void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                btnLogin_Click(sender, e);
+
+            }
+
         }
     }
 }

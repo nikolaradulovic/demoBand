@@ -10,6 +10,7 @@ namespace demoBand.Domen
     {
         private string path;
         private type typeOfInstrument;
+        
 
         public type TypeOfInstrument
         {

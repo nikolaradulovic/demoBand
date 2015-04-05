@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#1D1D1D" Height="Auto" Width="Auto">
+    <Grid Background="#1D1D1D" KeyUp="Grid_KeyUp" Height="Auto" Width="Auto">
         <Grid Grid.ColumnSpan="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>

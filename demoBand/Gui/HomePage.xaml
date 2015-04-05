@@ -40,9 +40,11 @@
                 </HubSection.HeaderTemplate>
                 <DataTemplate>
                     <Grid Margin="0,20,0,0">
-                        <GridView HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstSongs" FontSize="20" 
+                        <GridView HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstMenu" FontSize="20" 
                                    ItemsSource="{Binding ListItems}"  
                                    IsItemClickEnabled="True"
+                                   ItemClick="lstMenu_ItemClick"
+                                   SelectionChanged="lstMenu_SelectionChanged"
                                    SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}">
                             <GridView.ItemTemplate>
                                 <DataTemplate>

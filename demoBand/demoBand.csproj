@@ -110,6 +110,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Component\SliderStackPanel.cs" />
+    <Compile Include="Domen\Comment.cs" />
     <Compile Include="Domen\Instrument.cs" />
     <Compile Include="Domen\MenuItem.cs" />
     <Compile Include="Domen\Player.cs" />
@@ -117,9 +118,14 @@
     <Compile Include="Gui\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Gui\NewSong.xaml.cs">
+      <DependentUpon>NewSong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gui\SongPage.xaml.cs">
       <DependentUpon>SongPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Gui\StropheGui\StropheText.cs" />
+    <Compile Include="Gui\StropheGui\RecordTimer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +134,8 @@
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Session.cs" />
+    <Compile Include="SongDescription\SongView.cs" />
+    <Compile Include="SongDescription\Strophe.cs" />
     <Compile Include="Util\Converter.cs" />
     <Compile Include="Util\Recorder.cs" />
     <Compile Include="ViewModel\MenuView.cs" />
@@ -142,6 +150,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png" />
+    <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png" />
+    <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png" />
     <Content Include="Assets\Images\Covers\img10.jpg" />
     <Content Include="Assets\Images\Covers\img11.jpg" />
     <Content Include="Assets\Images\Covers\img12.jpg" />
@@ -154,7 +165,13 @@
     <Content Include="Assets\Images\Covers\img4.jpg" />
     <Content Include="Assets\Images\Covers\img5.jpg" />
     <Content Include="Assets\Images\Covers\img7.jpg" />
+    <Content Include="Assets\Images\Dashboard\dashboard_0000_Forma-1.png" />
+    <Content Include="Assets\Images\Dashboard\dashboard_0002_Bass.png" />
+    <Content Include="Assets\Images\Dashboard\dashboard_0003_Piano.png" />
+    <Content Include="Assets\Images\Dashboard\dashboard_0004_Layer-2.png" />
     <Content Include="Assets\Images\logo.jpg" />
+    <Content Include="Assets\Images\Dashboard\Buttons\play.png" />
+    <Content Include="Assets\Json\otherside.txt" />
     <Content Include="Assets\Json\practiceSongs.txt" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
@@ -174,6 +191,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Gui\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\NewSong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

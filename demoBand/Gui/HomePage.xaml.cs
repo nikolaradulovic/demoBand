@@ -93,16 +93,11 @@ namespace demoBand.Gui
 
         #endregion
 
-        private void lstSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+     
 
         private void lstSongs_ItemClick(object sender, ItemClickEventArgs e)
         {
-               
-
-
+ 
 
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);
@@ -134,8 +129,29 @@ namespace demoBand.Gui
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
             ParseUser.LogOut();
-            var currentUser = ParseUser.CurrentUser;
             Frame.Navigate(typeof(MainPage));
+        }
+
+ 
+        private void lstMenu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MenuItem m = e.ClickedItem as MenuItem;
+            switch (m.Name) 
+            {
+                case "Create new song": Frame.Navigate(typeof(NewSong));
+                    break;
+            }
+
+        }
+
+        private void lstSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void lstMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
       

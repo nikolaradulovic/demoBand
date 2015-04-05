@@ -1,0 +1,52 @@
+[
+    {
+        "text": "How long how long will I slide\nSeparate my side I don't\nI don't believe it's bad\nSlit my throat\nIt's all I ever",
+        "start": 0,
+        "end": 33
+    },
+    {
+        "text": "I heard your voice through a photograph\nI thought it up it brought up the past\nOnce you know you can never go back\nI've got to take it on the otherside",
+        "start": 33,
+        "end": 50
+    },
+    {
+        "text": "Centuries are what it meant to me\nA cemetery where I marry the sea\nStranger things could never change my mind\nI've got to take it on the otherside\nTake it on the otherside\nTake it on\nTake it on",
+        "start": 50,
+        "end": 77
+    },
+    {
+        "text": "How long how long will I slide\nSeparate my side I don't\nI don't believe it's bad\nSlit my throat\nIt's all I ever ",
+        "start": 77,
+        "end": 102
+    },
+    {
+        "text": "Pour my life into a paper cup\nThe ashtray's full and I'm spillin' my guts\nShe wants to know am I still a slut\nI've got to take it on the otherside\n ",
+        "start": 102,
+        "end": 117
+    },
+    {
+        "text": "Scarlet starlet and she's in my bed\nA candidate for my soulmate bled\nPush the trigger and pull the thread\nI've got to take it on the otherside\nTake it on the otherside\nTake it on\nTake it on ",
+        "start": 121,
+        "end": 147
+    },
+    {
+        "text": " How long how long will I slide\nSeparate my side I don't\nI don't believe it's bad\nSlit my throat\nIt's all I ever ",
+        "start": 148,
+        "end": 172
+    },
+    {
+        "text": "Turn me on take me for a hard ride\nBurn me out leaveme on the otherside\nI yell and tell it that\nIt's not my friend\nI tear it down I tear it down\nAnd then it's born again ",
+        "start": 187,
+        "end": 201
+    },
+    {
+        "text": "How long how long will I slide\nSeparate my side I don't\nI don't believe it's bad\nSlit my throat\nIt's all I ever ",
+        "start": 209,
+        "end": 232
+    },
+    {
+        "text": "How long I don't believe it's bad\nSlit my throat It's all I ever",
+        "start": 233,
+        "end": 249
+    }
+]

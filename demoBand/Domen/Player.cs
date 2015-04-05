@@ -32,10 +32,11 @@ namespace demoBand.Domen
             mediaElement.Source = uri;
             mediaElement.AutoPlay = false;
             slider = new Slider();
-            slider.Height = 100;
+            slider.Height = 150;
             slider.Value = 50;
             slider.Orientation = Orientation.Vertical;
             slider.HorizontalAlignment = HorizontalAlignment.Center;
+            
 
 
             ((global::Windows.UI.Xaml.Controls.Primitives.RangeBase)(slider)).ValueChanged += volumeChanged;
