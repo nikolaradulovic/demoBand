@@ -52,8 +52,13 @@ namespace demoBand.Model
             map = new Dictionary<string, object>();
         }
 
-
-
-
     }
+
+    public enum Choice
+    {
+        solo,
+        collaborator
+    }
+
+
 }

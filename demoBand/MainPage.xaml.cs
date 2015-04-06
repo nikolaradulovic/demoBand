@@ -46,6 +46,10 @@ namespace demoBand
             {
                 await ParseUser.LogInAsync(username, password);
                 lblStatus.Text = "login succeeded";
+                
+                string idParse = ParseUser.CurrentUser.ObjectId;
+                string userParse = ParseUser.CurrentUser.Username;
+
                 Frame.Navigate(typeof(HomePage));
               
             }

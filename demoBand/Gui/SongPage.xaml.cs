@@ -55,15 +55,44 @@ namespace demoBand.Gui
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Song s = (Song) Session.GetInstance().getValueAt("song");
-            instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
-            string songViewPath = s.SongViewPath;
-            songView = await SongView.createSongView(songViewPath);        
-            loadInstruments(s);
-            createTextGrid();
+            Choice choice = (Choice)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("choice"));
+
+            //Song s = (Song) Session.GetInstance().getValueAt("song");
+            //instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            //string songViewPath = s.SongViewPath;
+            //songView = await SongView.createSongView(songViewPath);        
+            //loadInstruments(s);
+            //createTextGridForCollaborator();
+            if (choice == Choice.collaborator)
+                arrangeForCollaborator();
+            if (choice == Choice.solo)
+                arrangeForsolo();
+
+            
             setStartProperties();
             
         }
+
+        private void arrangeForsolo()
+        {
+            
+
+
+        }
+
+        private async void arrangeForCollaborator()
+        {
+            Song s = (Song)Session.GetInstance().getValueAt("song");
+            instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            string songViewPath = s.SongViewPath;
+            songView = await SongView.createSongView(songViewPath);
+            loadInstruments(s);
+            createTextGridForCollaborator();
+        }
+
+
+
+
 
         private void setStartProperties()
         {
@@ -81,9 +110,6 @@ namespace demoBand.Gui
 
         private void loadInstruments(Song s)
         {
-
-
-
             players = new Dictionary<type, Player>();
             foreach (Instrument i in s.Instruments)
             {
@@ -101,8 +127,6 @@ namespace demoBand.Gui
             int sec = Convert.ToInt32(s.Length) % 60;
             txtDuration.Text = min.ToString() + ":" + sec.ToString();
         }
-
-      
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
@@ -226,10 +250,6 @@ namespace demoBand.Gui
 
         public delegate void recordDelegate();
 
-        
-
-
-
         private  void btnRecord_Click(object sender, RoutedEventArgs e)
         {
 
@@ -244,16 +264,12 @@ namespace demoBand.Gui
 
         private void btnListen_Click(object sender, RoutedEventArgs e)
         {          
-            playAll();
+            startSong();
             btnRecord.IsEnabled = false;
             btnPause.IsEnabled = true;
             btnStop.IsEnabled = true;
             btnListen.IsEnabled = false;
         }
-
- 
-
- 
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -262,7 +278,6 @@ namespace demoBand.Gui
 
         }
 
-   
 
         private void txtComment_KeyUp(object sender, KeyRoutedEventArgs e)
         {
@@ -278,8 +293,6 @@ namespace demoBand.Gui
                 txtComment.Text = "";
             }
         }
-
-     
 
         private void lstComments_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -307,87 +320,75 @@ namespace demoBand.Gui
 
         }
 
-        private void playAll()
+        private void startSounds()
         {
-            foreach (KeyValuePair<type, Player> ply in players)
-            {
-                ply.Value.start();
-
-            }
-
-            if (mediaTimer == null)
-            {
-                mediaTimer = new DispatcherTimer();
-                mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
-                mediaTimer.Tick += timer_Tick;
-
-            }
-
-
-            //mediaTimer = new DispatcherTimer();
-            //mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
-            //mediaTimer.Tick += timer_Tick;
-            mediaTimer.Start();
-
-            if (mediaRecording != null)
-            {
-                mediaRecording.Play();
-            }
-            addTextGrid(stropheGrid);
-            
-
+            createMediaTimer();
+            mediaTimer.Start();           
+            playAllInstruments();
         }
 
-        public void createTextGrid() 
+        public void createTextGridForCollaborator() 
         {
             stropheGrid = new StropheText(songView);
-
-            //gridMain.Children.Add(stropheGrid);
         }
-
         private void addTextGrid(StropheText stropheText)
         {
             gridMain.Children.Clear();
             gridMain.Children.Add(stropheText);
         }
-
-
         private void startSong()
         {
-            //i record i novi grid
-            playAll();
+            startSounds();
+            playRecordedIfExist();
+            addTextGrid(stropheGrid);
         }
 
         private void startRecord() 
         {
+            startSounds();
+            startRecording();;
+            addTextGrid(stropheGrid);
+            disableStopButton();
             
-            foreach (KeyValuePair<type, Player> ply in players)
-            {
-                ply.Value.start();
-
-            }
+        }
+        private void createMediaTimer()
+        {
             if (mediaTimer == null)
             {
                 mediaTimer = new DispatcherTimer();
                 mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
                 mediaTimer.Tick += timer_Tick;
-                
+
             }
-            //mediaTimer = new DispatcherTimer();
-            //mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
-            //mediaTimer.Tick += timer_Tick;
-            mediaTimer.Start();
-            recorder = new Recorder();
-            recorder.startRecording();
-            //createTextGrid();
-            addTextGrid(stropheGrid);
-            disableStopButton();
-            
         }
 
+        private void playAllInstruments()
+        {
+            foreach (KeyValuePair<type, Player> ply in players)
+            {
+                ply.Value.start();
 
-        
+            }
+        }
+
+        private void playRecordedIfExist()
+        {
+            if (mediaRecording != null)
+            {
+                mediaRecording.Play();
+            }
+        }
+
+        private void startRecording()
+        {
+            recorder = new Recorder();
+            recorder.startRecording();
+        }
+
     }
+
+    
+
 
    
 }
