@@ -1,4 +1,5 @@
 ﻿using demoBand.Domen;
+using demoBand.Model;
 using demoBand.SongDescription;
 using demoBand.Util;
 using System;
@@ -14,7 +15,7 @@ namespace demoBand.Gui.StropheGui
 {
     class StropheText : Grid
     {
-
+        private Choice choice;
         private TextBlock text;
         private Image image;
         private SongView song;
@@ -29,13 +30,15 @@ namespace demoBand.Gui.StropheGui
             this.song = song;
             currentStrophe = song.Strophes.ElementAt(0);
             paintGrid(currentStrophe.Text);
+            choice = Choice.collaborator;
         }
 
-        public StropheText(Instrument instrument)
+        public StropheText(type instrument)
         {
             image = new Image();
             formatImage(instrument);
             Children.Add(image);
+            choice = Choice.solo;
 
 
         }
@@ -51,11 +54,11 @@ namespace demoBand.Gui.StropheGui
 
         }
 
-        private void formatImage(Instrument instrument)
+        private void formatImage(type instrument)
         {
             VerticalAlignment = VerticalAlignment.Center;
             BitmapImage bp = new BitmapImage();
-            Uri uri = InstrumentPicture.getLargeImages(instrument.TypeOfInstrument);
+            Uri uri = InstrumentPicture.getLargeImages(instrument);
             bp.UriSource = uri;
             image.Source = bp;
         }
@@ -66,15 +69,18 @@ namespace demoBand.Gui.StropheGui
 
         public void TryChange(int currentSecond)
         {
-            if (currentSecond >= currentStrophe.Start && currentSecond < currentStrophe.End)
-                return;
-            foreach (Strophe strophe in song.Strophes)
+            if (choice == Choice.collaborator)
             {
-                if (currentSecond >= strophe.Start && currentSecond < strophe.End)
-                {
-                    currentStrophe = strophe;
-                    fireChanges();
+                if (currentSecond >= currentStrophe.Start && currentSecond < currentStrophe.End)
                     return;
+                foreach (Strophe strophe in song.Strophes)
+                {
+                    if (currentSecond >= strophe.Start && currentSecond < strophe.End)
+                    {
+                        currentStrophe = strophe;
+                        fireChanges();
+                        return;
+                    }
                 }
             }
         }

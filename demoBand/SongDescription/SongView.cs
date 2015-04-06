@@ -28,12 +28,7 @@ namespace demoBand.SongDescription
             strophes = new List<Strophe>();
         }
 
-        public SongView(string path)
-        {
-            //iz parsera ucitati listu
-            populateList(path);
-            Task.Delay(250);
-        }
+        
 
         public  async Task populateList(string path)
         {

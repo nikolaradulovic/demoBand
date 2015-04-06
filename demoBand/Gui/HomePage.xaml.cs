@@ -102,6 +102,7 @@ namespace demoBand.Gui
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);
             CreateMEssageDialog(song);
+            Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
             //Frame.Navigate(typeof(SongPage));
         }
 
@@ -138,15 +139,28 @@ namespace demoBand.Gui
         private void probaInvokedHanler(IUICommand command)
         {
             Session.GetInstance().insertValue("instrument", command.Label);
+            Session.GetInstance().insertValue("choice", Choice.solo.ToString());
             Frame.Navigate(typeof(SongPage));
         }
 
 
         private void CommandInvokedHanler(IUICommand command)
         {
-            Session.GetInstance().insertValue("instrument", command.Label);
+            string label = command.Label;
+            //Session.GetInstance().insertValue("instrument", command.Label);
+            //Frame.Navigate(typeof(SongPage));
+            type instrument = (type) Enum.Parse(typeof (type), label);
+            navigateToSongPage(instrument);
+        }
+
+        private void navigateToSongPage(type instrument)
+        {
+            Session.GetInstance().insertValue("instrument", instrument.ToString());
+            
             Frame.Navigate(typeof(SongPage));
         }
+
+
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
