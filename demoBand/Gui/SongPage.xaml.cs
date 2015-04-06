@@ -208,7 +208,18 @@ namespace demoBand.Gui
 
             if (mediaRecording != null)
             {
-                mediaRecording.Position = time;
+               
+                TimeSpan length = mediaRecording.NaturalDuration.TimeSpan;
+
+                if (length > time)
+                {
+                    mediaRecording.Play();
+                    mediaRecording.Position = time;
+                }
+                else
+                {
+                    mediaRecording.Stop();
+                }
             }
             return progressBarValue;
         }
@@ -304,10 +315,18 @@ namespace demoBand.Gui
 
             }
 
-            mediaTimer = new DispatcherTimer();
-            mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+            if (mediaTimer == null)
+            {
+                mediaTimer = new DispatcherTimer();
+                mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+                mediaTimer.Tick += timer_Tick;
 
-            mediaTimer.Tick += timer_Tick;
+            }
+
+
+            //mediaTimer = new DispatcherTimer();
+            //mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+            //mediaTimer.Tick += timer_Tick;
             mediaTimer.Start();
 
             if (mediaRecording != null)
@@ -328,7 +347,7 @@ namespace demoBand.Gui
 
         private void addTextGrid(StropheText stropheText)
         {
-            //gridMain.Children.Clear();
+            gridMain.Children.Clear();
             gridMain.Children.Add(stropheText);
         }
 
@@ -341,15 +360,22 @@ namespace demoBand.Gui
 
         private void startRecord() 
         {
+            
             foreach (KeyValuePair<type, Player> ply in players)
             {
                 ply.Value.start();
 
             }
-            mediaTimer = new DispatcherTimer();
-            mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
-
-            mediaTimer.Tick += timer_Tick;
+            if (mediaTimer == null)
+            {
+                mediaTimer = new DispatcherTimer();
+                mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+                mediaTimer.Tick += timer_Tick;
+                
+            }
+            //mediaTimer = new DispatcherTimer();
+            //mediaTimer.Interval = TimeSpan.FromSeconds(0.1);
+            //mediaTimer.Tick += timer_Tick;
             mediaTimer.Start();
             recorder = new Recorder();
             recorder.startRecording();

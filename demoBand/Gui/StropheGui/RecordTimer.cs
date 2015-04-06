@@ -57,8 +57,11 @@ namespace demoBand.Gui.StropheGui
 
         public static event SongPage.recordDelegate recordEvent;
 
+        
+
         public void startRecording()
         {
+            
             if (recordEvent != null)
             {
                 recordEvent();
