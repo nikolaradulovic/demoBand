@@ -44,7 +44,7 @@ namespace demoBand.Gui
         private StropheText stropheGrid;
         private Choice choice;
 
-        private bool progressEnabled;
+        //private bool progressEnabled;
 
 
 
@@ -76,7 +76,7 @@ namespace demoBand.Gui
         {
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             stropheGrid = new StropheText(instrument);
-            progressEnabled = false;
+            progressBar.IsEnabled = false;
             setStartPropertiesSolo();
         }
 
@@ -88,7 +88,7 @@ namespace demoBand.Gui
             songView = await SongView.createSongView(songViewPath);
             loadInstruments(s);
             createTextGridForCollaborator();
-            progressEnabled = true;
+            progressBar.IsEnabled = true;
             setStartPropertiesCollaborator();
         }
 
@@ -112,8 +112,14 @@ namespace demoBand.Gui
 
         private void timer_Tick(object sender, object e)
         {
-            if (progressEnabled)
-                progressBar.Value += 0.1;
+            progressBar.Value += 0.1;
+            // ovo treba promeniti da radi,
+            // timer tick treba d apovecava vrednost
+            // ali ne da se prikazuje ako je recording
+            if (progressBar.IsEnabled) {
+                double seconds = progressBar.Value;
+                changeProgressText((int)seconds);
+            }
         }
 
         private void loadInstruments(Song s)
@@ -143,8 +149,11 @@ namespace demoBand.Gui
             progressBar.Maximum = length;
             int min = Convert.ToInt32(length) / 60;
             int sec = Convert.ToInt32(length) % 60;
-            txtDuration.Text = "/" + min.ToString() + ":" + sec.ToString();
+            txtDuration.Text = "/" + min.ToString() + ":" + sec.ToString("00");
         }
+
+        
+
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
@@ -176,40 +185,55 @@ namespace demoBand.Gui
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
-
+            
             foreach (KeyValuePair<type, Player> ply in players)
             {
                 ply.Value.stop();
             }
-            progressBar.Value = 0;        
+
+            if (progressBar.IsEnabled)
+            {
+                
+                double seconds = progressBar.Value;
+                setMaximumProgressBar(seconds);
+                progressBar.Value = 0;
+
+            }
+                      
             if (recorder != null)
             {
                 if (recorder.Active)
-                recorder.stopRecording();
+                    recorder.stopRecording();
                 mediaRecording.SetSource(recorder.AudioStream,"audio/mpeg");
             }
             if (mediaTimer != null)
             {
                 mediaTimer.Stop();
             }
-            if (mediaRecording != null)
-            {
-                
-                TimeSpan time = mediaRecording.NaturalDuration.TimeSpan;
-            }
+           
 
             btnRecord.IsEnabled = true;
             btnListen.IsEnabled = true;
             btnPause.IsEnabled = false;
             btnStop.IsEnabled = false;
-            gridMain.Children.Clear(); 
+            clearGridMain();
+           
         }
+
+        private void clearGridMain()
+        {
+            if (choice == Choice.collaborator)
+            {
+                gridMain.Children.Clear();
+            }
+        }
+
 
         private void UpdateProgressBarValues()
         {
-            progressEnabled = true;
+            progressBar.IsEnabled = true;
             TimeSpan time = mediaRecording.NaturalDuration.TimeSpan;
-            //setMaximumProgressBar(seconds);
+            setMaximumProgressBar(time.Seconds);
         }
 
         
@@ -218,14 +242,24 @@ namespace demoBand.Gui
 
         private void progressBar_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
+            
             txtProgres.Text = progressBar.Value.ToString();
             int seconds = Convert.ToInt32(progressBar.Value);
             changeTextGrid(seconds);
+            changeProgressText(seconds);
 
-            int secT = Convert.ToInt32(progressBar.Value) % 60;
-            int minT = Convert.ToInt32(progressBar.Value) / 60;
-            txtProgres.Text =minT.ToString() + ":" + secT.ToString("00");
+            //int secT = seconds % 60;
+            //int minT = seconds / 60;
+            //txtProgres.Text =minT.ToString() + ":" + secT.ToString("00");
         }
+
+        private void changeProgressText(int seconds)
+        {
+            int secT = seconds % 60;
+            int minT = seconds / 60;
+            txtProgres.Text = minT.ToString() + ":" + secT.ToString("00");
+        }
+
 
 
         private void changeTextGrid(int seconds)
@@ -294,8 +328,10 @@ namespace demoBand.Gui
         }
 
         private void btnListen_Click(object sender, RoutedEventArgs e)
-        {          
+        {
+            //UpdateProgressBarValues();
             startSong();
+            
             btnRecord.IsEnabled = false;
             btnPause.IsEnabled = true;
             btnStop.IsEnabled = true;
@@ -369,8 +405,9 @@ namespace demoBand.Gui
         }
         private void startSong()
         {
+            
             startSounds();
-            playRecordedIfExist();
+            playRecordedIfExist();      
             addTextGrid(stropheGrid);
         }
 
