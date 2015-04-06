@@ -24,6 +24,239 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                               
+        	<Image x:Name="image" Source="../Assets/Images/Dashboard/Buttons/dashboard_0008_Rec.png">
+        		<VisualStateManager.VisualStateGroups>
+        			<VisualStateGroup x:Name="CommonStates">
+        				<VisualStateGroup.Transitions>
+        					<VisualTransition From="PointerOver" GeneratedDuration="0:0:1" To="Pressed"/>
+        					<VisualTransition From="Normal" GeneratedDuration="0:0:1" To="PointerOver">
+        						<Storyboard>
+        							<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+        								<DiscreteObjectKeyFrame KeyTime="0">
+        									<DiscreteObjectKeyFrame.Value>
+        										<Visibility>Visible</Visibility>
+        									</DiscreteObjectKeyFrame.Value>
+        								</DiscreteObjectKeyFrame>
+        							</ObjectAnimationUsingKeyFrames>
+        							<DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+        						</Storyboard>
+        					</VisualTransition>
+        					<VisualTransition From="Pressed" GeneratedDuration="0" To="Disabled"/>
+        					<VisualTransition From="Disabled" GeneratedDuration="0:0:0.2" To="Normal"/>
+        				</VisualStateGroup.Transitions>
+        				<VisualState x:Name="Normal"/>
+        				<VisualState x:Name="Pressed">
+        					<Storyboard>
+        						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+        							<DiscreteObjectKeyFrame KeyTime="0">
+        								<DiscreteObjectKeyFrame.Value>
+        									<Visibility>Visible</Visibility>
+        								</DiscreteObjectKeyFrame.Value>
+        							</DiscreteObjectKeyFrame>
+        						</ObjectAnimationUsingKeyFrames>
+        						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+        							<DiscreteObjectKeyFrame KeyTime="0">
+        								<DiscreteObjectKeyFrame.Value>
+        									<ElementTheme>Default</ElementTheme>
+        								</DiscreteObjectKeyFrame.Value>
+        							</DiscreteObjectKeyFrame>
+        						</ObjectAnimationUsingKeyFrames>
+        						<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+        					</Storyboard>
+        				</VisualState>
+        				<VisualState x:Name="Disabled">
+        					<Storyboard>
+        						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+        							<DiscreteObjectKeyFrame KeyTime="0">
+        								<DiscreteObjectKeyFrame.Value>
+        									<ElementTheme>Dark</ElementTheme>
+        								</DiscreteObjectKeyFrame.Value>
+        							</DiscreteObjectKeyFrame>
+        						</ObjectAnimationUsingKeyFrames>
+        						<DoubleAnimation Duration="0" To="0.2" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+        					</Storyboard>
+        				</VisualState>
+        				<VisualState x:Name="PointerOver"/>
+        			</VisualStateGroup>
+        		</VisualStateManager.VisualStateGroups>
+        	</Image>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonControlTemplate2" TargetType="Button">                              
+        	<Image x:Name="image" Source="../Assets/Images/Dashboard/Buttons/dashboard_0006_Stop.png">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualStateGroup.Transitions>
+                            <VisualTransition From="PointerOver" GeneratedDuration="0:0:1" To="Pressed"/>
+                            <VisualTransition From="Normal" GeneratedDuration="0:0:1" To="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                                </Storyboard>
+                            </VisualTransition>
+                            <VisualTransition From="Pressed" GeneratedDuration="0" To="Disabled"/>
+                            <VisualTransition From="Disabled" GeneratedDuration="0:0:0.2" To="Normal"/>
+                        </VisualStateGroup.Transitions>
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Default</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Dark</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="0.2" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Image>                                                            
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonControlTemplate3" TargetType="Button">
+            <Image x:Name="image" Source="../Assets/Images/Dashboard/Buttons/dashboard_0007_Pause.png">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualStateGroup.Transitions>
+                            <VisualTransition From="PointerOver" GeneratedDuration="0:0:1" To="Pressed"/>
+                            <VisualTransition From="Normal" GeneratedDuration="0:0:1" To="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                                </Storyboard>
+                            </VisualTransition>
+                            <VisualTransition From="Pressed" GeneratedDuration="0" To="Disabled"/>
+                            <VisualTransition From="Disabled" GeneratedDuration="0:0:0.2" To="Normal"/>
+                        </VisualStateGroup.Transitions>
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Default</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Dark</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="0.2" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Image>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ButtonControlTemplate4" TargetType="Button">
+            <Image x:Name="image" Source="../Assets/Images/Dashboard/Buttons/play.png">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualStateGroup.Transitions>
+                            <VisualTransition From="PointerOver" GeneratedDuration="0:0:1" To="Pressed"/>
+                            <VisualTransition From="Normal" GeneratedDuration="0:0:1" To="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                                </Storyboard>
+                            </VisualTransition>
+                            <VisualTransition From="Pressed" GeneratedDuration="0" To="Disabled"/>
+                            <VisualTransition From="Disabled" GeneratedDuration="0:0:0.2" To="Normal"/>
+                        </VisualStateGroup.Transitions>
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Default</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Dark</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="0.2" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Image>
+        </ControlTemplate>
     </Page.Resources>
 
     <Grid >
@@ -46,7 +279,7 @@
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions >
                         <RowDefinition Height="1*"/>
-                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="6*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
                     <TextBlock x:Name="txtTitleComment" Text="Comments:" Margin="20,0,0,0" FontSize="20"/>
@@ -89,7 +322,7 @@
                             <StaticResource ResourceKey="ListViewItemStyle2"/>
                         </ListView.ItemContainerStyle>
                     </ListView>
-                    <TextBox KeyUp="txtComment_KeyUp" Foreground="White" Background="#303030"  x:Name="txtComment" Grid.Row="2" FontSize="20"/>
+                    <TextBox Grid.Row="2" KeyUp="txtComment_KeyUp" Foreground="White" Background="#303030"  x:Name="txtComment"  FontSize="20"/>
                 </Grid>
                 <Grid x:Name="gridMain" Grid.Column="1">
                     
@@ -118,35 +351,14 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnRecord" Click="btnRecord_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0008_Rec.png"/>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnStop" Click="btnStop_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0006_Stop.png"/>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                    <Button Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnRecord" Click="btnRecord_Click" Template="{StaticResource ButtonControlTemplate1}"/>
+                    <Button  Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnStop" Click="btnStop_Click" Template="{StaticResource ButtonControlTemplate2}"/>
 
-                    <Button  Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnPause" Click="btnPause_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Assets/Images/Dashboard/Buttons/dashboard_0007_Pause.png"/>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button  Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnListen" Click="btnListen_Click">
-                        <Button.Template>
-                            <ControlTemplate>
-                                <Image Source="../Assets/Images/Dashboard/Buttons/play.png"/>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                    <Button  Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnPause" Click="btnPause_Click" Template="{StaticResource ButtonControlTemplate3}" />
+
+
+                    <Button  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnListen" Click="btnListen_Click" Template="{StaticResource ButtonControlTemplate4}" />
+                     
                 </Grid>
                 <StackPanel x:Name="slideContainer"  Orientation="Horizontal" Grid.Column="3" />
                 <TextBlock x:Name="txtCounter" FontSize="30" Height="100" Width="100"  Grid.Column="2" />
@@ -157,7 +369,9 @@
                 <TextBlock x:Name="txtSlash"  FontSize="20" Text=" / "/>
                 <TextBlock x:Name="txtDuration" Text="" FontSize="20"/>
             </StackPanel>
-            <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="2"/>
+          
+                <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="2"/>
+      
         </Grid>
     </Grid>
     <Page.BottomAppBar>

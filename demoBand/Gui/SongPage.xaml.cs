@@ -58,11 +58,19 @@ namespace demoBand.Gui
             Song s = (Song) Session.GetInstance().getValueAt("song");
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             string songViewPath = s.SongViewPath;
-            songView = await SongView.createSongView(songViewPath);
-            
+            songView = await SongView.createSongView(songViewPath);        
             loadInstruments(s);
+            createTextGrid();
+            setStartProperties();
+            
+        }
 
-
+        private void setStartProperties()
+        {
+            btnRecord.IsEnabled = true;
+            btnStop.IsEnabled = false;
+            btnPause.IsEnabled = false;
+            btnListen.IsEnabled = true;
         }
 
         private void timer_Tick(object sender, object e)
@@ -111,7 +119,17 @@ namespace demoBand.Gui
             {
                 mediaTimer.Stop();
             }
+
+            btnStop.IsEnabled = true;
+            btnRecord.IsEnabled = false;
+            btnListen.IsEnabled = true;
+            btnPause.IsEnabled = false;
             
+        }
+
+        private void disableStopButton()
+        {
+            btnStop.IsEnabled = true;
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
@@ -136,6 +154,8 @@ namespace demoBand.Gui
             btnRecord.IsEnabled = true;
             btnListen.IsEnabled = true;
             btnPause.IsEnabled = false;
+            btnStop.IsEnabled = false;
+            gridMain.Children.Clear();
 
                 
             
@@ -163,8 +183,11 @@ namespace demoBand.Gui
 
         private void progressBar_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            double MousePosition = e.GetPosition(progressBar).X;
-            this.progressBar.Value = SetProgressBarValue(MousePosition);
+            
+                double MousePosition = e.GetPosition(progressBar).X;
+                this.progressBar.Value = SetProgressBarValue(MousePosition);
+            
+            
 
 
         }
@@ -204,12 +227,17 @@ namespace demoBand.Gui
             btnPause.IsEnabled = false;
             btnListen.IsEnabled = false;
             btnRecord.IsEnabled = false;
+            //btnStop.IsEnabled = true;
 
         }
 
         private void btnListen_Click(object sender, RoutedEventArgs e)
         {          
-            playAll();         
+            playAll();
+            btnRecord.IsEnabled = false;
+            btnPause.IsEnabled = true;
+            btnStop.IsEnabled = true;
+            btnListen.IsEnabled = false;
         }
 
  
@@ -286,13 +314,22 @@ namespace demoBand.Gui
             {
                 mediaRecording.Play();
             }
+            addTextGrid(stropheGrid);
+            
 
         }
 
         public void createTextGrid() 
         {
             stropheGrid = new StropheText(songView);
-            gridMain.Children.Add(stropheGrid);
+
+            //gridMain.Children.Add(stropheGrid);
+        }
+
+        private void addTextGrid(StropheText stropheText)
+        {
+            //gridMain.Children.Clear();
+            gridMain.Children.Add(stropheText);
         }
 
 
@@ -316,7 +353,10 @@ namespace demoBand.Gui
             mediaTimer.Start();
             recorder = new Recorder();
             recorder.startRecording();
-            createTextGrid();
+            //createTextGrid();
+            addTextGrid(stropheGrid);
+            disableStopButton();
+            
         }
 
 
