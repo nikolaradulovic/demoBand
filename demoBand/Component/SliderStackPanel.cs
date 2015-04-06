@@ -1,4 +1,5 @@
 ﻿using demoBand.Domen;
+using demoBand.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace demoBand.Component
 {
-    
+
     public class SliderStackPanel : StackPanel
     {
         private Instrument instrument;
@@ -24,37 +25,29 @@ namespace demoBand.Component
             this.instrument = instrument;
             player = new Player(new Uri(instrument.Path));
 
-            
+
         }
 
-        private StackPanel CreateStackPanelForSlider() {
+        private StackPanel CreateStackPanelForSlider()
+        {
             StackPanel stackSlider = new StackPanel();
             stackSlider.Children.Add(player.Slider);
-           
+
             //stackSlider.Background = new SolidColorBrush(Color.FromArgb(0xFF, 112, 138, 144));
             //stackSlider.Width = 42;
             return stackSlider;
         }
 
-        private Image createImageBox() 
+        private Image createImageBox()
         {
             Image img = new Image();
             img.Height = 80;
             img.Width = 80;
             VerticalAlignment = VerticalAlignment.Center;
-            
-            switch (instrument.TypeOfInstrument.ToString())
-            {
-                case "Voice": img.Source = setMicPicture();
-                    break;
-                case "Guitar": img.Source = setGuitarPicture();
-                    break;
-                case "Drums": img.Source = setDrumsPicture();
-                    break;
-                case "Piano": img.Source = setPianoPicture();
-                    break;
-            }
-          
+            BitmapImage bp = new BitmapImage();
+            Uri uri = InstrumentPicture.getImageUri(instrument.TypeOfInstrument);
+            bp.UriSource = uri;
+            img.Source = bp;
             return img;
         }
 
@@ -84,9 +77,9 @@ namespace demoBand.Component
             Children.Add(player.MediaElement);
             Children.Add(CreateStackPanelForSlider());
             Children.Add(createImageBox());
-            
+
         }
-        
+
         public void SetVolumeSlider(int value)
         {
             player.Slider.Value = value;
@@ -97,36 +90,8 @@ namespace demoBand.Component
             return player;
         }
 
-        public BitmapImage setMicPicture() 
-        {
-            BitmapImage bp = new BitmapImage();
-            Uri uri = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0000_Forma-1.png");
-            bp.UriSource = uri;
-            return bp;
-        }
+      
 
-        public BitmapImage setGuitarPicture()
-        {
-            BitmapImage bp = new BitmapImage();
-            Uri uri = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0004_Layer-2.png");
-            bp.UriSource = uri;
-            return bp;
-        }
 
-        public BitmapImage setDrumsPicture()
-        {
-            BitmapImage bp = new BitmapImage();
-            Uri uri = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0002_Bass.png");
-            bp.UriSource = uri;
-            return bp;
-        }
-
-        public BitmapImage setPianoPicture()
-        {
-            BitmapImage bp = new BitmapImage();
-            Uri uri = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0003_Piano.png");
-            bp.UriSource = uri;
-            return bp;
-        }
     }
 }

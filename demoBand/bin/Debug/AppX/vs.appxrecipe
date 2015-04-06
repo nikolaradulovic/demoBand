@@ -7,8 +7,8 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>09b5dbff-bf47-459b-8ac4-52566512595c</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\NikolaR\git\demoBand\demoBand\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>0513BD57B996E649F94507646861000442336E2F4C618BC2D0A28EFBBEF3442B</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\NikolaR\git\demoBand2\demoBand\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5A5F88311AFEE2F33DF2656BC128DC7CFC0B80C89BC8249C9DEEE9F37D5F3DBA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>09b5dbff-bf47-459b-8ac4-52566512595c_1.0.0.0_neutral__vpw621za47p9m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>09b5dbff-bf47-459b-8ac4-52566512595c_vpw621za47p9m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>09b5dbff-bf47-459b-8ac4-52566512595c</RegisteredPackageID>
@@ -17,160 +17,200 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-03T02:58:11.329</Modified>
+      <Modified>2015-04-06T13:23:54.087</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.exe">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\demoBand.exe">
       <PackagePath>demoBand.exe</PackagePath>
-      <Modified>2015-04-03T03:09:49.429</Modified>
+      <Modified>2015-04-06T13:23:53.700</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-04-03T00:04:20.783</Modified>
+      <Modified>2015-04-06T13:14:42.177</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Parse.1.4.0\lib\netcore45\Parse.dll">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\packages\Parse.1.4.0\lib\netcore45\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
-      <Modified>2015-04-02T21:11:24.970</Modified>
+      <Modified>2015-04-06T13:14:42.625</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\packages\Parse.1.4.0\lib\netcore45\Parse.WinRT.dll">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\packages\Parse.1.4.0\lib\netcore45\Parse.WinRT.dll">
       <PackagePath>Parse.WinRT.dll</PackagePath>
-      <Modified>2015-04-02T21:11:24.989</Modified>
+      <Modified>2015-04-06T13:14:42.576</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img10.jpg">
-      <PackagePath>Assets\Images\Covers\img10.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.096</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png">
+      <PackagePath>Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img11.jpg">
-      <PackagePath>Assets\Images\Covers\img11.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.111</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png">
+      <PackagePath>Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.023</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img12.jpg">
-      <PackagePath>Assets\Images\Covers\img12.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.115</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png">
+      <PackagePath>Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.030</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img13.jpg">
-      <PackagePath>Assets\Images\Covers\img13.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.120</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\dashboard_0000_Forma-1.png">
+      <PackagePath>Assets\Images\Dashboard\dashboard_0000_Forma-1.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.042</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img14.jpg">
-      <PackagePath>Assets\Images\Covers\img14.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.124</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\dashboard_0002_Bass.png">
+      <PackagePath>Assets\Images\Dashboard\dashboard_0002_Bass.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.048</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img15.jpg">
-      <PackagePath>Assets\Images\Covers\img15.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.128</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\dashboard_0003_Piano.png">
+      <PackagePath>Assets\Images\Dashboard\dashboard_0003_Piano.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.052</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img16.jpg">
-      <PackagePath>Assets\Images\Covers\img16.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.132</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\dashboard_0004_Layer-2.png">
+      <PackagePath>Assets\Images\Dashboard\dashboard_0004_Layer-2.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.059</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img17.jpg">
-      <PackagePath>Assets\Images\Covers\img17.jpg</PackagePath>
-      <Modified>2015-04-03T00:23:59.088</Modified>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Dashboard\Buttons\play.png">
+      <PackagePath>Assets\Images\Dashboard\Buttons\play.png</PackagePath>
+      <Modified>2015-04-06T13:14:40.037</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img19.jpg">
-      <PackagePath>Assets\Images\Covers\img19.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.137</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img4.jpg">
-      <PackagePath>Assets\Images\Covers\img4.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.054</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img5.jpg">
-      <PackagePath>Assets\Images\Covers\img5.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.059</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\Covers\img7.jpg">
-      <PackagePath>Assets\Images\Covers\img7.jpg</PackagePath>
-      <Modified>2015-04-03T00:18:54.090</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Images\logo.jpg">
-      <PackagePath>Assets\Images\logo.jpg</PackagePath>
-      <Modified>2015-04-02T20:57:12.089</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Json\practiceSongs.txt">
-      <PackagePath>Assets\Json\practiceSongs.txt</PackagePath>
-      <Modified>2015-04-03T00:22:26.894</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2015-04-06T13:14:40.084</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2015-04-06T13:14:40.088</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2015-04-06T13:14:40.603</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-07-23T04:01:02.000</Modified>
+      <Modified>2015-04-06T13:14:40.604</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\1FUN. - We Are Young %28Studio Acapella%29 %28mp3cut.net%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img10.jpg">
+      <PackagePath>Assets\Images\Covers\img10.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.838</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img11.jpg">
+      <PackagePath>Assets\Images\Covers\img11.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img12.jpg">
+      <PackagePath>Assets\Images\Covers\img12.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.884</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img13.jpg">
+      <PackagePath>Assets\Images\Covers\img13.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.906</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img14.jpg">
+      <PackagePath>Assets\Images\Covers\img14.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.920</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img15.jpg">
+      <PackagePath>Assets\Images\Covers\img15.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.933</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img16.jpg">
+      <PackagePath>Assets\Images\Covers\img16.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img17.jpg">
+      <PackagePath>Assets\Images\Covers\img17.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.962</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img19.jpg">
+      <PackagePath>Assets\Images\Covers\img19.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.975</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img4.jpg">
+      <PackagePath>Assets\Images\Covers\img4.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.987</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img5.jpg">
+      <PackagePath>Assets\Images\Covers\img5.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:39.998</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\Covers\img7.jpg">
+      <PackagePath>Assets\Images\Covers\img7.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:40.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Images\logo.jpg">
+      <PackagePath>Assets\Images\logo.jpg</PackagePath>
+      <Modified>2015-04-06T13:14:40.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Json\otherside.txt">
+      <PackagePath>Assets\Json\otherside.txt</PackagePath>
+      <Modified>2015-04-06T13:14:40.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Json\practiceSongs.txt">
+      <PackagePath>Assets\Json\practiceSongs.txt</PackagePath>
+      <Modified>2015-04-06T13:14:40.080</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\1FUN. - We Are Young %28Studio Acapella%29 %28mp3cut.net%29.mp3">
       <PackagePath>Assets\Songs\1FUN. - We Are Young %28Studio Acapella%29 %28mp3cut.net%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:39.172</Modified>
+      <Modified>2015-04-06T13:14:40.223</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3">
       <PackagePath>Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:39.302</Modified>
+      <Modified>2015-04-06T13:14:40.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3">
       <PackagePath>Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:39.388</Modified>
+      <Modified>2015-04-06T13:14:40.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3">
       <PackagePath>Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:39.482</Modified>
+      <Modified>2015-04-06T13:14:40.601</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3">
       <PackagePath>Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:39.869</Modified>
+      <Modified>2015-04-06T13:14:40.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RHCP-Otherside%28Drums%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\RHCP-Otherside%28Drums%29.mp3">
       <PackagePath>Assets\Songs\RHCP-Otherside%28Drums%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:40.061</Modified>
+      <Modified>2015-04-06T13:14:40.373</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\Assets\Songs\RHCP-Otherside%28Guitar%29.mp3">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\Assets\Songs\RHCP-Otherside%28Guitar%29.mp3">
       <PackagePath>Assets\Songs\RHCP-Otherside%28Guitar%29.mp3</PackagePath>
-      <Modified>2015-04-03T00:19:40.262</Modified>
+      <Modified>2015-04-06T13:14:40.453</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-04-03T00:14:21.528</Modified>
+      <Modified>2015-04-06T13:17:31.591</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\HomePage.xbf">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\Gui\HomePage.xbf">
       <PackagePath>Gui\HomePage.xbf</PackagePath>
-      <Modified>2015-04-03T00:24:02.386</Modified>
+      <Modified>2015-04-06T13:17:31.594</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Gui\SongPage.xbf">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\Gui\NewSong.xbf">
+      <PackagePath>Gui\NewSong.xbf</PackagePath>
+      <Modified>2015-04-06T13:17:31.594</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\Gui\SongPage.xbf">
       <PackagePath>Gui\SongPage.xbf</PackagePath>
-      <Modified>2015-04-03T02:58:10.539</Modified>
+      <Modified>2015-04-06T13:17:31.596</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-04-03T00:14:21.531</Modified>
+      <Modified>2015-04-06T13:17:31.597</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\Register\Registration.xbf">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\Register\Registration.xbf">
       <PackagePath>Register\Registration.xbf</PackagePath>
-      <Modified>2015-04-03T00:14:21.532</Modified>
+      <Modified>2015-04-06T13:17:31.597</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\demoBand.xr.xml">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\demoBand.xr.xml">
       <PackagePath>demoBand.xr.xml</PackagePath>
-      <Modified>2015-04-03T00:42:25.167</Modified>
+      <Modified>2015-04-06T13:17:31.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand\demoBand\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\NikolaR\git\demoBand2\demoBand\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-04-03T02:58:11.096</Modified>
+      <Modified>2015-04-06T13:23:53.834</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

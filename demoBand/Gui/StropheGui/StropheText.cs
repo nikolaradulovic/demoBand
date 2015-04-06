@@ -1,4 +1,6 @@
-﻿using demoBand.SongDescription;
+﻿using demoBand.Domen;
+using demoBand.SongDescription;
+using demoBand.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace demoBand.Gui.StropheGui
 {
@@ -13,6 +16,7 @@ namespace demoBand.Gui.StropheGui
     {
 
         private TextBlock text;
+        private Image image;
         private SongView song;
         private Strophe currentStrophe;
 
@@ -27,7 +31,16 @@ namespace demoBand.Gui.StropheGui
             paintGrid(currentStrophe.Text);
         }
 
-        private void formatText() 
+        public StropheText(Instrument instrument)
+        {
+            image = new Image();
+            formatImage(instrument);
+            Children.Add(image);
+
+
+        }
+
+        private void formatText()
         {
             text.HorizontalAlignment = HorizontalAlignment.Center;
             text.VerticalAlignment = VerticalAlignment.Stretch;
@@ -35,14 +48,23 @@ namespace demoBand.Gui.StropheGui
             text.FontSize = 40;
             text.Margin = new Thickness(0, 20, 0, 0);
             text.TextWrapping = TextWrapping.Wrap;
-            
+
+        }
+
+        private void formatImage(Instrument instrument)
+        {
+            VerticalAlignment = VerticalAlignment.Center;
+            BitmapImage bp = new BitmapImage();
+            Uri uri = InstrumentPicture.getLargeImages(instrument.TypeOfInstrument);
+            bp.UriSource = uri;
+            image.Source = bp;
         }
 
 
-        
 
 
-        public void TryChange(int currentSecond) 
+
+        public void TryChange(int currentSecond)
         {
             if (currentSecond >= currentStrophe.Start && currentSecond < currentStrophe.End)
                 return;

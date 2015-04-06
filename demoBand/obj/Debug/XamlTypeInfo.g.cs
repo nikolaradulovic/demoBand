@@ -124,7 +124,7 @@ namespace demoBand.demoBand_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[23];
+            _typeNameTable = new string[24];
             _typeNameTable[0] = "demoBand.ViewModel.MenuView";
             _typeNameTable[1] = "demoBand.ViewModel.ViewModelBase";
             _typeNameTable[2] = "Object";
@@ -145,11 +145,12 @@ namespace demoBand.demoBand_XamlTypeInfo
             _typeNameTable[17] = "demoBand.Common.ObservableDictionary";
             _typeNameTable[18] = "demoBand.Common.NavigationHelper";
             _typeNameTable[19] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[20] = "demoBand.Gui.SongPage";
-            _typeNameTable[21] = "demoBand.MainPage";
-            _typeNameTable[22] = "demoBand.Register.Registration";
+            _typeNameTable[20] = "demoBand.Gui.NewSong";
+            _typeNameTable[21] = "demoBand.Gui.SongPage";
+            _typeNameTable[22] = "demoBand.MainPage";
+            _typeNameTable[23] = "demoBand.Register.Registration";
 
-            _typeTable = new global::System.Type[23];
+            _typeTable = new global::System.Type[24];
             _typeTable[0] = typeof(global::demoBand.ViewModel.MenuView);
             _typeTable[1] = typeof(global::demoBand.ViewModel.ViewModelBase);
             _typeTable[2] = typeof(global::System.Object);
@@ -170,9 +171,10 @@ namespace demoBand.demoBand_XamlTypeInfo
             _typeTable[17] = typeof(global::demoBand.Common.ObservableDictionary);
             _typeTable[18] = typeof(global::demoBand.Common.NavigationHelper);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[20] = typeof(global::demoBand.Gui.SongPage);
-            _typeTable[21] = typeof(global::demoBand.MainPage);
-            _typeTable[22] = typeof(global::demoBand.Register.Registration);
+            _typeTable[20] = typeof(global::demoBand.Gui.NewSong);
+            _typeTable[21] = typeof(global::demoBand.Gui.SongPage);
+            _typeTable[22] = typeof(global::demoBand.MainPage);
+            _typeTable[23] = typeof(global::demoBand.Register.Registration);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -216,9 +218,10 @@ namespace demoBand.demoBand_XamlTypeInfo
         private object Activate_9_List() { return new global::System.Collections.Generic.List<global::demoBand.Domen.Instrument>(); }
         private object Activate_14_HomePage() { return new global::demoBand.Gui.HomePage(); }
         private object Activate_17_ObservableDictionary() { return new global::demoBand.Common.ObservableDictionary(); }
-        private object Activate_20_SongPage() { return new global::demoBand.Gui.SongPage(); }
-        private object Activate_21_MainPage() { return new global::demoBand.MainPage(); }
-        private object Activate_22_Registration() { return new global::demoBand.Register.Registration(); }
+        private object Activate_20_NewSong() { return new global::demoBand.Gui.NewSong(); }
+        private object Activate_21_SongPage() { return new global::demoBand.Gui.SongPage(); }
+        private object Activate_22_MainPage() { return new global::demoBand.MainPage(); }
+        private object Activate_23_Registration() { return new global::demoBand.Register.Registration(); }
         private void VectorAdd_3_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::demoBand.Domen.MenuItem>)instance;
@@ -318,6 +321,7 @@ namespace demoBand.demoBand_XamlTypeInfo
                 userType.AddMemberName("Length");
                 userType.AddMemberName("ImagePath");
                 userType.AddMemberName("Instruments");
+                userType.AddMemberName("SongViewPath");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -393,23 +397,30 @@ namespace demoBand.demoBand_XamlTypeInfo
                 xamlType = new global::demoBand.demoBand_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  demoBand.Gui.SongPage
+            case 20:   //  demoBand.Gui.NewSong
                 userType = new global::demoBand.demoBand_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_SongPage;
+                userType.Activator = Activate_20_NewSong;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  demoBand.MainPage
+            case 21:   //  demoBand.Gui.SongPage
                 userType = new global::demoBand.demoBand_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_MainPage;
+                userType.Activator = Activate_21_SongPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  demoBand.Register.Registration
+            case 22:   //  demoBand.MainPage
                 userType = new global::demoBand.demoBand_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_Registration;
+                userType.Activator = Activate_22_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 23:   //  demoBand.Register.Registration
+                userType = new global::demoBand.demoBand_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_23_Registration;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -538,22 +549,32 @@ namespace demoBand.demoBand_XamlTypeInfo
             var that = (global::demoBand.Domen.Instrument)instance;
             that.Path = (global::System.String)Value;
         }
-        private object get_12_PracticeView_SelectedSong(object instance)
+        private object get_12_Song_SongViewPath(object instance)
+        {
+            var that = (global::demoBand.Domen.Song)instance;
+            return that.SongViewPath;
+        }
+        private void set_12_Song_SongViewPath(object instance, object Value)
+        {
+            var that = (global::demoBand.Domen.Song)instance;
+            that.SongViewPath = (global::System.String)Value;
+        }
+        private object get_13_PracticeView_SelectedSong(object instance)
         {
             var that = (global::demoBand.ViewModel.PracticeView)instance;
             return that.SelectedSong;
         }
-        private void set_12_PracticeView_SelectedSong(object instance, object Value)
+        private void set_13_PracticeView_SelectedSong(object instance, object Value)
         {
             var that = (global::demoBand.ViewModel.PracticeView)instance;
             that.SelectedSong = (global::System.String)Value;
         }
-        private object get_13_HomePage_DefaultViewModel(object instance)
+        private object get_14_HomePage_DefaultViewModel(object instance)
         {
             var that = (global::demoBand.Gui.HomePage)instance;
             return that.DefaultViewModel;
         }
-        private object get_14_HomePage_NavigationHelper(object instance)
+        private object get_15_HomePage_NavigationHelper(object instance)
         {
             var that = (global::demoBand.Gui.HomePage)instance;
             return that.NavigationHelper;
@@ -638,22 +659,28 @@ namespace demoBand.demoBand_XamlTypeInfo
                 xamlMember.Getter = get_11_Instrument_Path;
                 xamlMember.Setter = set_11_Instrument_Path;
                 break;
+            case "demoBand.Domen.Song.SongViewPath":
+                userType = (global::demoBand.demoBand_XamlTypeInfo.XamlUserType)GetXamlTypeByName("demoBand.Domen.Song");
+                xamlMember = new global::demoBand.demoBand_XamlTypeInfo.XamlMember(this, "SongViewPath", "String");
+                xamlMember.Getter = get_12_Song_SongViewPath;
+                xamlMember.Setter = set_12_Song_SongViewPath;
+                break;
             case "demoBand.ViewModel.PracticeView.SelectedSong":
                 userType = (global::demoBand.demoBand_XamlTypeInfo.XamlUserType)GetXamlTypeByName("demoBand.ViewModel.PracticeView");
                 xamlMember = new global::demoBand.demoBand_XamlTypeInfo.XamlMember(this, "SelectedSong", "String");
-                xamlMember.Getter = get_12_PracticeView_SelectedSong;
-                xamlMember.Setter = set_12_PracticeView_SelectedSong;
+                xamlMember.Getter = get_13_PracticeView_SelectedSong;
+                xamlMember.Setter = set_13_PracticeView_SelectedSong;
                 break;
             case "demoBand.Gui.HomePage.DefaultViewModel":
                 userType = (global::demoBand.demoBand_XamlTypeInfo.XamlUserType)GetXamlTypeByName("demoBand.Gui.HomePage");
                 xamlMember = new global::demoBand.demoBand_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "demoBand.Common.ObservableDictionary");
-                xamlMember.Getter = get_13_HomePage_DefaultViewModel;
+                xamlMember.Getter = get_14_HomePage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "demoBand.Gui.HomePage.NavigationHelper":
                 userType = (global::demoBand.demoBand_XamlTypeInfo.XamlUserType)GetXamlTypeByName("demoBand.Gui.HomePage");
                 xamlMember = new global::demoBand.demoBand_XamlTypeInfo.XamlMember(this, "NavigationHelper", "demoBand.Common.NavigationHelper");
-                xamlMember.Getter = get_14_HomePage_NavigationHelper;
+                xamlMember.Getter = get_15_HomePage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

@@ -137,6 +137,7 @@
     <Compile Include="SongDescription\SongView.cs" />
     <Compile Include="SongDescription\Strophe.cs" />
     <Compile Include="Util\Converter.cs" />
+    <Compile Include="Util\InstrumentPicture.cs" />
     <Compile Include="Util\Recorder.cs" />
     <Compile Include="ViewModel\MenuView.cs" />
     <Compile Include="ViewModel\PracticeView.cs" />

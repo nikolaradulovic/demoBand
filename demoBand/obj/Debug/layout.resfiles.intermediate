@@ -10,7 +10,16 @@ Assets\Images\Covers\img19.jpg
 Assets\Images\Covers\img4.jpg
 Assets\Images\Covers\img5.jpg
 Assets\Images\Covers\img7.jpg
+Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png
+Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png
+Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png
+Assets\Images\Dashboard\Buttons\play.png
+Assets\Images\Dashboard\dashboard_0000_Forma-1.png
+Assets\Images\Dashboard\dashboard_0002_Bass.png
+Assets\Images\Dashboard\dashboard_0003_Piano.png
+Assets\Images\Dashboard\dashboard_0004_Layer-2.png
 Assets\Images\logo.jpg
+Assets\Json\otherside.txt
 Assets\Json\practiceSongs.txt
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
@@ -26,6 +35,7 @@ Assets\StoreLogo.scale-100.png
 App.xbf
 demoBand.xr.xml
 Gui\HomePage.xbf
+Gui\NewSong.xbf
 Gui\SongPage.xbf
 MainPage.xbf
 Register\Registration.xbf

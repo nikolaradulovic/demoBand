@@ -4,6 +4,7 @@
         "Author": "RHCP",
         "Length": "255",
 	   "ImagePath": "../Assets/Images/Covers/img19.jpg",
+	   "songViewPath" : "../Assets/Json/otherside.txt",
         "Instruments": [
             {
                 "TypeOfInstrument": 0,
@@ -25,6 +26,7 @@
         "Author": "Imagine Dragons",
         "Length": "147",
 		"ImagePath": "../Assets/Images/Covers/img16.jpg",
+		"songViewPath" : "../Assets/Json/otherside.txt",
         "Instruments": [
             {
                 "TypeOfInstrument": 3,

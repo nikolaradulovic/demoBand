@@ -40,9 +40,11 @@
                 </HubSection.HeaderTemplate>
                 <DataTemplate>
                     <Grid Margin="0,20,0,0">
-                        <GridView HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstSongs" FontSize="20" 
+                        <GridView x:ConnectionId='2' HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstMenu" FontSize="20" 
                                    ItemsSource="{Binding ListItems}"  
                                    IsItemClickEnabled="True"
+                                                                
+                                                                              
                                    SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}">
                             <GridView.ItemTemplate>
                                 <DataTemplate>
@@ -98,7 +100,13 @@
                     </StackPanel>
                 </DataTemplate>
             </HubSection>
+            
         </Hub>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='3' Content="Logout" x:Name="btnLogout"                         />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

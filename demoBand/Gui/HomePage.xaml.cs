@@ -93,11 +93,11 @@ namespace demoBand.Gui
 
         #endregion
 
-     
+
 
         private void lstSongs_ItemClick(object sender, ItemClickEventArgs e)
         {
- 
+
 
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);
@@ -110,14 +110,36 @@ namespace demoBand.Gui
             var messageDialog = new MessageDialog("Choose your instrument");
             for (int i = 0; i < song.Instruments.Count; i++)
             {
-                messageDialog.Commands.Add(new UICommand(song.Instruments.ElementAt(i).TypeOfInstrument.ToString(),new UICommandInvokedHandler(this.CommandInvokedHanler)));
+                messageDialog.Commands.Add(new UICommand(song.Instruments.ElementAt(i).TypeOfInstrument.ToString(), new UICommandInvokedHandler(this.CommandInvokedHanler)));
             }
-            
+
             await messageDialog.ShowAsync();
 
         }
 
-      
+        private async void createChooseInstrumentDialog()
+        {
+            //UICommandInvokedHandler a = new UICommandInvokedHandler(probaInvokedHanler);
+
+            var messageDialog = new MessageDialog("Chooe your instrument");
+
+            //messageDialog.Commands.Add(new UICommand("Voice"));
+            //messageDialog.Commands.Add(new UICommand("Guitar"));
+            //messageDialog.Commands.Add(new UICommand("Drums"));
+            //messageDialog.Commands.Add(new UICommand("Piano"));
+            //messageDialog.Commands.Add(new UICommand("Voice", new UICommandInvokedHandler(this.probaInvokedHanler)));
+            messageDialog.Commands.Add(new UICommand("Guitar", new UICommandInvokedHandler(this.probaInvokedHanler)));
+            messageDialog.Commands.Add(new UICommand("Drums", new UICommandInvokedHandler(this.probaInvokedHanler)));
+            messageDialog.Commands.Add(new UICommand("Piano", new UICommandInvokedHandler(this.probaInvokedHanler)));
+            //   messageDialog.Commands.Add(
+            await messageDialog.ShowAsync();
+        }
+
+        private void probaInvokedHanler(IUICommand command)
+        {
+            Session.GetInstance().insertValue("instrument", command.Label);
+            Frame.Navigate(typeof(SongPage));
+        }
 
 
         private void CommandInvokedHanler(IUICommand command)
@@ -132,14 +154,18 @@ namespace demoBand.Gui
             Frame.Navigate(typeof(MainPage));
         }
 
- 
+
         private void lstMenu_ItemClick(object sender, ItemClickEventArgs e)
         {
             MenuItem m = e.ClickedItem as MenuItem;
-            switch (m.Name) 
+            switch (m.Name)
             {
-                case "Create new song": Frame.Navigate(typeof(NewSong));
+
+                case "Create new song": createChooseInstrumentDialog();
+                    //case "Create new song": Frame.Navigate(typeof(NewSong));
                     break;
+
+
             }
 
         }
@@ -154,7 +180,7 @@ namespace demoBand.Gui
 
         }
 
-      
+
 
     }
 }

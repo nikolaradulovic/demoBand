@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#1D1D1D" Height="Auto" Width="Auto">
+    <Grid x:ConnectionId='1' Background="#1D1D1D"                    Height="Auto" Width="Auto">
         <Grid Grid.ColumnSpan="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -37,10 +37,10 @@
                 <TextBox x:Name="txtUser"  VerticalAlignment="Center" Grid.Row="3" FontSize="20"  />
                 <TextBlock x:Name="lblPass" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="4" Text="Password:"  FontSize="20"/>
                 <PasswordBox x:Name="txtPassword" VerticalAlignment="Center" Grid.Row="5" FontSize="20" />
-                <TextBlock x:ConnectionId='1' x:Name="lblAccount"                            Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="6" Text="Create Account" FontSize="20" >
+                <TextBlock x:ConnectionId='2' x:Name="lblAccount"                            Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="6" Text="Create Account" FontSize="20" >
 
                 </TextBlock>
-                <Button x:ConnectionId='2' x:Name="btnLogin" Background="DodgerBlue" Content="Login" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Right"                        />
+                <Button x:ConnectionId='3' x:Name="btnLogin" Background="DodgerBlue" Content="Login" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Right"                        />
                 <TextBlock x:Name="lblStatus" TextWrapping="Wrap"  HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="20" Grid.Row="8"/>
             </Grid>
             <Grid Grid.RowSpan="5" Grid.Column="1" HorizontalAlignment="Center">
