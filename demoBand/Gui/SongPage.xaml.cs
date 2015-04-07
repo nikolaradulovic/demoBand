@@ -43,6 +43,8 @@ namespace demoBand.Gui
         private SongView songView;
         private StropheText stropheGrid;
         private Choice choice;
+        private double progressValue;
+
 
         //private bool progressEnabled;
 
@@ -59,7 +61,7 @@ namespace demoBand.Gui
         protected  override void OnNavigatedTo(NavigationEventArgs e)
         {
             players = new Dictionary<type, Player>();
-
+            progressValue = 0;
 
             choice = (Choice)Enum.Parse(typeof(Choice), (string)Session.GetInstance().getValueAt("choice"));
 
@@ -67,16 +69,13 @@ namespace demoBand.Gui
                 arrangeForCollaborator();
             if (choice == Choice.solo)
                 arrangeForsolo();
-
-          
-            
         }
 
         private void arrangeForsolo()
         {
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             stropheGrid = new StropheText(instrument);
-            progressBar.IsEnabled = false;
+            setProgressBarForSolo();
             setStartPropertiesSolo();
         }
 
@@ -88,8 +87,20 @@ namespace demoBand.Gui
             songView = await SongView.createSongView(songViewPath);
             loadInstruments(s);
             createTextGridForCollaborator();
-            progressBar.IsEnabled = true;
+            setProgressBarForCollaborator(Convert.ToDouble(s.Length));
             setStartPropertiesCollaborator();
+        }
+
+        private void setProgressBarForSolo()
+        {
+            progressBar.IsEnabled = false;
+            progressBar.Maximum = 0;
+        }
+
+        private void setProgressBarForCollaborator(double seconds)
+        {
+            progressBar.IsEnabled = true;
+            setMaximumProgressBar(seconds);
         }
 
         private void setStartPropertiesSolo()
@@ -112,13 +123,19 @@ namespace demoBand.Gui
 
         private void timer_Tick(object sender, object e)
         {
-            progressBar.Value += 0.1;
+            progressValue += 0.1;
+            changeProgressText((int)progressValue);
+            //progressBar.Value += 0.1;
             // ovo treba promeniti da radi,
             // timer tick treba d apovecava vrednost
             // ali ne da se prikazuje ako je recording
-            if (progressBar.IsEnabled) {
-                double seconds = progressBar.Value;
-                changeProgressText((int)seconds);
+            if (progressBar.IsEnabled) 
+            {
+                progressBar.Value = progressValue;
+            }
+            else
+            {
+                progressBar.Value = 0;
             }
         }
 
@@ -191,15 +208,17 @@ namespace demoBand.Gui
                 ply.Value.stop();
             }
 
-            if (progressBar.IsEnabled)
+           
+            if (progressBar.IsEnabled == false)
             {
-                
-                double seconds = progressBar.Value;
-                setMaximumProgressBar(seconds);
-                progressBar.Value = 0;
-
+                setMaximumProgressBar(progressValue);
+                progressBar.IsEnabled = true;
             }
+            progressValue = 0;
+            progressBar.Value = 0;
+            changeProgressText(0);
                       
+
             if (recorder != null)
             {
                 if (recorder.Active)
@@ -227,16 +246,6 @@ namespace demoBand.Gui
                 gridMain.Children.Clear();
             }
         }
-
-
-        private void UpdateProgressBarValues()
-        {
-            progressBar.IsEnabled = true;
-            TimeSpan time = mediaRecording.NaturalDuration.TimeSpan;
-            setMaximumProgressBar(time.Seconds);
-        }
-
-        
 
 
 
