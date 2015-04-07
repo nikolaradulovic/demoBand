@@ -2,6 +2,7 @@
 using demoBand.Domen;
 using demoBand.Gui.StropheGui;
 using demoBand.Model;
+using demoBand.ParseBase;
 using demoBand.SongDescription;
 using demoBand.Util;
 using System;
@@ -44,7 +45,8 @@ namespace demoBand.Gui
         private StropheText stropheGrid;
         private Choice choice;
         private double progressValue;
-
+        private Song song;
+        private RecordParse recordParse;
 
         //private bool progressEnabled;
 
@@ -60,6 +62,7 @@ namespace demoBand.Gui
 
         protected  override void OnNavigatedTo(NavigationEventArgs e)
         {
+            recordParse = new RecordParse();
             players = new Dictionary<type, Player>();
             progressValue = 0;
 
@@ -77,18 +80,20 @@ namespace demoBand.Gui
             stropheGrid = new StropheText(instrument);
             setProgressBarForSolo();
             setStartPropertiesSolo();
+            populateRecordParseSolo();
         }
 
         private async void arrangeForCollaborator()
         {
-            Song s = (Song)Session.GetInstance().getValueAt("song");
+            song = (Song)Session.GetInstance().getValueAt("song");
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
-            string songViewPath = s.SongViewPath;
+            string songViewPath = song.SongViewPath;
             songView = await SongView.createSongView(songViewPath);
-            loadInstruments(s);
+            loadInstruments(song);
             createTextGridForCollaborator();
-            setProgressBarForCollaborator(Convert.ToDouble(s.Length));
+            setProgressBarForCollaborator(Convert.ToDouble(song.Length));
             setStartPropertiesCollaborator();
+            populateRecordParseCollaborator(song);
         }
 
         private void setProgressBarForSolo()
@@ -111,6 +116,19 @@ namespace demoBand.Gui
             btnListen.IsEnabled = false;
         }
 
+        private void populateRecordParseCollaborator(Song song) {
+            recordParse.ArtistSong = song.Author;
+            recordParse.Songname = song.Name;
+            recordParse.Instrument = instrument.ToString();
+            recordParse.Username = Session.GetInstance().getValueAt("username").ToString();
+        }
+
+        private void populateRecordParseSolo()
+        {
+            recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
+            recordParse.Username = Session.GetInstance().getValueAt("username").ToString();
+            recordParse.Instrument = instrument.ToString();
+        }
 
 
         private void setStartPropertiesCollaborator()
@@ -277,8 +295,6 @@ namespace demoBand.Gui
         }
 
 
-
-
         private void progressBar_Tapped(object sender, TappedRoutedEventArgs e)
         {
             
@@ -390,10 +406,21 @@ namespace demoBand.Gui
         }
 
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            if (mediaRecording == null)
+            {
+                //dodati deo da se obaveti da mora prvo da snimi
+                return;
+            }
+            byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
 
 
+            DataBaseParse.saveSongToRecord(songFile, 
+                                           recordParse.Songname, 
+                                           recordParse.ArtistSong, 
+                                           recordParse.Username, 
+                                           recordParse.Instrument);
         }
 
         private void startSounds()
