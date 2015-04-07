@@ -50,6 +50,8 @@ namespace demoBand
                 string idParse = ParseUser.CurrentUser.ObjectId;
                 string userParse = ParseUser.CurrentUser.Username;
 
+                Session.GetInstance().insertValue("username", userParse);
+
                 Frame.Navigate(typeof(HomePage));
               
             }
