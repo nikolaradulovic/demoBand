@@ -284,7 +284,7 @@ namespace demoBand.Gui
             
                 double MousePosition = e.GetPosition(progressBar).X;
                 this.progressBar.Value = SetProgressBarValue(MousePosition);
-            
+                progressValue = progressBar.Value;
             
 
 
