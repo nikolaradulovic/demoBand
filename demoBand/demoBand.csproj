@@ -146,6 +146,7 @@
     <Compile Include="Util\InstrumentPicture.cs" />
     <Compile Include="Util\Recorder.cs" />
     <Compile Include="ViewModel\MenuView.cs" />
+    <Compile Include="ViewModel\MySongsView.cs" />
     <Compile Include="ViewModel\PracticeView.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
   </ItemGroup>

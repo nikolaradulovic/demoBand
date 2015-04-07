@@ -22,5 +22,7 @@ namespace demoBand.Domen
             get { return songName; }
             set { songName = value; }
         }
+
+        public SongListItem() { }
     }
 }

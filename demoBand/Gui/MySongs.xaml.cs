@@ -23,11 +23,11 @@ namespace demoBand.Gui
     /// </summary>
     public sealed partial class MySongs : Page
     {
-        private List<Song> songsList;
+        
         public MySongs()
         {
             this.InitializeComponent();
-            songsList = new List<Song>();
+            
         }
     }
 }
