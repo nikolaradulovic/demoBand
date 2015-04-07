@@ -175,7 +175,7 @@ namespace demoBand.Gui
             switch (m.Name)
             {
 
-                case "Create new song": createChooseInstrumentDialog();
+                case "Create": createChooseInstrumentDialog();
                     //case "Create new song": Frame.Navigate(typeof(NewSong));
                     break;
                 case "My songs": Frame.Navigate(typeof(MySongs));

@@ -46,9 +46,9 @@ namespace demoBand.ViewModel
         public MenuView()
         {
             listItems = new List<MenuItem>();
-            listItems.Add(new MenuItem("Create new song", "../Assets/Images/Icons/new-song-small.png"));
+            listItems.Add(new MenuItem("Create", "../Assets/Images/Icons/new-song-small.png"));
             listItems.Add(new MenuItem("My songs", "../Assets/Images/Icons/my-songs.png"));
-            listItems.Add(new MenuItem("Discover", "../Assets/Images/Icons/discover.png"));
+            listItems.Add(new MenuItem("Discover", "../Assets/Images/Icons/discover2.png"));
             listItems.Add(new MenuItem("Settings", "../Assets/Images/Icons/settings.png"));
             listItems.Add(new MenuItem("Help", "../Assets/Images/Icons/help.png"));
 
