@@ -374,9 +374,9 @@
         </Grid>
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar Background="White">
-            <AppBarButton Icon="Save" x:Name="btnSave"  Click="btnSave_Click" Foreground="Black" Background="Black" Content="Save song" HorizontalAlignment="Left"/>
-            <AppBarButton Icon="Add" Foreground="Black" Content="New song" HorizontalAlignment="Left"/>
+        <CommandBar Background="DodgerBlue">
+            <AppBarButton Icon="Save" x:Name="btnSave"  Click="btnSave_Click"  Label="Save song" HorizontalAlignment="Left"/>
+            <AppBarButton Icon="Add"  Label="New song" HorizontalAlignment="Left"/>
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
