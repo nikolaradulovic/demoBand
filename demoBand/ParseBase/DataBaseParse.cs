@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Parse;
+using demoBand.Domen;
 
 namespace demoBand.ParseBase
 {
@@ -26,6 +27,44 @@ namespace demoBand.ParseBase
             await record.SaveAsync();
         }
 
+        public async static Task<List<SongListItem>> getSongListItemsForUser(string username)
+        {
+            List<SongListItem> list = new List<SongListItem>();
 
+            // adding where I am author
+            //var _query = from song in ParseObject.GetQuery("Song")
+            //            where song.Get<String>("artist") == username
+            //            select song;
+            //IEnumerable<ParseObject> results = await _query.FindAsync();
+            //foreach (ParseObject resultObject in results)
+            //{
+            //    SongListItem sli = new SongListItem();
+            //    sli.SongName = resultObject.Get<string>("songname");
+            //    sli.ArtistName = resultObject.Get<string>("songartist");
+            //    list.Add(sli);
+            //}
+
+            
+            //adding where I am collaborator
+            var query = from record in ParseObject.GetQuery("Record")
+                        where record.Get<String>("username") == username
+                        select record;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+            foreach (ParseObject resultObject in results)
+            {
+                SongListItem sli = new SongListItem();
+                sli.SongName = resultObject.Get<string>("songname");
+                sli.ArtistName = resultObject.Get<string>("songartist");
+                list.Add(sli);
+            }
+
+            return list;
+        }
+    
+    
     }
+
+
+
+
 }

@@ -9,8 +9,18 @@ namespace demoBand.Domen
 {
     public class SongListItem
     {
-        private Image songImage;
+        private string songName;
         private string artistName;
-        private List<Collaborator> collaboratorList;
+        
+        public string ArtistName
+        {
+            get { return artistName; }
+            set { artistName = value; }
+        }
+        public string SongName
+        {
+            get { return songName; }
+            set { songName = value; }
+        }
     }
 }

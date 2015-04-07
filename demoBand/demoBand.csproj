@@ -110,7 +110,6 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Component\SliderStackPanel.cs" />
-    <Compile Include="Domen\Collaborator.cs" />
     <Compile Include="Domen\Comment.cs" />
     <Compile Include="Domen\Instrument.cs" />
     <Compile Include="Domen\MenuItem.cs" />
