@@ -110,13 +110,18 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Component\SliderStackPanel.cs" />
+    <Compile Include="Domen\Collaborator.cs" />
     <Compile Include="Domen\Comment.cs" />
     <Compile Include="Domen\Instrument.cs" />
     <Compile Include="Domen\MenuItem.cs" />
     <Compile Include="Domen\Player.cs" />
     <Compile Include="Domen\Song.cs" />
+    <Compile Include="Domen\SongListItem.cs" />
     <Compile Include="Gui\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MySongs.xaml.cs">
+      <DependentUpon>MySongs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\NewSong.xaml.cs">
       <DependentUpon>NewSong.xaml</DependentUpon>
@@ -170,6 +175,15 @@
     <Content Include="Assets\Images\Dashboard\dashboard_0002_Bass.png" />
     <Content Include="Assets\Images\Dashboard\dashboard_0003_Piano.png" />
     <Content Include="Assets\Images\Dashboard\dashboard_0004_Layer-2.png" />
+    <Content Include="Assets\Images\Icons\discover.png" />
+    <Content Include="Assets\Images\Icons\discover2.png" />
+    <Content Include="Assets\Images\Icons\help.png" />
+    <Content Include="Assets\Images\Icons\my-songs.png" />
+    <Content Include="Assets\Images\Icons\new-song-small.png" />
+    <Content Include="Assets\Images\Icons\new-song.png" />
+    <Content Include="Assets\Images\Icons\settings.png" />
+    <Content Include="Assets\Images\Instruments\guitar.png" />
+    <Content Include="Assets\Images\Instruments\mic.png" />
     <Content Include="Assets\Images\logo.jpg" />
     <Content Include="Assets\Images\Dashboard\Buttons\play.png" />
     <Content Include="Assets\Json\otherside.txt" />
@@ -192,6 +206,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Gui\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\MySongs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

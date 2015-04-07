@@ -48,13 +48,15 @@
                                    SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}">
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid  HorizontalAlignment="Stretch" Width="350" Height="80">
+                                    <Grid  Width="350" Height="80" >
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="2*"/>
                                             <ColumnDefinition Width="4*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Image Grid.Column="0" Stretch="UniformToFill" x:Name="imgSlika" Source="{Binding ImagePath}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="25" Foreground="DodgerBlue" VerticalAlignment="Center"/>
+                                        <StackPanel Background="DodgerBlue" Grid.Column="0">
+                                            <Image x:Name="imgSlika" Source="{Binding ImagePath}" Margin="0,10,0,10" Height="60" />
+                                        </StackPanel>
+                                        <TextBlock Grid.Column="1" Margin="20,0,0,0" Text="{Binding Name}" FontSize="25" Foreground="DodgerBlue" VerticalAlignment="Center"/>
 
                                     </Grid>
                                 </DataTemplate>

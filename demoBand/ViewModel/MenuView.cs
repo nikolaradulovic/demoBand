@@ -46,11 +46,11 @@ namespace demoBand.ViewModel
         public MenuView()
         {
             listItems = new List<MenuItem>();
-            listItems.Add(new MenuItem("Create new song", ""));
-            listItems.Add(new MenuItem("My songs", ""));
-            listItems.Add(new MenuItem("Discover", ""));
-            listItems.Add(new MenuItem("Settings", ""));
-            listItems.Add(new MenuItem("Help", ""));
+            listItems.Add(new MenuItem("Create new song", "../Assets/Images/Icons/new-song-small.png"));
+            listItems.Add(new MenuItem("My songs", "../Assets/Images/Icons/my-songs.png"));
+            listItems.Add(new MenuItem("Discover", "../Assets/Images/Icons/discover.png"));
+            listItems.Add(new MenuItem("Settings", "../Assets/Images/Icons/settings.png"));
+            listItems.Add(new MenuItem("Help", "../Assets/Images/Icons/help.png"));
 
         }
     }

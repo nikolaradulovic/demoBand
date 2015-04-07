@@ -178,6 +178,8 @@ namespace demoBand.Gui
                 case "Create new song": createChooseInstrumentDialog();
                     //case "Create new song": Frame.Navigate(typeof(NewSong));
                     break;
+                case "My songs": Frame.Navigate(typeof(MySongs));
+                    break;
 
 
             }
