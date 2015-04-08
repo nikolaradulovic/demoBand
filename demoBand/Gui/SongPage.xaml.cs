@@ -47,6 +47,7 @@ namespace demoBand.Gui
         private double progressValue;
         private Song song;
         private RecordParse recordParse;
+        private Boolean textExist;
 
         //private bool progressEnabled;
 
@@ -87,9 +88,25 @@ namespace demoBand.Gui
         {
             song = (Song)Session.GetInstance().getValueAt("song");
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
-            string songViewPath = song.SongViewPath;
-            songView = await SongView.createSongView(songViewPath);
-            loadInstruments(song);
+            //string songViewPath = song.SongViewPath;
+            string songViewP = "";
+            foreach (Instrument i in song.Instruments)
+	        {
+                if (i.TypeOfInstrument == instrument)
+                {
+                    songViewP = i.TextPath;
+                    break;
+                }
+	        }
+            if (songViewP == null) {
+                textExist = false;
+            }
+            else
+            {
+                textExist = true;
+            }
+            songView = await SongView.createSongView(songViewP);
+            await loadInstruments(song);
             createTextGridForCollaborator();
             if (song.Length != null)
             {
@@ -279,8 +296,10 @@ namespace demoBand.Gui
         {
             
             txtProgres.Text = progressBar.Value.ToString();
+            
             int seconds = Convert.ToInt32(progressBar.Value);
-            changeTextGrid(seconds);
+            if (textExist)
+                changeTextGrid(seconds);
             changeProgressText(seconds);
 
             //int secT = seconds % 60;
@@ -450,7 +469,14 @@ namespace demoBand.Gui
 
         public void createTextGridForCollaborator() 
         {
-            stropheGrid = new StropheText(songView);
+            if (textExist) 
+            {
+                stropheGrid = new StropheText(songView);
+            }
+            else
+            {
+                stropheGrid = new StropheText(instrument);
+            }    
         }
         private void addTextGrid(StropheText stropheText)
         {

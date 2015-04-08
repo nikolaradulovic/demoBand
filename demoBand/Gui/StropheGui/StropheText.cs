@@ -38,10 +38,11 @@ namespace demoBand.Gui.StropheGui
             image = new Image();
             formatImage(instrument);
             Children.Add(image);
-            choice = Choice.solo;
-
-
+            //choice = Choice.solo;
         }
+
+        
+
 
         private void formatText()
         {

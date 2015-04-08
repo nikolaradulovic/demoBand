@@ -12,6 +12,13 @@ namespace demoBand.Domen
         private string path;
         private type typeOfInstrument;
         private byte[] audioByteArray;
+        private string textPath;
+
+        public string TextPath
+        {
+            get { return textPath; }
+            set { textPath = value; }
+        }
 
         public byte[] AudioByteArray
         {

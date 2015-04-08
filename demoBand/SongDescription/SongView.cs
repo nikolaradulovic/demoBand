@@ -35,7 +35,15 @@ namespace demoBand.SongDescription
           
             try
             {
-                StorageFile sFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"Assets\Json\otherside.txt");
+                string textPath = "";
+                if (path != null)
+                {
+                    textPath = path.Replace("/", @"\");
+                }
+                StorageFile sFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(textPath);
+                 
+
+                //StorageFile sFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"Assets\Json\otherside.txt");
                  var fileStream = await sFile.OpenStreamForReadAsync();
             using (StreamReader sr = new StreamReader(fileStream))
             {
