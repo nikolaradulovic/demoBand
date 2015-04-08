@@ -16,6 +16,9 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <AppBarButton Icon="Back" x:Name="btnBack" Click="btnBack_Click" />
+        </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>

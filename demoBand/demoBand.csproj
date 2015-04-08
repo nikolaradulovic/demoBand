@@ -160,6 +160,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png" />
