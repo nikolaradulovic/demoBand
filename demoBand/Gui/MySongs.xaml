@@ -18,7 +18,8 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="1">              
                 <GridView x:Name="gridList" Margin="30,0,0,0" DataContext="{Binding Source={StaticResource mySongsView}}"
-                          ItemsSource="{Binding MySongs}">        
+                          ItemsSource="{Binding MySongs}"
+                          ItemClick="gridList_ItemClick">        
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Grid x:Name="gridSong" Width="300" Background="DodgerBlue" Height="80">

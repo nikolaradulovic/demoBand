@@ -29,5 +29,12 @@ namespace demoBand.Gui
             this.InitializeComponent();
             
         }
+
+    
+
+        private void gridList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SongListItem songItem = e.ClickedItem as SongListItem; 
+        }
     }
 }
