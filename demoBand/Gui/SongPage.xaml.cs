@@ -379,20 +379,20 @@ namespace demoBand.Gui
         }
 
 
-        private void txtComment_KeyUp(object sender, KeyRoutedEventArgs e)
-        {
+        //private void txtComment_KeyUp(object sender, KeyRoutedEventArgs e)
+        //{
 
-            if (e.Key == VirtualKey.Enter) {
-                int min = Convert.ToInt32(progressBar.Value) / 60;
-                int sec = Convert.ToInt32(progressBar.Value) % 60;
-                Comment comment = new Comment();
-                comment.Min = min;
-                comment.Sec = sec;
-                comment.Text = txtComment.Text;
-                lstComments.Items.Add(comment);
-                txtComment.Text = "";
-            }
-        }
+        //    if (e.Key == VirtualKey.Enter) {
+        //        int min = Convert.ToInt32(progressBar.Value) / 60;
+        //        int sec = Convert.ToInt32(progressBar.Value) % 60;
+        //        Comment comment = new Comment();
+        //        comment.Min = min;
+        //        comment.Sec = sec;
+        //        comment.Text = txtComment.Text;
+        //        lstComments.Items.Add(comment);
+        //        txtComment.Text = "";
+        //    }
+        //}
 
         private void lstComments_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -435,6 +435,7 @@ namespace demoBand.Gui
             cmbBar.IsOpen = false;
             popunQuestion.IsLightDismissEnabled = true;
             gridSave.Width = mainGrid.ActualWidth;
+            if(mainGrid.ActualHeight/4 >250)
             gridSave.Height = mainGrid.ActualHeight / 4;
 
             popunQuestion.IsOpen = true;
