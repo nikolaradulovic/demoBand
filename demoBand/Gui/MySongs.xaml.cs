@@ -31,7 +31,6 @@ namespace demoBand.Gui
             this.InitializeComponent();
             
         }
-
     
 
         private async void gridList_ItemClick(object sender, ItemClickEventArgs e)

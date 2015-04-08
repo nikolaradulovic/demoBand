@@ -191,6 +191,9 @@
     <Content Include="Assets\Images\Instruments\mic.png" />
     <Content Include="Assets\Images\logo.jpg" />
     <Content Include="Assets\Images\Dashboard\Buttons\play.png" />
+    <Content Include="Assets\Images\MySongs\mysongs.png" />
+    <Content Include="Assets\Images\MySongs\songback.png" />
+    <Content Include="Assets\Json\oChords.txt" />
     <Content Include="Assets\Json\otherside.txt" />
     <Content Include="Assets\Json\practiceSongs.txt" />
     <Content Include="Assets\Logo.scale-100.png" />
