@@ -18,6 +18,7 @@ using demoBand.Model;
 using Parse;
 using demoBand.ParseBase;
 using demoBand.ViewModel;
+using demoBand.Gui.Dialog;
 
 // The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=321224
 
@@ -113,7 +114,8 @@ namespace demoBand.Gui
 
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);
-            CreateMEssageDialog(song);
+            //CreateMEssageDialog(song);
+            createChooseInstrumentDialogForSong(song);
             Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
             //Frame.Navigate(typeof(SongPage));
         }
@@ -130,23 +132,26 @@ namespace demoBand.Gui
 
         }
 
-        private async void createChooseInstrumentDialog()
+        private  void createChooseInstrumentDialogForSong(Song song)
         {
-            //UICommandInvokedHandler a = new UICommandInvokedHandler(probaInvokedHanler);
 
-            var messageDialog = new MessageDialog("Chooe your instrument");
-
-            //messageDialog.Commands.Add(new UICommand("Voice"));
-            //messageDialog.Commands.Add(new UICommand("Guitar"));
-            //messageDialog.Commands.Add(new UICommand("Drums"));
-            //messageDialog.Commands.Add(new UICommand("Piano"));
-            //messageDialog.Commands.Add(new UICommand("Voice", new UICommandInvokedHandler(this.probaInvokedHanler)));
-            messageDialog.Commands.Add(new UICommand("Guitar", new UICommandInvokedHandler(this.probaInvokedHanler)));
-            messageDialog.Commands.Add(new UICommand("Drums", new UICommandInvokedHandler(this.probaInvokedHanler)));
-            messageDialog.Commands.Add(new UICommand("Piano", new UICommandInvokedHandler(this.probaInvokedHanler)));
-            //   messageDialog.Commands.Add(
-            await messageDialog.ShowAsync();
+            List<Instrument> instruments = song.Instruments;
+            InstrumentButton.NavigateEvent += goToSongPage;
+            InstrumentStackPanel sp = new InstrumentStackPanel(instruments);
+            sp.HorizontalAlignment = HorizontalAlignment.Center;
+            stackDialogChoose.Children.Add(sp);
+            arrangePopupMessageDialog();
+            popupDialogChoose.IsOpen = true;
         }
+
+        private void arrangePopupMessageDialog()
+        {
+            mainGrid.Opacity = 0.1;
+            popupDialogChoose.IsLightDismissEnabled = true;
+            stackDialogChoose.Width = mainGrid.ActualWidth;
+            stackDialogChoose.Height = mainGrid.ActualHeight /5;
+        }
+
 
         private void probaInvokedHanler(IUICommand command)
         {
@@ -187,9 +192,9 @@ namespace demoBand.Gui
             switch (m.Name)
             {
 
-                case "Create": createChooseInstrumentDialog();
-                    //case "Create new song": Frame.Navigate(typeof(NewSong));
-                    break;
+                //case "Create": createChooseInstrumentDialogForSong();
+                //    //case "Create new song": Frame.Navigate(typeof(NewSong));
+                //    break;
                 case "My songs": Frame.Navigate(typeof(MySongs));
                     break;
 
@@ -207,6 +212,22 @@ namespace demoBand.Gui
         {
 
         }
+
+        
+
+        public delegate void emptyDelegate();
+
+        private void goToSongPage()
+        {
+            Frame.Navigate(typeof(SongPage));
+        }
+
+        private void popupDialogChoose_Closed(object sender, object e)
+        {
+            mainGrid.Opacity = 1;
+        }
+
+
 
 
 

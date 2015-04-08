@@ -23,20 +23,28 @@
     <!--
         This grid acts as a root panel for the page.
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="mainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
+        <Popup x:Name="popupDialogChoose" IsOpen="False" Closed="popupDialogChoose_Closed" VerticalAlignment="Center">
+            <Grid x:Name="stackDialogChoose" Background="DodgerBlue" >
+                
+            </Grid>
+        </Popup>
         <Hub> 
+            
             <HubSection Width="400" Margin="100,30,0,0" >
+                
                 <HubSection.HeaderTemplate>
                     <DataTemplate>
                         <TextBlock FontSize="42" Foreground="DodgerBlue" Text="Menu"/>
                     </DataTemplate>
                 </HubSection.HeaderTemplate>
                 <DataTemplate>
+                   
                     <Grid Margin="0,20,0,0">
                         <GridView HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstMenu" FontSize="20" 
                                    ItemsSource="{Binding ListItems}"  
