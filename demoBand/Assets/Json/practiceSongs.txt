@@ -16,7 +16,7 @@
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/RHCP-Otherside(Guitar).mp3",
 				"AudioByteArray" : null,
-				"TextPath" : Assets/Json/oChords.txt
+				"TextPath" : "Assets/Json/oChords.txt"
             },
 			{
                 "TypeOfInstrument": 2,
