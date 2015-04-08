@@ -11,7 +11,7 @@ namespace demoBand.ParseBase
     public class DataBaseParse
     {
 
-        public static async void saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument)
+        public static async void saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument, string collaborator)
         {
             ParseFile file = new ParseFile("song.mp3", song);
             await file.SaveAsync();
@@ -23,9 +23,16 @@ namespace demoBand.ParseBase
             record["songartist"] = artist;
             record["username"] = username;
             record["instrument"] = instrument;
+            record["collaborator"] = collaborator;
 
             await record.SaveAsync();
         }
+
+        
+
+
+
+
 
         public async static Task<List<SongListItem>> getSongListItemsForUser(string username)
         {
@@ -47,7 +54,8 @@ namespace demoBand.ParseBase
             
             //adding where I am collaborator
             var query = from record in ParseObject.GetQuery("Record")
-                        where record.Get<String>("username") == username
+                        where record.Get<string>("username") == username 
+                             || record.Get<string>("collaborator") == username
                         select record;
             IEnumerable<ParseObject> results = await query.FindAsync();
             foreach (ParseObject resultObject in results)
@@ -60,8 +68,6 @@ namespace demoBand.ParseBase
 
             return list;
         }
-    
-    
     }
 
 

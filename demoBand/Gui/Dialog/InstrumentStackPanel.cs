@@ -25,6 +25,26 @@ namespace demoBand.Gui.Dialog
             
         }
 
+        public InstrumentStackPanel()
+        {
+            arrangeStackPanel();
+            List<string> instruments = new List<string>();
+            instruments.Add("Voice");
+            instruments.Add("Guitar");
+            instruments.Add("Piano");
+            instruments.Add("Drums");
+            foreach (string instrument in instruments)
+            {
+                InstrumentButton btn = new InstrumentButton(instrument);
+                btn.HorizontalAlignment = HorizontalAlignment.Center;
+                btn.Margin = new Thickness(10, 0, 0, 0);
+                Children.Add(btn);
+            }
+
+        }
+
+
+
         private void arrangeStackPanel()
         {
             Orientation = Orientation.Horizontal;

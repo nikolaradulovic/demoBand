@@ -120,17 +120,7 @@ namespace demoBand.Gui
             //Frame.Navigate(typeof(SongPage));
         }
 
-        private async void CreateMEssageDialog(Song song)
-        {
-            var messageDialog = new MessageDialog("Choose your instrument");
-            for (int i = 0; i < song.Instruments.Count; i++)
-            {
-                messageDialog.Commands.Add(new UICommand(song.Instruments.ElementAt(i).TypeOfInstrument.ToString(), new UICommandInvokedHandler(this.CommandInvokedHanler)));
-            }
-
-            await messageDialog.ShowAsync();
-
-        }
+       
 
         private  void createChooseInstrumentDialogForSong(Song song)
         {
@@ -142,7 +132,21 @@ namespace demoBand.Gui
             stackDialogChoose.Children.Add(sp);
             arrangePopupMessageDialog();
             popupDialogChoose.IsOpen = true;
+            Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
         }
+
+        private void createChooseInsturmentDialogForCreate()
+        {
+            InstrumentButton.NavigateEvent += goToSongPage;
+            InstrumentStackPanel sp = new InstrumentStackPanel();
+            sp.HorizontalAlignment = HorizontalAlignment.Center;
+            stackDialogChoose.Children.Add(sp);
+            arrangePopupMessageDialog();
+            popupDialogChoose.IsOpen = true;
+            Session.GetInstance().insertValue("choice", Choice.solo.ToString());
+        }
+
+
 
         private void arrangePopupMessageDialog()
         {
@@ -192,9 +196,9 @@ namespace demoBand.Gui
             switch (m.Name)
             {
 
-                //case "Create": createChooseInstrumentDialogForSong();
-                //    //case "Create new song": Frame.Navigate(typeof(NewSong));
-                //    break;
+                case "Create": createChooseInsturmentDialogForCreate();
+                    //case "Create new song": Frame.Navigate(typeof(NewSong));
+                    break;
                 case "My songs": Frame.Navigate(typeof(MySongs));
                     break;
 

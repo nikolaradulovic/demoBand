@@ -408,21 +408,17 @@ namespace demoBand.Gui
 
         private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            showPopupDialog();
-
-            //if (mediaRecording == null)
-            //{
-            //    //dodati deo da se obaveti da mora prvo da snimi
-            //    return;
-            //}
-            //byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
-
-
-            //DataBaseParse.saveSongToRecord(songFile, 
-            //                               recordParse.Songname, 
-            //                               recordParse.ArtistSong, 
-            //                               recordParse.Username, 
-            //                               recordParse.Instrument);
+            //dodati da ne moze da se uradi save ako nije snimio nista
+            if (choice == Choice.solo)
+                showPopupDialog();
+            else
+            {
+                await saveSong();
+                //da se doda ne znam ko ce al ja necu,
+                //message dialog: Are you sure you wwant to save?
+            }
+                
+            
         }
 
         public void showPopupDialog() 
@@ -505,6 +501,35 @@ namespace demoBand.Gui
         private void popunQuestion_Closed(object sender, object e)
         {
             mainGrid.Opacity = 1;
+        }
+
+        private async void btnYes_Click(object sender, RoutedEventArgs e)
+        {
+            
+            recordParse.Songname = txtSongName.Text;
+            recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
+            recordParse.Collaborator = txtCollaborator.Text;
+            
+            await saveSong();
+
+            popunQuestion.IsOpen = false;
+
+        }
+
+        private async Task saveSong()
+        {
+            byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
+
+
+            DataBaseParse.saveSongToRecord(songFile,
+                                           recordParse.Songname,
+                                           recordParse.ArtistSong,
+                                           recordParse.Username,
+                                           recordParse.Instrument,
+                                           recordParse.Collaborator
+                                           );
+
+
         }
 
     }

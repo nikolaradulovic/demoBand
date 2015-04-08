@@ -13,6 +13,13 @@ namespace demoBand.ParseBase
         private string artistsong;
         private string username;
         private string instrument;
+        private string collaborator;
+
+        public string Collaborator
+        {
+            get { return collaborator; }
+            set { collaborator = value; }
+        }
 
         public string Instrument
         {
@@ -47,5 +54,9 @@ namespace demoBand.ParseBase
             set { file = value; }
         }
 
+        public RecordParse()
+        {
+            collaborator = "";
+        }
     }
 }
