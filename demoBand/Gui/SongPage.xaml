@@ -259,7 +259,7 @@
         </ControlTemplate>
     </Page.Resources>
 
-    <Grid >
+    <Grid x:Name="mainGrid">
         <Grid Grid.RowSpan="4">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*" />
@@ -372,9 +372,23 @@
                 <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="2"/>
       
         </Grid>
+        <Popup x:Name="popunQuestion" Closed="popunQuestion_Closed" VerticalAlignment="Center" IsOpen="False">
+            <Grid x:Name="gridSave" Background="DarkBlue" >
+                <Grid.RowDefinitions>              
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,50,0" x:Name="stackButtons" Orientation="Vertical">
+                    <TextBlock Grid.Row="1" x:Name="txtQuestion" Text="Enter the song name." FontSize="30"/>
+                    <TextBox x:Name="txtSongName" FontSize="20" Margin="0,10,0,0" />
+                        <Button Content="Save" HorizontalAlignment="Right" Margin="0,10,0,0" Width="80" x:Name="btnYes"/>                           
+                </StackPanel>
+            </Grid>
+        </Popup>
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar Background="DodgerBlue">
+        <CommandBar x:Name="cmbBar" Background="DodgerBlue">
             <AppBarButton Icon="Save" x:Name="btnSave"  Click="btnSave_Click"  Label="Save song" HorizontalAlignment="Left"/>
             <AppBarButton Icon="Add"  Label="New song" HorizontalAlignment="Left"/>
         </CommandBar>

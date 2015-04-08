@@ -408,19 +408,32 @@ namespace demoBand.Gui
 
         private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (mediaRecording == null)
-            {
-                //dodati deo da se obaveti da mora prvo da snimi
-                return;
-            }
-            byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
+            showPopupDialog();
+
+            //if (mediaRecording == null)
+            //{
+            //    //dodati deo da se obaveti da mora prvo da snimi
+            //    return;
+            //}
+            //byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
 
 
-            DataBaseParse.saveSongToRecord(songFile, 
-                                           recordParse.Songname, 
-                                           recordParse.ArtistSong, 
-                                           recordParse.Username, 
-                                           recordParse.Instrument);
+            //DataBaseParse.saveSongToRecord(songFile, 
+            //                               recordParse.Songname, 
+            //                               recordParse.ArtistSong, 
+            //                               recordParse.Username, 
+            //                               recordParse.Instrument);
+        }
+
+        public void showPopupDialog() 
+        {
+            mainGrid.Opacity = 0.1;
+            cmbBar.IsOpen = false;
+            popunQuestion.IsLightDismissEnabled = true;
+            gridSave.Width = mainGrid.ActualWidth;
+            gridSave.Height = mainGrid.ActualHeight / 4;
+
+            popunQuestion.IsOpen = true;
         }
 
         private void startSounds()
@@ -487,6 +500,11 @@ namespace demoBand.Gui
         {
             recorder = new Recorder();
             recorder.startRecording();
+        }
+
+        private void popunQuestion_Closed(object sender, object e)
+        {
+            mainGrid.Opacity = 1;
         }
 
     }
