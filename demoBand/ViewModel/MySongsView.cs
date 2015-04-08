@@ -18,7 +18,7 @@ namespace demoBand.ViewModel
                 return mySongs;
             }
 
-            set
+             set
             {
                 mySongs = value;
                 RaisePropertyChanged("MySongs");
@@ -46,6 +46,11 @@ namespace demoBand.ViewModel
         }
 
         public MySongsView() { }
+
+        public static void setMySongs(List<SongListItem> list) 
+        {
+            mySongs = list;
+        }
 
     }
 }

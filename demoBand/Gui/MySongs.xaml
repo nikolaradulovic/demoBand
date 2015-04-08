@@ -22,9 +22,10 @@
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Grid x:Name="gridSong" Width="300" Background="DodgerBlue" Height="80">
+                                <StackPanel Orientation="Vertical">
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding SongName}"/>
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
-
+                                </StackPanel>
                             </Grid>
                             
                         </DataTemplate>

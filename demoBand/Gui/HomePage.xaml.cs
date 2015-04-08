@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using demoBand.Model;
 using Parse;
+using demoBand.ParseBase;
+using demoBand.ViewModel;
 
 // The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=321224
 
@@ -51,6 +53,13 @@ namespace demoBand.Gui
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+
+        }
+
+        private async void loadMyLoadMySong()
+        {
+            string username = Session.GetInstance().getValueAt("username").ToString();
+            MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
         }
 
 
@@ -68,6 +77,9 @@ namespace demoBand.Gui
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Assign a collection of bindable groups to this.DefaultViewModel["Groups"]
+            loadMyLoadMySong();
+
+
         }
 
         #region NavigationHelper registration
