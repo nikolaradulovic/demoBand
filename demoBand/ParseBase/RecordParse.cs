@@ -11,9 +11,17 @@ namespace demoBand.ParseBase
         private byte[] file;
         private string songname;
         private string artistsong;
+        private double length;
         private string username;
         private string instrument;
         private string collaborator;
+        private Uri urlFile;
+
+        public Uri UrlFile
+        {
+            get { return urlFile; }
+            set { urlFile = value; }
+        }
 
         public string Collaborator
         {
@@ -53,6 +61,13 @@ namespace demoBand.ParseBase
             get { return file; }
             set { file = value; }
         }
+
+        public double Length
+        {
+            get { return length; }
+            set { length = value; }
+        }
+
 
         public RecordParse()
         {

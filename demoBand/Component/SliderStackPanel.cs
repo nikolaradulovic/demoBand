@@ -17,16 +17,40 @@ namespace demoBand.Component
     public class SliderStackPanel : StackPanel
     {
         private Instrument instrument;
-
         private Player player;
 
-        public SliderStackPanel(Instrument instrument)
+        public Instrument Instrument
         {
-            this.instrument = instrument;
-            player = new Player(new Uri(instrument.Path));
-
-
+            get { return instrument; }
+            set { instrument = value; }
         }
+
+        
+
+        public Player Player
+        {
+            get { return player; }
+            set { player = value; }
+        }
+
+        
+
+        public async  static Task<SliderStackPanel> createSliderStackPanel(Instrument instrument)
+        {
+            SliderStackPanel stack = new SliderStackPanel();
+            stack.Instrument = instrument;
+            //if (instrument.AudioByteArray == null)
+            //{
+                stack.Player = new Player(new Uri(instrument.Path));
+            //}
+            //else
+            //{
+            //    stack.Player = await Player.createPlayer(instrument.AudioByteArray);
+            //}
+            return stack;
+        }
+
+
 
         private StackPanel CreateStackPanelForSlider()
         {

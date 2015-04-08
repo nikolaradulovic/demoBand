@@ -91,7 +91,14 @@ namespace demoBand.Gui
             songView = await SongView.createSongView(songViewPath);
             loadInstruments(song);
             createTextGridForCollaborator();
-            setProgressBarForCollaborator(Convert.ToDouble(song.Length));
+            if (song.Length != null)
+            {
+                setProgressBarForCollaborator(Convert.ToDouble(song.Length));
+            }
+            else
+            {
+                setProgressBarForCollaborator(Convert.ToDouble(Session.GetInstance().getValueAt("length").ToString()));
+            }
             setStartPropertiesCollaborator();
             populateRecordParseCollaborator(song);
         }
@@ -121,6 +128,7 @@ namespace demoBand.Gui
             recordParse.Songname = song.Name;
             recordParse.Instrument = instrument.ToString();
             recordParse.Username = Session.GetInstance().getValueAt("username").ToString();
+            recordParse.Length = Convert.ToDouble(song.Length);
         }
 
         private void populateRecordParseSolo()
@@ -157,12 +165,12 @@ namespace demoBand.Gui
             }
         }
 
-        private void loadInstruments(Song s)
+        private async Task loadInstruments(Song s)
         {
             
             foreach (Instrument i in s.Instruments)
             {
-                SliderStackPanel sliderPanel = new SliderStackPanel(i);
+                SliderStackPanel sliderPanel = await SliderStackPanel.createSliderStackPanel(i);
                 if (i.TypeOfInstrument == instrument)
                     sliderPanel.SetVolumeSlider(0);
                 sliderPanel.Initilize();
@@ -509,7 +517,7 @@ namespace demoBand.Gui
             recordParse.Songname = txtSongName.Text;
             recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
             recordParse.Collaborator = txtCollaborator.Text;
-            
+            recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
             await saveSong();
 
             popunQuestion.IsOpen = false;
@@ -519,14 +527,15 @@ namespace demoBand.Gui
         private async Task saveSong()
         {
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
-
+           
 
             DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
                                            recordParse.Username,
                                            recordParse.Instrument,
-                                           recordParse.Collaborator
+                                           recordParse.Collaborator,
+                                           recordParse.Length
                                            );
 
 

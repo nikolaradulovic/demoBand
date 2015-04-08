@@ -19,6 +19,7 @@
             <Grid Grid.Row="1">              
                 <GridView x:Name="gridList" Margin="30,0,0,0" DataContext="{Binding Source={StaticResource mySongsView}}"
                           ItemsSource="{Binding MySongs}"
+                          IsItemClickEnabled="True"
                           ItemClick="gridList_ItemClick">        
                     <GridView.ItemTemplate>
                         <DataTemplate>

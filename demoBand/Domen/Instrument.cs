@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage.Streams;
 
 namespace demoBand.Domen
 {
@@ -10,7 +11,13 @@ namespace demoBand.Domen
     {
         private string path;
         private type typeOfInstrument;
-        
+        private byte[] audioByteArray;
+
+        public byte[] AudioByteArray
+        {
+            get { return audioByteArray; }
+            set { audioByteArray = value; }
+        }
 
         public type TypeOfInstrument
         {
@@ -30,6 +37,15 @@ namespace demoBand.Domen
            // this.tipInstrumenta = tipInstrumenta;
         }
 
+        //public Instrument(byte[] audioByteArray)
+        //{
+        //    this.audioByteArray = audioByteArray;
+        //}
+
+        public Instrument()
+        {
+
+        }
 
     }
      public enum type

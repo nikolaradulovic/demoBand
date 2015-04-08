@@ -1,4 +1,6 @@
 ﻿using demoBand.Domen;
+using demoBand.Model;
+using demoBand.ParseBase;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,9 +34,35 @@ namespace demoBand.Gui
 
     
 
-        private void gridList_ItemClick(object sender, ItemClickEventArgs e)
+        private async void gridList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            SongListItem songItem = e.ClickedItem as SongListItem; 
+            SongListItem songItem = e.ClickedItem as SongListItem;
+            List<RecordParse> list = await DataBaseParse.getAllFiles(songItem.SongName, songItem.ArtistName);
+
+            Song s = new Song();
+            s.Name = songItem.SongName;
+            s.Author = songItem.ArtistName;
+            List<Instrument> instruments = new List<Instrument>();
+            foreach (RecordParse rp in list)
+            {
+                Instrument i = new Instrument();
+                i.AudioByteArray = rp.File;
+                i.TypeOfInstrument = (type)Enum.Parse(typeof(type), rp.Instrument);
+                i.Path = rp.UrlFile.ToString();
+                s.Length = rp.Length.ToString();
+                instruments.Add(i);
+            }
+            s.Instruments = instruments;
+            Session.GetInstance().insertValue("song", s);
+            Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
+            
+
+            //hardkodovan instrument
+            Session.GetInstance().insertValue("instrument", type.Voice.ToString());
+            //
+            Frame.Navigate(typeof(SongPage));
+
+
         }
     }
 }
