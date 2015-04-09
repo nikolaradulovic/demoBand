@@ -52,7 +52,7 @@
             </Grid>
             <Grid Grid.Row="2">
                 <GridView x:Name="gridListCollab" DataContext="{Binding Source={StaticResource mySongsView}}"
-                          ItemsSource="{Binding MySongs}"
+                          ItemsSource="{Binding MyCollaborations}"
                           IsItemClickEnabled="True"
                           ItemClick="gridList_ItemClick">
                     <GridView.ItemTemplate>
