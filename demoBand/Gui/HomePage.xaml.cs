@@ -201,6 +201,9 @@ namespace demoBand.Gui
                     break;
                 case "My songs": Frame.Navigate(typeof(MySongs));
                     break;
+                case "Discover": Frame.Navigate(typeof(CollaborationSong));
+                    break;
+
 
 
             }

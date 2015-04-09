@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="demoBand.Gui.CollaborationSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:demoBand.Gui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="mainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <AppBarButton Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnBack_Click" Grid.Row="0" x:Name="btnBack" Icon="Back"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>      
+            </Grid.RowDefinitions> 
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1">
+                    <TextBlock x:Name="txtInstrument" Text="Choose your instrument:" FontSize="20"/>
+                    <RadioButton x:Name="radioButton1" Margin="0,30,0,0" Content="Voice" GroupName="instrumentGroup" Checked="RadioButton_Checked"/>
+                    <RadioButton x:Name="radioButton2"  Content="Guitar" GroupName="instrumentGroup" Checked="RadioButton_Checked"/>
+                    <RadioButton x:Name="radioButton3"  Content="Drums" GroupName="instrumentGroup" Checked="RadioButton_Checked"/>
+                    <RadioButton x:Name="radioButton4"  Content="Piano" GroupName="instrumentGroup" Checked="RadioButton_Checked"/>
+                    <Button x:Name="btnSave" Content="Start" Width="100" Click="btnSave_Click" Margin="0,20,0,0" HorizontalAlignment="Right" Background="DodgerBlue" />
+                    <TextBlock x:Name="txtStatus" Margin="0,5,0,0" FontSize="20" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

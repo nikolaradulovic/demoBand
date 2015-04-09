@@ -39,7 +39,7 @@
                         <DataTemplate>
                             <Grid x:Name="gridSong" Width="250" Height="100">
                                 <Grid.Background>
-                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png" Opacity="0.7" />   
+                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />   
                                 </Grid.Background>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding SongName}"/>

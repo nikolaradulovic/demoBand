@@ -116,6 +116,10 @@
     <Compile Include="Domen\Player.cs" />
     <Compile Include="Domen\Song.cs" />
     <Compile Include="Domen\SongListItem.cs" />
+    <Compile Include="Gui\CollaborationInstruments\InstrumentCollaborators.cs" />
+    <Compile Include="Gui\CollaborationSong.xaml.cs">
+      <DependentUpon>CollaborationSong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gui\Dialog\InstrumentButton.cs" />
     <Compile Include="Gui\Dialog\InstrumentStackPanel.cs" />
     <Compile Include="Gui\HomePage.xaml.cs">
@@ -213,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Gui\CollaborationSong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gui\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -87,20 +87,18 @@
                                    SelectedItem="">
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Background="LightGray" Width="140" Height="140">
+                                    <Grid Width="140" Height="140">
+                                        <Grid.Background>
+                                            <ImageBrush Stretch="Fill" ImageSource="{Binding ImagePath}" />
+                                        </Grid.Background>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="2*"/>
                                             <RowDefinition Height="4*"/>
+                                            <RowDefinition Height="2*"/>
                                         </Grid.RowDefinitions>
-                                        <StackPanel Grid.Row="0" Background="DodgerBlue">
-                                            <TextBlock FontSize="14" Grid.Row="0"  Text="{Binding Author}" Width="100" />
-                                            <TextBlock FontSize="14" TextWrapping="NoWrap" Grid.Row="1" Text="{Binding Name}" Width="100" />
-                                        </StackPanel>
-                                        <StackPanel Grid.Row="1" >
-                                            <StackPanel.Background>
-                                                <ImageBrush Stretch="Fill" ImageSource="{Binding ImagePath}" />
-                                            </StackPanel.Background>
-                                        </StackPanel>
+                                        <StackPanel Grid.Row="1" Background="DodgerBlue" Opacity="0.7">
+                                            <TextBlock FontSize="14" Text="{Binding Name}" Width="100" FontWeight="Bold" />
+                                            <TextBlock FontSize="14" Text="{Binding Author}" Width="100" />
+                                        </StackPanel> 
                                     </Grid>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
@@ -112,8 +110,8 @@
         </Hub>
     </Grid>
     <Page.BottomAppBar>
-        <CommandBar>
-            <AppBarButton Content="Logout" x:Name="btnLogout" Click="btnLogout_Click" />
+        <CommandBar Background="DodgerBlue">
+            <AppBarButton Label="Logout" Icon="GoToStart" x:Name="btnLogout" Click="btnLogout_Click" />
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
