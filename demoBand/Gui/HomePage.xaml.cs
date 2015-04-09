@@ -60,7 +60,10 @@ namespace demoBand.Gui
         private async void loadMyLoadMySong()
         {
             string username = Session.GetInstance().getValueAt("username").ToString();
-            MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
+            MySongsView.setMySongs(await DataBaseParse.getSongListItemAuthor(username));
+            MySongsView.setCollaboratorSongs(await DataBaseParse.getSongListItemCollaborator(username));
+
+            //MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
         }
 
 

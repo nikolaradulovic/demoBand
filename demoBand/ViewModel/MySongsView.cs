@@ -10,7 +10,7 @@ namespace demoBand.ViewModel
     public class MySongsView: ViewModelBase
     {
         private static List<SongListItem> mySongs;
-        private static List<SongListItem> myCollaborations;
+        private static List<SongListItem> collaborations;
 
         public List<SongListItem> MySongs
         {
@@ -46,17 +46,17 @@ namespace demoBand.ViewModel
 
         }
 
-        public List<SongListItem> MyCollaborations
+        public List<SongListItem> Collaborations
         {
             get
             {
-                return myCollaborations;
+                return collaborations;
             }
 
             set
             {
-                myCollaborations = value;
-                RaisePropertyChanged("MyCollaborations");
+                collaborations = value;
+                RaisePropertyChanged("Collaborations");
             }
         }
 
@@ -85,6 +85,11 @@ namespace demoBand.ViewModel
         public static void setMySongs(List<SongListItem> list) 
         {
             mySongs = list;
+        }
+
+        public static void setCollaboratorSongs(List<SongListItem> list)
+        {
+            collaborations = list;
         }
 
     }

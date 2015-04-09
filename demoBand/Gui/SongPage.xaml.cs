@@ -66,6 +66,10 @@ namespace demoBand.Gui
         {
             recordParse = new RecordParse();
             players = new Dictionary<type, Player>();
+            instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            //createBackgroundImage(instrument);
+
+
             progressValue = 0;
 
             choice = (Choice)Enum.Parse(typeof(Choice), (string)Session.GetInstance().getValueAt("choice"));
@@ -76,9 +80,34 @@ namespace demoBand.Gui
                 arrangeForsolo();
         }
 
+        private void createBackgroundImage(type instrument)
+        {
+            Image img = new Image();
+            Uri uri;
+
+            switch (instrument)
+            {
+                case type.Voice: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                    break;
+                case type.Guitar: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                    break;
+                case type.Drums: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                    break;
+                case type.Piano: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                    break;
+            }
+
+            uri = new Uri(this.BaseUri, song.ImagePath);
+            
+            BitmapImage bp = new BitmapImage();
+            bp.UriSource = uri;
+            imgBrushBackground.ImageSource = bp;
+            
+            }
+
         private void arrangeForsolo()
         {
-            instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            //instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             stropheGrid = new StropheText(instrument);
             setProgressBarForSolo();
             setStartPropertiesSolo();
@@ -105,9 +134,10 @@ namespace demoBand.Gui
             BitmapImage bp = new BitmapImage();
             bp.UriSource = uri;
             return bp;
-           
-            
+ 
         }
+
+        
 
         private async void arrangeForCollaborator()
         {
@@ -116,7 +146,7 @@ namespace demoBand.Gui
             imgLogo.Source = createImage(song);
             txtTitle.Text = song.Name;
             txtArtist.Text = song.Author;
-            instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            //instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             //string songViewPath = song.SongViewPath;
             string songViewP = "";
             foreach (Instrument i in song.Instruments)
@@ -147,6 +177,7 @@ namespace demoBand.Gui
             }
             setStartPropertiesCollaborator();
             populateRecordParseCollaborator(song);
+            
         }
 
         private void setProgressBarForSolo()

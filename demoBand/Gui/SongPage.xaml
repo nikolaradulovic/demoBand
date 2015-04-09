@@ -270,7 +270,7 @@
             </Grid.RowDefinitions>
             <Grid x:Name="gridBackground" Grid.Row="0" >
                 <Grid.Background>
-                    <ImageBrush ImageSource="../Assets/Images/background-now-playing.png"/>
+                    <ImageBrush x:Name="imgBrushBackground"  ImageSource="../Assets/Images/background-now-playing.png"/>
                 </Grid.Background>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>

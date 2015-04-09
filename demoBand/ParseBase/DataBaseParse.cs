@@ -35,6 +35,40 @@ namespace demoBand.ParseBase
         }
 
 
+        public async static Task<List<SongListItem>> getSongListItemAuthor(string username)
+        {
+            List<SongListItem> list = new List<SongListItem>();
+            var query = from song in ParseObject.GetQuery("Record")
+                         where song.Get<String>("songartist") == username
+                         select song;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+            foreach (ParseObject resultObject in results)
+            {
+                SongListItem sli = new SongListItem();
+                sli.SongName = resultObject.Get<string>("songname");
+                sli.ArtistName = resultObject.Get<string>("songartist");
+                list.Add(sli);
+            }
+            return list;
+        }
+
+        public async static Task<List<SongListItem>> getSongListItemCollaborator(string username)
+        {
+            List<SongListItem> list = new List<SongListItem>();
+            var query = from song in ParseObject.GetQuery("Record")
+                        where song.Get<String>("collaborator") == username
+                        select song;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+            foreach (ParseObject resultObject in results)
+            {
+                SongListItem sli = new SongListItem();
+                sli.SongName = resultObject.Get<string>("songname");
+                sli.ArtistName = resultObject.Get<string>("songartist");
+                list.Add(sli);
+            }
+            return list;
+        }
+
 
 
 
