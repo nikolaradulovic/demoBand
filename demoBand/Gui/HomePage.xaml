@@ -25,7 +25,7 @@
     -->
     <Grid x:Name="mainGrid">
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/Backgrounds/home background.png"/>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/home-back.png"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>

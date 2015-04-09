@@ -167,6 +167,7 @@
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
     <Content Include="Assets\Images\Backgrounds\home background.png" />
+    <Content Include="Assets\Images\Backgrounds\home-back.png" />
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png" />
