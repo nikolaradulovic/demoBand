@@ -25,6 +25,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -84,9 +85,37 @@ namespace demoBand.Gui
             populateRecordParseSolo();
         }
 
+        //private void createLeftGrid(Song song)
+        //{
+        //    SongLogo songLogo = new SongLogo();
+        //    songLogo.Artist = song.Author;
+        //    songLogo.Title = song.Name;
+        //    BitmapImage bp = new BitmapImage();
+        //    bp.UriSource = new Uri(song.ImagePath);
+        //    Image img = new Image();
+        //    img.Source = bp;
+        //    songLogo.LogoImage = img;
+        //}
+
+        private BitmapImage createImage(Song song)
+        {
+
+            Image img = new Image();
+            Uri uri = new Uri(this.BaseUri, song.ImagePath);
+            BitmapImage bp = new BitmapImage();
+            bp.UriSource = uri;
+            return bp;
+           
+            
+        }
+
         private async void arrangeForCollaborator()
         {
             song = (Song)Session.GetInstance().getValueAt("song");
+            //createLeftGrid(song);
+            imgLogo.Source = createImage(song);
+            txtTitle.Text = song.Name;
+            txtArtist.Text = song.Author;
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             //string songViewPath = song.SongViewPath;
             string songViewP = "";
