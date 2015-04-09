@@ -1,4 +1,6 @@
-﻿using System;
+﻿using demoBand.Domen;
+using demoBand.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace demoBand.Gui.CollaborationInstruments
     public class InstrumentCollaborators: StackPanel
     {
 
-        private List<string> instrumentList;
+        private List<Collaborator> collaborators;
         public InstrumentCollaborators() 
         {
             loadInstrumentList();

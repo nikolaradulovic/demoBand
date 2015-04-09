@@ -74,40 +74,7 @@ namespace demoBand.ParseBase
 
 
 
-        public async static Task<List<SongListItem>> getSongListItemsForUser(string username)
-        {
-            List<SongListItem> list = new List<SongListItem>();
-
-            // adding where I am author
-            //var _query = from song in ParseObject.GetQuery("Song")
-            //            where song.Get<String>("artist") == username
-            //            select song;
-            //IEnumerable<ParseObject> results = await _query.FindAsync();
-            //foreach (ParseObject resultObject in results)
-            //{
-            //    SongListItem sli = new SongListItem();
-            //    sli.SongName = resultObject.Get<string>("songname");
-            //    sli.ArtistName = resultObject.Get<string>("songartist");
-            //    list.Add(sli);
-            //}
-
-
-            //adding where I am collaborator
-            var query = from record in ParseObject.GetQuery("Record")
-                        where record.Get<string>("username") == username
-                             || record.Get<string>("collaborator") == username
-                        select record;
-            IEnumerable<ParseObject> results = await query.FindAsync();
-            foreach (ParseObject resultObject in results)
-            {
-                SongListItem sli = new SongListItem();
-                sli.SongName = resultObject.Get<string>("songname");
-                sli.ArtistName = resultObject.Get<string>("songartist");
-                list.Add(sli);
-            }
-
-            return list;
-        }
+        
 
 
         public async static Task<List<RecordParse>> getAllFiles(string songname, string artistsong)
