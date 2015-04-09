@@ -23,7 +23,10 @@
     <!--
         This grid acts as a root panel for the page.
     -->
-    <Grid x:Name="mainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="mainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/home background.png"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
