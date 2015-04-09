@@ -27,10 +27,7 @@ namespace demoBand.Gui
             this.InitializeComponent();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-                       
-        }
+  
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -38,29 +35,6 @@ namespace demoBand.Gui
                 Frame.GoBack();
         }
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-            if (radioButton1.IsChecked == true)
-            {
-                txtStatus.Text = "First button is check";
-            }
-
-            else if (radioButton2.IsChecked == true)
-            {
-                txtStatus.Text = "Seconds button is check";
-            }
-            else if (radioButton3.IsChecked == true)
-            {
-                txtStatus.Text = "Third button is check";
-            }
-            else if (radioButton4.IsChecked == true)
-            {
-                txtStatus.Text = "Fourth button is check";
-            }
-            else
-            {
-                txtStatus.Text = "Select an instrument";
-            }
-        }
+      
     }
 }

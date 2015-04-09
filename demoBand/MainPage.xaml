@@ -7,12 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#1D1D1D" KeyUp="Grid_KeyUp" Height="Auto" Width="Auto">
+    <Grid KeyUp="Grid_KeyUp" Height="Auto" Width="Auto">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Images/Backgrounds/login-background.png"/>
+        </Grid.Background>
         <Grid Grid.ColumnSpan="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="4*"></ColumnDefinition>
-                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -37,9 +40,11 @@
                 <TextBox x:Name="txtUser"  VerticalAlignment="Center" Grid.Row="3" FontSize="20"  />
                 <TextBlock x:Name="lblPass" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="4" Text="Password:"  FontSize="20"/>
                 <PasswordBox x:Name="txtPassword" VerticalAlignment="Center" Grid.Row="5" FontSize="20" />
-                <TextBlock x:Name="lblAccount" Tapped="lblAccount_Tapped" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="6" Text="Create Account" FontSize="20" >
-
-                </TextBlock>
+                <StackPanel Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Left">
+                    <SymbolIcon  x:Name="btnCreate" VerticalAlignment="Bottom" Margin="0,0,5,0" Symbol="Add"/> 
+                    <TextBlock x:Name="lblAccount" Tapped="lblAccount_Tapped" Foreground="DodgerBlue" VerticalAlignment="Bottom" Text="Create Account" FontSize="20"/>
+                </StackPanel>
+                
                 <Button x:Name="btnLogin" Background="DodgerBlue" Content="Login" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Click="btnLogin_Click"/>
                 <TextBlock x:Name="lblStatus" TextWrapping="Wrap"  HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="20" Grid.Row="8"/>
             </Grid>
