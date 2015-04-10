@@ -232,6 +232,13 @@ namespace demoBand.Gui
         {
             progressValue += 0.1;
             changeProgressText((int)progressValue);
+
+            //da se prekine ako dodje do maksimuma
+            if (progressValue > progressBar.Maximum)
+                btnStop_Click(null, null);
+
+
+            //
             //progressBar.Value += 0.1;
             // ovo treba promeniti da radi,
             // timer tick treba d apovecava vrednost
@@ -604,7 +611,8 @@ namespace demoBand.Gui
             if (choice == Choice.solo)
                 recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
             else { } //vec je setovano u parse object
-            recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
+            if (choice == Choice.solo)
+                recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
             await saveSong();
 
             popunQuestion.IsOpen = false;
