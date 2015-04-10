@@ -26,7 +26,19 @@
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="2*"/>      
             </Grid.RowDefinitions> 
-         
+            <Grid Grid.Row="0" x:Name="gridPanels">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="voiceGrid" Grid.Column="0"/>
+                <Grid x:Name="guitarGrid" Grid.Column="1"/>
+                <Grid x:Name="drumsGrid" Grid.Column="2"/>
+                <Grid x:Name="pianoGrid" Grid.Column="3"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

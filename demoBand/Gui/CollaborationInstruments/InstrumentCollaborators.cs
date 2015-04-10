@@ -17,6 +17,12 @@ namespace demoBand.Gui.CollaborationInstruments
 
         private List<Collaborator> collaborators;
         private ListView listViewCollaborators;
+
+        public ListView ListViewCollaborators
+        {
+            get { return listViewCollaborators; }
+            set { listViewCollaborators = value; }
+        }
         private type instrumentType;
 
        

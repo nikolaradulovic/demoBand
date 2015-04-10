@@ -64,10 +64,10 @@ namespace demoBand.Gui
         private void populatePageWithList()
         {
 
-            collaboration_Grid.Children.Add(new InstrumentCollaborators(voiceList, type.Voice));
-            collaboration_Grid.Children.Add(new InstrumentCollaborators(guitarList, type.Guitar));
-            collaboration_Grid.Children.Add(new InstrumentCollaborators(drumList, type.Drums));
-            collaboration_Grid.Children.Add(new InstrumentCollaborators(pianoList, type.Piano));
+            voiceGrid.Children.Add(new InstrumentCollaborators(voiceList, type.Voice));
+            guitarGrid.Children.Add(new InstrumentCollaborators(guitarList, type.Guitar));
+            drumsGrid.Children.Add(new InstrumentCollaborators(drumList, type.Drums));
+            pianoGrid.Children.Add(new InstrumentCollaborators(pianoList, type.Piano));
         }
 
 
