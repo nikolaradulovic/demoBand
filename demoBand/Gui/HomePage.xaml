@@ -25,7 +25,7 @@
     -->
     <Grid x:Name="mainGrid">
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/Backgrounds/home-back.png"/>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/collaborator picker background.png"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -39,11 +39,11 @@
         </Popup>
         <Hub> 
             
-            <HubSection Width="400" Margin="100,30,0,0" >
+            <HubSection Width="400" Margin="100,-20,0,0" >
                 
                 <HubSection.HeaderTemplate>
                     <DataTemplate>
-                        <TextBlock FontSize="42" Foreground="DodgerBlue" Text="Menu"/>
+                        <TextBlock FontSize="42" Foreground="White" Text="Menu"/>
                     </DataTemplate>
                 </HubSection.HeaderTemplate>
                 <DataTemplate>
@@ -74,10 +74,10 @@
                     </Grid>
                 </DataTemplate>
             </HubSection>
-            <HubSection Width="800" Margin="0,30,0,0">
+            <HubSection Width="800" Margin="0,-20,0,0">
                 <HubSection.HeaderTemplate>
                     <DataTemplate>
-                        <TextBlock FontSize="42" Margin="5,0,0,0" Foreground="DodgerBlue" Text="Practice"/>
+                        <TextBlock FontSize="42" Margin="5,0,0,0" Foreground="White" Text="Practice"/>
                     </DataTemplate>
                 </HubSection.HeaderTemplate>
                 <DataTemplate>

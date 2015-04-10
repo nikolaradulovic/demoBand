@@ -9,7 +9,7 @@
 
     <Grid x:Name="mainGrid">
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/Backgrounds/collaborator picker background.png"/>
+            <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -39,10 +39,23 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="voiceGrid" Margin="20,20,0,0" Grid.Row="1" Grid.Column="0"/>
-                <Grid x:Name="guitarGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="1"/>
-                <Grid x:Name="drumsGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="2"/>
-                <Grid x:Name="pianoGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="3"/>
+                <Grid x:Name="voiceGrid" Margin="0,40,0,0" Grid.Row="1" Grid.Column="0">
+                    <GridView x:Name="gridViewVoice">
+                    </GridView>
+                </Grid>
+                <Grid x:Name="guitarGrid" Margin="0,40,0,0"  Grid.Row="1" Grid.Column="1">
+                    <GridView x:Name="gridViewGuitar">
+                    </GridView>
+                </Grid>
+                <Grid x:Name="drumsGrid" Margin="0,40,0,0"  Grid.Row="1" Grid.Column="2">
+                    <GridView x:Name="gridViewDrums">
+                    </GridView>
+                </Grid>
+                <Grid x:Name="pianoGrid" Margin="0,40,0,0"  Grid.Row="1" Grid.Column="3">
+                    <GridView x:Name="gridViewPiano">
+                        <Border BorderThickness="2" BorderBrush="Azure"></Border>
+                    </GridView>
+                </Grid>
                 <Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,14,0,0"/>
                 <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
                     <Image x:Name="imgMic" Source="../Assets/Images/Dashboard/dashboard_0000_Forma-1.png" />

@@ -13,30 +13,26 @@ using Windows.UI.Xaml.Media;
 
 namespace demoBand.Gui.CollaborationInstruments
 {
-    public class InstrumentCollaborators: StackPanel
+    public class InstrumentCollaborators
     {
 
         private List<Collaborator> collaborators;
-        private ListView listViewCollaborators;
+        private List<GridViewItemCollaborator> gridItemColl;
         private type instrumentType;
-        private ListViewItemCollaborator choosenCollaborator;
+        private GridViewItemCollaborator choosenCollaborator;
 
-        public type InstrumentType1
+        public type InstrumentType
         {
             get { return instrumentType; }
             set { instrumentType = value; }
         }
-       
 
-
-        public ListView ListViewCollaborators
+        public List<GridViewItemCollaborator> GridItemColl
         {
-            get { return listViewCollaborators; }
-            set { listViewCollaborators = value; }
+            get { return gridItemColl; }
+            set { gridItemColl = value; }
         }
-        
 
-       
 
         public InstrumentCollaborators(List<Collaborator> collaborators, type instrumentType) 
         {
@@ -46,36 +42,45 @@ namespace demoBand.Gui.CollaborationInstruments
 
             choosenCollaborator = null;
 
-            populateListView();
+            populateList();
 
-            arrangeStack();
+           
 
 
-            ((global::Windows.UI.Xaml.Controls.ListViewBase)(listViewCollaborators)).ItemClick += clickItem;
-            ((global::Windows.UI.Xaml.UIElement)(listViewCollaborators)).RightTapped += rightClickItem;
-            ((global::Windows.UI.Xaml.Controls.Primitives.Selector)(listViewCollaborators)).SelectionChanged+=selectionChanged;
+            //((global::Windows.UI.Xaml.Controls.ListViewBase)(listViewCollaborators)).ItemClick += clickItem;
+            //((global::Windows.UI.Xaml.UIElement)(listViewCollaborators)).RightTapped += rightClickItem;
+            //((global::Windows.UI.Xaml.Controls.Primitives.Selector)(listViewCollaborators)).SelectionChanged+=selectionChanged;
         }
 
-        private void populateListView()
+        private void populateList()
         {
-            listViewCollaborators = new ListView();
+            //listViewCollaborators = new ListView();
 
             //listViewCollaborators.IsItemClickEnabled = true;
             //listViewCollaborators.IsRightTapEnabled = true;
             //listViewCollaborators.IsEnabled = true;
             
             
-            listViewCollaborators.Items.Add(createMeAsCollaborator());
+            //listViewCollaborators.Items.Add(createMeAsCollaborator());
+            //foreach (Collaborator coll in collaborators)
+            //{
+            //    listViewCollaborators.Items.Add(new GridViewItemCollaborator(coll));
+            //}
+
+            gridItemColl = new List<GridViewItemCollaborator>();
+            gridItemColl.Add(createMeAsCollaborator());
+
             foreach (Collaborator coll in collaborators)
             {
-                listViewCollaborators.Items.Add(new ListViewItemCollaborator(coll));
+                gridItemColl.Add(new GridViewItemCollaborator(coll));
             }
 
-            Children.Add(listViewCollaborators);
+
+            
             
         }
 
-        private ListViewItemCollaborator createMeAsCollaborator()
+        private GridViewItemCollaborator createMeAsCollaborator()
         {
             Instrument ins = new Instrument();
             string content = null;
@@ -92,7 +97,8 @@ namespace demoBand.Gui.CollaborationInstruments
             Collaborator coll = new Collaborator();
             coll.CollaboratorName = content;
             
-            ListViewItemCollaborator item = new ListViewItemCollaborator(coll);
+            GridViewItemCollaborator item = new GridViewItemCollaborator(coll);
+           
             return item;
         }
 
@@ -101,52 +107,42 @@ namespace demoBand.Gui.CollaborationInstruments
 
 
 
-        private void arrangeStack()
-        {
-            Orientation = Orientation.Horizontal;
        
 
-
-        }
-
-        public type InstrumentType
-        {
-            get { return instrumentType; }
-            set { instrumentType = value; }
-        }
+     
        
 
-        public void clickItem(object sender, ItemClickEventArgs e)
-        {
-            ListViewItem lv = e.ClickedItem as ListViewItem;
-            lv.IsSelected = true;
-            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
-            {
-                Observer.getInstance().notifyAll(this);
-            }
-        }
+        //public void clickItem(object sender, ItemClickEventArgs e)
+        //{
+        //    ListViewItem lv = e.ClickedItem as ListViewItem;
+        //    lv.IsSelected = true;
+        //    if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+        //    {
+        //        Observer.getInstance().notifyAll(this);
+        //    }
+        //}
 
-        public void rightClickItem(object sender, RightTappedRoutedEventArgs e)
-        {
-            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
-            {
-                Observer.getInstance().notifyAll(this);
-            }
-        }
-
-
-        public void selectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            choosenCollaborator = listViewCollaborators.SelectedItem as ListViewItemCollaborator;
-            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
-            {
-                Observer.getInstance().notifyAll(this);
-            }
-        }
+        //public void rightClickItem(object sender, RightTappedRoutedEventArgs e)
+        //{
+        //    if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+        //    {
+        //        Observer.getInstance().notifyAll(this);
+        //    }
+        //}
 
 
+        //public void selectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    choosenCollaborator = listViewCollaborators.SelectedItem as GridViewItemCollaborator;
+        //    if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+        //    {
+        //        Observer.getInstance().notifyAll(this);
+        //    }
+        //}
 
-        private class ListViewItemCollaborator 
+
+
+        public class GridViewItemCollaborator : GridViewItem
         {
             private Instrument instrument;
             private string text;
@@ -157,15 +153,31 @@ namespace demoBand.Gui.CollaborationInstruments
                 set { instrument = value; }
             } 
 
-            public ListViewItemCollaborator(Collaborator collaborator)
+            public GridViewItemCollaborator(Collaborator collaborator)
             {
+                
                 text = collaborator.CollaboratorName;
                 instrument = collaborator.Instrument;
+                arrange();
+                
             }
 
             private void arrange()
             {
-                
+                Height = 50;
+                Width = 200;
+                BorderThickness = new Thickness(4);
+                BorderBrush = new SolidColorBrush(Colors.AliceBlue);
+                FontSize = 20; 
+             //   BorderBrush = BorderBrush.
+                Background = new SolidColorBrush(Colors.DodgerBlue);
+                Background.Opacity = 0.2;
+                Foreground = new SolidColorBrush(Colors.White);
+             //   Foreground = new SolidColorBrush(Colors.White);
+                //TextBox tb = new TextBox();
+                //tb.Text = text;
+               // Name = text;
+                Content = text;
             }
 
             public override string ToString()
@@ -181,10 +193,10 @@ namespace demoBand.Gui.CollaborationInstruments
         internal void notify()
         {
             
-            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
-            {
-                listViewCollaborators.SelectedItem = -1;
-            }
+            //if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+            //{
+            //    listViewCollaborators.SelectedItem = -1;
+            //}
         }
 
         public Instrument getChoosenInstrument()
@@ -200,10 +212,10 @@ namespace demoBand.Gui.CollaborationInstruments
 
         public bool isMyChoice()
         {
-            if (choosenCollaborator == listViewCollaborators.Items[0])
-            {
-                return true;
-            }
+            //if (choosenCollaborator == listViewCollaborators.Items[0])
+            //{
+            //    return true;
+            //}
             return false;
         }
 

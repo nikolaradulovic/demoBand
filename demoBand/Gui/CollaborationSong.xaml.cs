@@ -56,6 +56,7 @@ namespace demoBand.Gui
             length = (int) so.getExtra("length") ;
 
             populatePageWithList();
+           
 
 
         }
@@ -74,22 +75,25 @@ namespace demoBand.Gui
 
             stackPanels = new List<InstrumentCollaborators>();
 
-            
+
             InstrumentCollaborators vc = new InstrumentCollaborators(voiceList, type.Voice);
-            voiceGrid.Children.Add(vc);
-            stackPanels.Add(vc);
-            
+            gridViewVoice.ItemsSource = vc.GridItemColl;
+            //voiceGrid.Children.Add(vc);
+            //stackPanels.Add(vc);
+
             InstrumentCollaborators gc = new InstrumentCollaborators(guitarList, type.Guitar);
-            guitarGrid.Children.Add(gc);
-            stackPanels.Add(gc);
-            
+            gridViewGuitar.ItemsSource = gc.GridItemColl;
+            //guitarGrid.Children.Add(gc);
+            //stackPanels.Add(gc);
+
             InstrumentCollaborators dc = new InstrumentCollaborators(drumList, type.Drums);
-            drumsGrid.Children.Add(dc);
-            stackPanels.Add(dc);
-            
+            gridViewDrums.ItemsSource = dc.GridItemColl;
+            //stackPanels.Add(dc);
+
             InstrumentCollaborators pc = new InstrumentCollaborators(pianoList, type.Piano);
-            pianoGrid.Children.Add(pc);
-            stackPanels.Add(pc);
+            gridViewPiano.ItemsSource = pc.GridItemColl;
+            //pianoGrid.Children.Add(pc);
+            //stackPanels.Add(pc);
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
