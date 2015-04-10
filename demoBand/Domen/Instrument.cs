@@ -73,7 +73,8 @@ namespace demoBand.Domen
         Voice,
         Guitar,
         Drums,
-        Piano
+        Piano,
+        
        
     };
     

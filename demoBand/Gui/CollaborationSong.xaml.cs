@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace demoBand.Gui
@@ -30,7 +31,7 @@ namespace demoBand.Gui
         List<Collaborator> drumList;
         List<Collaborator> pianoList;
 
-        List<InstrumentCollaborators> stackPanels;
+        //List<InstrumentCollaborators> stackPanels;
 
         string songname;
         string author;
@@ -51,12 +52,12 @@ namespace demoBand.Gui
             drumList = so.getExtra("drumlist") as List<Collaborator>;
             pianoList = so.getExtra("pianolist") as List<Collaborator>;
 
-            songname =  so.getExtra("songname") as string;
-            author =  so.getExtra("author") as string;
-            length = (int) so.getExtra("length") ;
+            songname = so.getExtra("songname") as string;
+            author = so.getExtra("author") as string;
+            length = (int)so.getExtra("length");
 
             populatePageWithList();
-           
+
 
 
         }
@@ -64,7 +65,7 @@ namespace demoBand.Gui
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            
+
             if (Frame.CanGoBack)
                 Frame.GoBack();
         }
@@ -73,7 +74,7 @@ namespace demoBand.Gui
         private void populatePageWithList()
         {
 
-            stackPanels = new List<InstrumentCollaborators>();
+            //stackPanels = new List<InstrumentCollaborators>();
 
 
             InstrumentCollaborators vc = new InstrumentCollaborators(voiceList, type.Voice);
@@ -101,26 +102,48 @@ namespace demoBand.Gui
             // mora se dodati provera da li je sebe selektovao
             Song song = new Song();
             type myInstrument = 0;
+
+
+            //foreach (InstrumentCollaborators sp in stackPanels)
+            //{
+            //    if (sp.isMyChoice())
+            //    {
+            //        myInstrument = sp.InstrumentType;
+            //    }
+
+            //    else if (sp.getChoosenInstrument() != null)
+            //    {
+            //        Instrument ins = sp.getChoosenInstrument();
+            //        instruments.Add(ins);
+            //    }
+            //}
+            List<GridViewItemCollaborator> listColl = getChoosenCollaborators(); //potrebno da bih napunio listu isturmenata u Song objektu
             List<Instrument> instruments = new List<Instrument>();
 
-            foreach (InstrumentCollaborators sp in stackPanels)
+            foreach (GridViewItemCollaborator coll in listColl)
             {
-                if (sp.isMyChoice())
+                int insNum = getMyChoosenInstrument(coll);
+                if (insNum != 0) //izabrao je da peva/svira
                 {
-                    myInstrument = sp.InstrumentType;
+                    myInstrument = convertToTypeInstrument(insNum);
+                }
+                else //nije izabrao da pva/svira, vec nekog
+                {
+                    Instrument i = coll.Instrument;
+                    instruments.Add(i);
                 }
 
-                else if (sp.getChoosenInstrument() != null)
-                {
-                    Instrument ins = sp.getChoosenInstrument();
-                    instruments.Add(ins);
-                }
+
             }
+
 
             song.Author = author;
             song.Name = songname;
             song.Length = length.ToString();
             song.Instruments = instruments;
+
+
+
 
             Session.GetInstance().insertValue("song", song);
             Session.GetInstance().insertValue("instrument", myInstrument.ToString());
@@ -129,6 +152,60 @@ namespace demoBand.Gui
 
             Frame.Navigate(typeof(SongPage));
 
+        }
+
+
+        private List<GridViewItemCollaborator> getChoosenCollaborators()
+        {
+            List<GridViewItemCollaborator> list = new List<GridViewItemCollaborator>();
+
+            GridViewItemCollaborator voice = gridViewVoice.SelectedItem as GridViewItemCollaborator;
+            GridViewItemCollaborator guitar = gridViewGuitar.SelectedItem as GridViewItemCollaborator;
+            GridViewItemCollaborator drums = gridViewDrums.SelectedItem as GridViewItemCollaborator;
+            GridViewItemCollaborator piano = gridViewPiano.SelectedItem as GridViewItemCollaborator;
+
+            if (voice != null)
+                list.Add(voice);
+            if (guitar != null)
+                list.Add(guitar);
+            if (drums != null)
+                list.Add(drums);
+            if (piano != null)
+                list.Add(piano);
+
+
+            return list;
+
+
+
+        }
+
+        private int getMyChoosenInstrument(GridViewItemCollaborator coll)
+        {
+            if (coll.Text == ChoiceText.Voice)
+                return 1;
+            if (coll.Text == ChoiceText.Guitar)
+                return 2;
+            if (coll.Text == ChoiceText.Drums)
+                return 3;
+            if (coll.Text == ChoiceText.Piano)
+                return 4;
+            return 0;
+        }
+
+        private type convertToTypeInstrument(int number)
+        {
+            return (type)number;
+        }
+
+
+
+        public class ChoiceText
+        {
+            public static string Voice = "I sing";
+            public static string Guitar = "I play guitar";
+            public static string Drums = "I play drumms";
+            public static string Piano = "I play piano";
         }
 
 

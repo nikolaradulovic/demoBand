@@ -117,6 +117,7 @@
     <Compile Include="Domen\Player.cs" />
     <Compile Include="Domen\Song.cs" />
     <Compile Include="Domen\SongListItem.cs" />
+    <Compile Include="Gui\CollaborationInstruments\GridViewItemCollaborator.cs" />
     <Compile Include="Gui\CollaborationInstruments\InstrumentCollaborators.cs" />
     <Compile Include="Gui\CollaborationInstruments\Observer.cs" />
     <Compile Include="Gui\CollaborationSong.xaml.cs">

@@ -83,6 +83,7 @@ namespace demoBand.Gui.CollaborationInstruments
         private GridViewItemCollaborator createMeAsCollaborator()
         {
             Instrument ins = new Instrument();
+            ins.TypeOfInstrument = instrumentType;
             string content = null;
             switch (instrumentType) {
                 case type.Voice: content = "I sing";
@@ -96,7 +97,8 @@ namespace demoBand.Gui.CollaborationInstruments
             }
             Collaborator coll = new Collaborator();
             coll.CollaboratorName = content;
-            
+            coll.Instrument = ins;
+
             GridViewItemCollaborator item = new GridViewItemCollaborator(coll);
            
             return item;
@@ -142,57 +144,57 @@ namespace demoBand.Gui.CollaborationInstruments
 
 
 
-        public class GridViewItemCollaborator : GridViewItem
-        {
-            private Instrument instrument;
-            private string text;
+        //public class GridViewItemCollaborator : GridViewItem
+        //{
+        //    private Instrument instrument;
+        //    private string text;
 
-            public Instrument Instrument
-            {
-                get { return instrument; }
-                set { instrument = value; }
-            } 
+        //    public Instrument Instrument
+        //    {
+        //        get { return instrument; }
+        //        set { instrument = value; }
+        //    } 
 
-            public GridViewItemCollaborator(Collaborator collaborator)
-            {
+        //    public GridViewItemCollaborator(Collaborator collaborator)
+        //    {
                 
-                text = collaborator.CollaboratorName;
-                instrument = collaborator.Instrument;
-                arrange();
+        //        text = collaborator.CollaboratorName;
+        //        instrument = collaborator.Instrument;
+        //        arrange();
                 
-            }
+        //    }
 
-            private void arrange()
-            {
-                Height = 50;
-                Width = 200;
-                BorderThickness = new Thickness(4);
-                BorderBrush = new SolidColorBrush(Colors.AliceBlue);
-                FontSize = 20; 
-             //   BorderBrush = BorderBrush.
-                Background = new SolidColorBrush(Colors.DodgerBlue);
-                Background.Opacity = 0.2;
-                Foreground = new SolidColorBrush(Colors.White);
-             //   Foreground = new SolidColorBrush(Colors.White);
-                //TextBox tb = new TextBox();
-                //tb.Text = text;
-               // Name = text;
-                Content = text;
-            }
+        //    private void arrange()
+        //    {
+        //        Height = 50;
+        //        Width = 200;
+        //        BorderThickness = new Thickness(4);
+        //        BorderBrush = new SolidColorBrush(Colors.AliceBlue);
+        //        FontSize = 20; 
+        //     //   BorderBrush = BorderBrush.
+        //        Background = new SolidColorBrush(Colors.DodgerBlue);
+        //        Background.Opacity = 0.2;
+        //        Foreground = new SolidColorBrush(Colors.White);
+        //     //   Foreground = new SolidColorBrush(Colors.White);
+        //        //TextBox tb = new TextBox();
+        //        //tb.Text = text;
+        //       // Name = text;
+        //        Content = text;
+        //    }
 
-            public override string ToString()
-            {
-                return text;
-            }
+        //    public override string ToString()
+        //    {
+        //        return text;
+        //    }
             
 
 
-        }
+        //}
 
 
         internal void notify()
         {
-            
+
             //if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
             //{
             //    listViewCollaborators.SelectedItem = -1;
