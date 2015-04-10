@@ -278,7 +278,7 @@
                 </Grid.RowDefinitions>
                 <StackPanel Margin="50,0,0,0" VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Row="0">
                 <AppBarButton Icon="Back" VerticalAlignment="Bottom" x:Name="btnBack" Click="btnBack_Click"></AppBarButton>
-                    <TextBlock x:Name="txtNowPlaying" Text="Now Playing" VerticalAlignment="Center" FontSize="35"/>
+                    <TextBlock x:Name="txtNowPlaying" Text="Now playing" VerticalAlignment="Center" FontSize="42"/>
                 </StackPanel>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -310,9 +310,8 @@
             <ProgressBar Tapped="progressBar_Tapped" ValueChanged="progressBar_ValueChanged" VerticalAlignment="Stretch"  x:Name="progressBar" Grid.Row="1"/>
             <Grid Grid.Row="3" Background="#1D1D1D" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
                     <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="9*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0" Margin="30,0,0,0">
@@ -324,11 +323,11 @@
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2.7*"/>
                         <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.5*"/>
                         <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
                     <Button Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Center" x:Name="btnRecord" Click="btnRecord_Click" Template="{StaticResource ButtonControlTemplate1}"/>
                     <Button  Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnStop" Click="btnStop_Click" Template="{StaticResource ButtonControlTemplate2}"/>
@@ -339,8 +338,8 @@
                     <Button  Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" x:Name="btnListen" Click="btnListen_Click" Template="{StaticResource ButtonControlTemplate4}" />
                      
                 </Grid>
-                <StackPanel x:Name="slideContainer"  Orientation="Horizontal" Grid.Column="3" />
-                <TextBlock x:Name="txtCounter" FontSize="30" Height="100" Width="100"  Grid.Column="2" />
+                <StackPanel x:Name="slideContainer"  Orientation="Horizontal" Grid.Column="2" />
+                <TextBlock x:Name="txtCounter" FontSize="30" Height="100" Width="100"  Grid.Column="1" />
                 <MediaElement x:Name="mediaRecording" AutoPlay="False"/>
             </Grid>
             <StackPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,60,0">

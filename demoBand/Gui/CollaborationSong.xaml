@@ -6,7 +6,66 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <ControlTemplate x:Key="ButtonControlTemplate4" TargetType="Button">
+            <Image x:Name="image" Source="../Assets/Images/Dashboard/Buttons/play.png">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualStateGroup.Transitions>
+                            <VisualTransition From="PointerOver" GeneratedDuration="0:0:1" To="Pressed"/>
+                            <VisualTransition From="Normal" GeneratedDuration="0:0:1" To="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                        <DiscreteObjectKeyFrame KeyTime="0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <Visibility>Visible</Visibility>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                    <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                                </Storyboard>
+                            </VisualTransition>
+                            <VisualTransition From="Pressed" GeneratedDuration="0" To="Disabled"/>
+                            <VisualTransition From="Disabled" GeneratedDuration="0:0:0.2" To="Normal"/>
+                        </VisualStateGroup.Transitions>
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Default</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.RequestedTheme)" Storyboard.TargetName="image">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <ElementTheme>Dark</ElementTheme>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation Duration="0" To="0.2" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Image>
+        </ControlTemplate>
+    </Page.Resources>
     <Grid x:Name="mainGrid">
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
@@ -16,16 +75,26 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <AppBarButton Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnBack_Click" Grid.Row="0" x:Name="btnBack" Icon="Back"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="Collaboration picker" FontSize="42" Margin="0,0,0,30" VerticalAlignment="Bottom" />
         <Grid x:Name="collaboration_Grid" Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="2*"/>      
-            </Grid.RowDefinitions> 
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button  Grid.Column="1" VerticalAlignment="Center" Height="60" Click="btnPlay_Click" Width="60" x:Name="btnListen" Template="{StaticResource ButtonControlTemplate4}" />
+
+            </Grid>
+
             <Grid Grid.Row="0" x:Name="gridPanels">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -56,7 +125,8 @@
                         <Border BorderThickness="2" BorderBrush="Azure"></Border>
                     </GridView>
                 </Grid>
-                <Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,14,0,0"/>
+
+                <!--<Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,14,0,0"/>-->
                 <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
                     <Image x:Name="imgMic" Source="../Assets/Images/Dashboard/dashboard_0000_Forma-1.png" />
                     <TextBlock x:Name="txtVoice" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Voice"/>
@@ -73,6 +143,13 @@
                     <Image x:Name="imgPiano" Source="../Assets/Images/Dashboard/dashboard_0003_Piano.png" />
                     <TextBlock x:Name="txtPiano" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Piano"/>
                 </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
             </Grid>
         </Grid>
     </Grid>

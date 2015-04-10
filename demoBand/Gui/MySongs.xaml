@@ -10,20 +10,22 @@
     <Page.Resources>
         <vm:MySongsView x:Key="mySongsView"/>
     </Page.Resources>
-    <Grid x:Name="mainGrid">
+    <Grid x:Name="mainGrid"> 
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
         </Grid.Background>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="9*"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="9*"/>
-        </Grid.ColumnDefinitions> 
-            <AppBarButton Grid.Column="0" Grid.Row="0" Icon="Back" x:Name="btnBack" VerticalAlignment="Bottom" Click="btnBack_Click" />
-        <TextBlock  x:Name="txtMySongs" Grid.Column="1" Grid.Row="0" Text="MySongs" VerticalAlignment="Bottom" Margin="0,0,0,30" FontSize="30" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar x:Name="progressLoading" Grid.Column="1" Grid.Row="0" Height="30" VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" FontSize="20" SmallChange="0.1"/>
+            <AppBarButton Grid.Column="0" Grid.Row="0" Icon="Back" x:Name="btnBack" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="btnBack_Click" />
+        <TextBlock  x:Name="txtMySongs" Grid.Column="1" Grid.Row="0" Text="My songs" VerticalAlignment="Bottom" Margin="0,0,0,30" FontSize="42" />
         <Grid x:Name="gridContain" Grid.Row="1" Grid.Column="1">        
             <Grid.RowDefinitions >
                 <RowDefinition Height="5*"/>
@@ -72,10 +74,11 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </Grid>
-            <TextBlock x:Name="txtCollaborators" Grid.Row="1" FontSize="30" Text="Collaborations Songs" />
+            <TextBlock x:Name="txtCollaborators" Grid.Row="1" FontSize="42" Text="Collaborations Songs" />
             <Grid  Grid.Row="2"></Grid>
             </Grid>
         </Grid>
+    
     <Page.BottomAppBar>
         <CommandBar Background="DodgerBlue">
             <AppBarButton Label="Exit" Icon="ClosePane" x:Name="btnClose" Click="btnClose_Click"/>

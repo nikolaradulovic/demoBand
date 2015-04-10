@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#1D1D1D">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/login-background.png"/>
+        </Grid.Background>
         <Grid Grid.ColumnSpan="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
