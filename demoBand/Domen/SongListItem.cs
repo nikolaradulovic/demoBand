@@ -24,5 +24,19 @@ namespace demoBand.Domen
         }
 
         public SongListItem() { }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if (obj.GetType() == typeof(SongListItem))
+            {
+                SongListItem sli = obj as SongListItem;
+                if (sli.ArtistName == artistName && sli.SongName == songName)
+                    return true;
+            }
+            return false;
+        }
+
     }
 }

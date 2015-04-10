@@ -49,6 +49,7 @@ namespace demoBand.Gui
         private Song song;
         private RecordParse recordParse;
         private Boolean textExist;
+        string username; 
 
         //private bool progressEnabled;
 
@@ -65,6 +66,7 @@ namespace demoBand.Gui
         protected  override void OnNavigatedTo(NavigationEventArgs e)
         {
             recordParse = new RecordParse();
+            username = Session.GetInstance().getValueAt("username").ToString();
             players = new Dictionary<type, Player>();
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             //createBackgroundImage(instrument);
@@ -493,20 +495,7 @@ namespace demoBand.Gui
         }
 
 
-        private async void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-            //dodati da ne moze da se uradi save ako nije snimio nista
-            if (choice == Choice.solo)
-                showPopupDialog();
-            else
-            {
-                await saveSong();
-                //da se doda ne znam ko ce al ja necu,
-                //message dialog: Are you sure you wwant to save?
-            }
-                
-            
-        }
+       
 
         public void showPopupDialog() 
         {
@@ -608,7 +597,9 @@ namespace demoBand.Gui
 
 
             recordParse.Songname = txtSongName.Text;
-            recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
+            if (choice == Choice.solo)
+                recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
+            else { } //vec je setovano u parse object
             recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
             await saveSong();
 
@@ -620,17 +611,25 @@ namespace demoBand.Gui
         {
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
 
-            createCollaboratorsList();
+            
 
             foreach (string collString in collaboratorSave)
             {
+                string exist = "NO";
+
+                if (collString == username)
+                {
+                    exist = "YES";
+                }
+
                 DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
                                            recordParse.Username,
                                            recordParse.Instrument,
                                            collString,
-                                           recordParse.Length
+                                           recordParse.Length,
+                                           exist
                                            );
             }
         }
@@ -639,6 +638,25 @@ namespace demoBand.Gui
         {
             collaboratorSave = new List<string>();
             collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            //dodati da ne moze da se uradi save ako nije snimio nista
+            createCollaboratorsList();
+            if (choice == Choice.solo)
+                showPopupDialog();
+            else
+            {
+                txtSongName.Text = song.Name;
+                txtSongName.IsEnabled = false;
+                showPopupDialog();
+
+                //da se doda ne znam ko ce al ja necu,
+                //message dialog: Are you sure you wwant to save?
+            }
+
+
         }
 
     }
