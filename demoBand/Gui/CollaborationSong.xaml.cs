@@ -30,6 +30,11 @@ namespace demoBand.Gui
         List<Collaborator> drumList;
         List<Collaborator> pianoList;
 
+        List<InstrumentCollaborators> stackPanels;
+
+        string songname;
+        string author;
+        int length;
 
 
         public CollaborationSong()
@@ -46,6 +51,9 @@ namespace demoBand.Gui
             drumList = so.getExtra("drumlist") as List<Collaborator>;
             pianoList = so.getExtra("pianolist") as List<Collaborator>;
 
+            songname =  so.getExtra("songname") as string;
+            author =  so.getExtra("author") as string;
+            length = (int) so.getExtra("length") ;
 
             populatePageWithList();
 
@@ -64,14 +72,58 @@ namespace demoBand.Gui
         private void populatePageWithList()
         {
 
-            voiceGrid.Children.Add(new InstrumentCollaborators(voiceList, type.Voice));
-            guitarGrid.Children.Add(new InstrumentCollaborators(guitarList, type.Guitar));
-            drumsGrid.Children.Add(new InstrumentCollaborators(drumList, type.Drums));
-            pianoGrid.Children.Add(new InstrumentCollaborators(pianoList, type.Piano));
+            stackPanels = new List<InstrumentCollaborators>();
+
+            
+            InstrumentCollaborators vc = new InstrumentCollaborators(voiceList, type.Voice);
+            voiceGrid.Children.Add(vc);
+            stackPanels.Add(vc);
+            
+            InstrumentCollaborators gc = new InstrumentCollaborators(guitarList, type.Guitar);
+            guitarGrid.Children.Add(gc);
+            stackPanels.Add(gc);
+            
+            InstrumentCollaborators dc = new InstrumentCollaborators(drumList, type.Drums);
+            drumsGrid.Children.Add(dc);
+            stackPanels.Add(dc);
+            
+            InstrumentCollaborators pc = new InstrumentCollaborators(pianoList, type.Piano);
+            pianoGrid.Children.Add(pc);
+            stackPanels.Add(pc);
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
+            // mora se dodati provera da li je sebe selektovao
+            Song song = new Song();
+            type myInstrument = 0;
+            List<Instrument> instruments = new List<Instrument>();
+
+            foreach (InstrumentCollaborators sp in stackPanels)
+            {
+                if (sp.isMyChoice())
+                {
+                    myInstrument = sp.InstrumentType;
+                }
+
+                else if (sp.getChoosenInstrument() != null)
+                {
+                    Instrument ins = sp.getChoosenInstrument();
+                    instruments.Add(ins);
+                }
+            }
+
+            song.Author = author;
+            song.Name = songname;
+            song.Length = length.ToString();
+            song.Instruments = instruments;
+
+            Session.GetInstance().insertValue("song", song);
+            Session.GetInstance().insertValue("instrument", myInstrument.ToString());
+            Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
+
+
+            Frame.Navigate(typeof(SongPage));
 
         }
 

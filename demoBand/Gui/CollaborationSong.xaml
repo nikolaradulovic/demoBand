@@ -43,7 +43,7 @@
                 <Grid x:Name="guitarGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="1"/>
                 <Grid x:Name="drumsGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="2"/>
                 <Grid x:Name="pianoGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="3"/>
-                <Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,14,0,0"/>
                 <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
                     <Image x:Name="imgMic" Source="../Assets/Images/Dashboard/dashboard_0000_Forma-1.png" />
                     <TextBlock x:Name="txtVoice" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Voice"/>

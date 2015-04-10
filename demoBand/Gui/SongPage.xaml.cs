@@ -157,7 +157,7 @@ namespace demoBand.Gui
                     break;
                 }
 	        }
-            if (songViewP == null) {
+            if (songViewP == null || songViewP =="") {
                 textExist = false;
             }
             else
@@ -602,8 +602,8 @@ namespace demoBand.Gui
         private List<string> collaboratorSave;
         private async void btnYes_Click(object sender, RoutedEventArgs e)
         {
-            collaboratorSave = new List<string>();
-            collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
+            //collaboratorSave = new List<string>();
+            //collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
             collaboratorSave.Add(txtCollaborator.Text);
 
 
@@ -620,6 +620,8 @@ namespace demoBand.Gui
         {
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
 
+            createCollaboratorsList();
+
             foreach (string collString in collaboratorSave)
             {
                 DataBaseParse.saveSongToRecord(songFile,
@@ -631,9 +633,12 @@ namespace demoBand.Gui
                                            recordParse.Length
                                            );
             }
-            
+        }
 
-
+        private void createCollaboratorsList()
+        {
+            collaboratorSave = new List<string>();
+            collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
         }
 
     }

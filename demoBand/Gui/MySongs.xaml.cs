@@ -41,7 +41,7 @@ namespace demoBand.Gui
 
             string songname = songItem.SongName;
             string author = songItem.ArtistName;
-
+            int length = await DataBaseParse.getLengthOfSong(songname, author);
 
             List<Collaborator> voiceList = await DataBaseParse.getCollaborator(songname, author, "Voice");
             List<Collaborator> guitarList = await DataBaseParse.getCollaborator(songname, author, "Guitar");
@@ -53,6 +53,10 @@ namespace demoBand.Gui
             so.putExtra("guitarlist", guitarList);
             so.putExtra("drumlist", drumList);
             so.putExtra("pianolist", pianoList);
+            so.putExtra("songname", songname);
+            so.putExtra("author", author);
+            so.putExtra("length", length);
+
 
             //List<RecordParse> list = await DataBaseParse.getAllFiles(songItem.SongName, songItem.ArtistName);//============================dobiti informacije okolaboratorima
 

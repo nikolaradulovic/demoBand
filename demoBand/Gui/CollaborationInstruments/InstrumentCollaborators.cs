@@ -19,6 +19,15 @@ namespace demoBand.Gui.CollaborationInstruments
         private List<Collaborator> collaborators;
         private ListView listViewCollaborators;
         private type instrumentType;
+        private ListViewItemCollaborator choosenCollaborator;
+
+        public type InstrumentType1
+        {
+            get { return instrumentType; }
+            set { instrumentType = value; }
+        }
+       
+
 
         public ListView ListViewCollaborators
         {
@@ -34,7 +43,11 @@ namespace demoBand.Gui.CollaborationInstruments
             this.collaborators = collaborators;
             this.instrumentType = instrumentType;
             Observer.getInstance().register(this);
+
+            choosenCollaborator = null;
+
             populateListView();
+
             arrangeStack();
 
 
@@ -91,6 +104,7 @@ namespace demoBand.Gui.CollaborationInstruments
         private void arrangeStack()
         {
             Orientation = Orientation.Horizontal;
+       
 
 
         }
@@ -123,6 +137,7 @@ namespace demoBand.Gui.CollaborationInstruments
 
         public void selectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            choosenCollaborator = listViewCollaborators.SelectedItem as ListViewItemCollaborator;
             if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
             {
                 Observer.getInstance().notifyAll(this);
@@ -165,14 +180,33 @@ namespace demoBand.Gui.CollaborationInstruments
 
         internal void notify()
         {
-
+            
             if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
             {
                 listViewCollaborators.SelectedItem = -1;
             }
         }
 
-        
+        public Instrument getChoosenInstrument()
+        {
+            if (choosenCollaborator == null)
+                return null;
+
+            Instrument i = new Instrument();
+            i.TypeOfInstrument = instrumentType;
+            i.Path = choosenCollaborator.Instrument.Path;
+            return i;
+        }
+
+        public bool isMyChoice()
+        {
+            if (choosenCollaborator == listViewCollaborators.Items[0])
+            {
+                return true;
+            }
+            return false;
+        }
+
 
     }
 

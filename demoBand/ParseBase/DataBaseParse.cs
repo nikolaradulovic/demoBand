@@ -102,7 +102,17 @@ namespace demoBand.ParseBase
         }
 
 
+        public async static Task<int> getLengthOfSong(string songname, string songartist) {
+            var query = from record in ParseObject.GetQuery("Record")
+                        where record.Get<string>("songname") == songname
+                           && record.Get<string>("songartist") == songartist
+                        select record;
 
+            ParseObject result = await query.FirstAsync();
+            int length = result.Get<int>("length");
+            return length;
+
+        }
         
 
 
