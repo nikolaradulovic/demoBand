@@ -87,5 +87,10 @@ namespace demoBand.Gui
             if (Frame.CanGoBack)
                 Frame.GoBack();
         }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

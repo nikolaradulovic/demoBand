@@ -48,7 +48,8 @@
                             </Grid>                         
                         </DataTemplate>
                     </GridView.ItemTemplate>
-                </GridView>               
+                </GridView> 
+                <Button x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue" Margin="0,0,100,0" Click="btnPlay_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             </Grid>
             <Grid Grid.Row="2">
                 <GridView x:Name="gridListCollab" DataContext="{Binding Source={StaticResource mySongsView}}"
