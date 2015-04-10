@@ -35,9 +35,9 @@ namespace demoBand.Gui.StropheGui
 
         public StropheText(type instrument)
         {
-            image = new Image();
-            formatImage(instrument);
-            Children.Add(image);
+            //image = new Image();
+            //formatImage(instrument);
+            //Children.Add(image);
             //choice = Choice.solo;
         }
 
