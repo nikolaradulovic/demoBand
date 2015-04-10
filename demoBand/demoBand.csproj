@@ -177,6 +177,12 @@
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
     <Content Include="Assets\Images\Backgrounds\piano-back.png" />
     <Content Include="Assets\Images\Backgrounds\voice-record.png" />
+    <Content Include="Assets\Images\Covers\img1.jpg" />
+    <Content Include="Assets\Images\Covers\img2.png" />
+    <Content Include="Assets\Images\Covers\img3.jpg" />
+    <Content Include="Assets\Images\Covers\img6.jpg" />
+    <Content Include="Assets\Images\Covers\img8.jpg" />
+    <Content Include="Assets\Images\Covers\img9.jpg" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png" />

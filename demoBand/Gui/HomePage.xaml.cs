@@ -204,8 +204,8 @@ namespace demoBand.Gui
                     break;
                 case "My songs": Frame.Navigate(typeof(MySongs));
                     break;
-                case "Discover": Frame.Navigate(typeof(CollaborationSong));
-                    break;
+                //case "Discover": Frame.Navigate(typeof(CollaborationSong));
+                //    break;
 
 
 
@@ -235,6 +235,11 @@ namespace demoBand.Gui
         private void popupDialogChoose_Closed(object sender, object e)
         {
             mainGrid.Opacity = 1;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
 
 
