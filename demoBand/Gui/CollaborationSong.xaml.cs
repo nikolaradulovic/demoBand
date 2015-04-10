@@ -70,6 +70,11 @@ namespace demoBand.Gui
             pianoGrid.Children.Add(new InstrumentCollaborators(pianoList, type.Piano));
         }
 
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
     }
 }
