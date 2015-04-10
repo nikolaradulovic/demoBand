@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 
 namespace demoBand.Gui.CollaborationInstruments
@@ -17,13 +18,14 @@ namespace demoBand.Gui.CollaborationInstruments
 
         private List<Collaborator> collaborators;
         private ListView listViewCollaborators;
+        private type instrumentType;
 
         public ListView ListViewCollaborators
         {
             get { return listViewCollaborators; }
             set { listViewCollaborators = value; }
         }
-        private type instrumentType;
+        
 
        
 
@@ -35,12 +37,21 @@ namespace demoBand.Gui.CollaborationInstruments
             populateListView();
             arrangeStack();
 
+
             ((global::Windows.UI.Xaml.Controls.ListViewBase)(listViewCollaborators)).ItemClick += clickItem;
+            ((global::Windows.UI.Xaml.UIElement)(listViewCollaborators)).RightTapped += rightClickItem;
+            ((global::Windows.UI.Xaml.Controls.Primitives.Selector)(listViewCollaborators)).SelectionChanged+=selectionChanged;
         }
 
         private void populateListView()
         {
             listViewCollaborators = new ListView();
+
+            //listViewCollaborators.IsItemClickEnabled = true;
+            //listViewCollaborators.IsRightTapEnabled = true;
+            //listViewCollaborators.IsEnabled = true;
+            
+            
             listViewCollaborators.Items.Add(createMeAsCollaborator());
             foreach (Collaborator coll in collaborators)
             {
@@ -93,6 +104,25 @@ namespace demoBand.Gui.CollaborationInstruments
 
         public void clickItem(object sender, ItemClickEventArgs e)
         {
+            ListViewItem lv = e.ClickedItem as ListViewItem;
+            lv.IsSelected = true;
+            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+            {
+                Observer.getInstance().notifyAll(this);
+            }
+        }
+
+        public void rightClickItem(object sender, RightTappedRoutedEventArgs e)
+        {
+            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+            {
+                Observer.getInstance().notifyAll(this);
+            }
+        }
+
+
+        public void selectionChanged(object sender, SelectionChangedEventArgs e)
+        {
             if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
             {
                 Observer.getInstance().notifyAll(this);
@@ -142,7 +172,7 @@ namespace demoBand.Gui.CollaborationInstruments
             }
         }
 
-
+        
 
     }
 
