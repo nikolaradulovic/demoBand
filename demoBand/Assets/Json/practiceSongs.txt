@@ -186,6 +186,12 @@
             }
         ]
     },
+	 {
+        "Name": "Do I Wanna Know",
+        "Author": "Arctic Monkeys",
+		"ImagePath": "../Assets/Images/Covers/img2.png",
+        "Length": "179"
+    },
 	
       {
         "Name": "Nothing but the beat",
@@ -211,7 +217,50 @@
         "Author": "Shakira",
 		"ImagePath": "../Assets/Images/Covers/img10.jpg",
         "Length": "256"
+    },
+	
+    {
+        "Name": "Long road to run",
+        "Author": "Foo Fighters",
+		"ImagePath": "../Assets/Images/Covers/img8.jpg",
+        "Length": "215"
+    },
+
+	
+    {
+        "Name": "Here and now",
+        "Author": "Nickelback",
+		"ImagePath": "../Assets/Images/Covers/img9.jpg",
+        "Length": "203"
+    },
+
+	
+    {
+        "Name": "Lost Highway",
+        "Author": "Bon Jovi",
+		"ImagePath": "../Assets/Images/Covers/img3.jpg",
+        "Length": "188"
+    },
+    {
+        "Name": "Abbey Road",
+        "Author": "The Beatles",
+		"ImagePath": "../Assets/Images/Covers/img1.jpg",
+        "Length": "186"
+    },
+	
+    {
+        "Name": "Feel Good",
+        "Author": "Gorillaz",
+		"ImagePath": "../Assets/Images/Covers/img6.jpg",
+        "Length": "173"
+		
     }
+
+
+
+
+
+
 	
 	
 ]

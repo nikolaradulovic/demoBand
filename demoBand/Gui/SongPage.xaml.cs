@@ -507,6 +507,8 @@ namespace demoBand.Gui
             gridSave.Width = mainGrid.ActualWidth;
             if(mainGrid.ActualHeight/4 >250)
             gridSave.Height = mainGrid.ActualHeight / 4;
+           // double marginTop = (mainGrid.ActualHeight / 4);
+            gridSave.Margin = new Thickness(0, mainGrid.ActualHeight / 3, 0, 0);
 
             popunQuestion.IsOpen = true;
         }
@@ -659,6 +661,11 @@ namespace demoBand.Gui
             }
 
 
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
 
     }

@@ -49,7 +49,7 @@ namespace demoBand.Gui.Dialog
         {
             Orientation = Orientation.Horizontal;
             TextBlock tb = new TextBlock();
-            tb.Text = "Choose your instrument.";
+            tb.Text = "Choose your instrument:";
             tb.FontSize = 30;
             tb.HorizontalAlignment = HorizontalAlignment.Left;
             tb.Margin = new Thickness(0, 30, 0, 20);
