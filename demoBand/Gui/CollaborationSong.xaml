@@ -76,4 +76,10 @@
             </Grid>
         </Grid>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar Background="DodgerBlue">
+            
+            <AppBarButton Label="Exit" Icon="ClosePane" x:Name="btnClose" Click="btnClose_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

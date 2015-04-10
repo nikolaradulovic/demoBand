@@ -92,6 +92,11 @@ namespace demoBand.Gui
                 Frame.GoBack();
         }
 
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
         
     }
 }

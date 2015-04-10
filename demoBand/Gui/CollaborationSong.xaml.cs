@@ -208,6 +208,11 @@ namespace demoBand.Gui
             public static string Piano = "I play piano";
         }
 
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
 
     }
 }
