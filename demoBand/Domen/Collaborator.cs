@@ -27,7 +27,10 @@ namespace demoBand.Domen
         
         public Collaborator() { }
 
-
+        public override string ToString()
+        {
+            return collaboratorName;
+        }
 
     }
 }

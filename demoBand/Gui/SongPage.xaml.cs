@@ -598,12 +598,17 @@ namespace demoBand.Gui
             mainGrid.Opacity = 1;
         }
 
+
+        private List<string> collaboratorSave;
         private async void btnYes_Click(object sender, RoutedEventArgs e)
         {
-            
+            collaboratorSave = new List<string>();
+            collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
+            collaboratorSave.Add(txtCollaborator.Text);
+
+
             recordParse.Songname = txtSongName.Text;
             recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
-            recordParse.Collaborator = txtCollaborator.Text;
             recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
             await saveSong();
 
@@ -614,16 +619,19 @@ namespace demoBand.Gui
         private async Task saveSong()
         {
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
-           
 
-            DataBaseParse.saveSongToRecord(songFile,
+            foreach (string collString in collaboratorSave)
+            {
+                DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
                                            recordParse.Username,
                                            recordParse.Instrument,
-                                           recordParse.Collaborator,
+                                           collString,
                                            recordParse.Length
                                            );
+            }
+            
 
 
         }

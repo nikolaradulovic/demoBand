@@ -70,7 +70,36 @@ namespace demoBand.ParseBase
         }
 
 
+        public async static Task<List<Collaborator>> getCollaborator(string songname, string songartist, string insturment)
+        {
+            List<Collaborator> list = new List<Collaborator>();
 
+            var query = from record in ParseObject.GetQuery("Record")
+                        where record.Get<string>("songname") == songname
+                           && record.Get<string>("songartist") == songartist
+                           && record.Get<string>("collaborator") == songartist
+                           && record.Get<string>("instrument") == insturment
+                        select record;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+
+            foreach (ParseObject resultObject in results)
+            {
+                Instrument i = new Instrument();
+                var songFile = resultObject.Get<ParseFile>("file");
+                i.Path = songFile.Url.ToString();
+                i.TypeOfInstrument = (type)Enum.Parse(typeof(type), insturment);
+                
+
+                Collaborator col = new Collaborator();
+                col.CollaboratorName = resultObject.Get<string>("collaborator");
+                col.Instrument = i;
+
+                list.Add(col);
+                
+            }
+            return list;
+
+        }
 
 
 

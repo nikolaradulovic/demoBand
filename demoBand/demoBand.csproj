@@ -118,6 +118,7 @@
     <Compile Include="Domen\Song.cs" />
     <Compile Include="Domen\SongListItem.cs" />
     <Compile Include="Gui\CollaborationInstruments\InstrumentCollaborators.cs" />
+    <Compile Include="Gui\CollaborationInstruments\Observer.cs" />
     <Compile Include="Gui\CollaborationSong.xaml.cs">
       <DependentUpon>CollaborationSong.xaml</DependentUpon>
     </Compile>
@@ -140,6 +141,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\SenderObject.cs" />
     <Compile Include="ParseBase\RecordParse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\Registration.xaml.cs">

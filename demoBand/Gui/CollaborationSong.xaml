@@ -21,7 +21,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <AppBarButton Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnBack_Click" Grid.Row="0" x:Name="btnBack" Icon="Back"/>
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid x:Name="collaboration_Grid" Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="2*"/>      

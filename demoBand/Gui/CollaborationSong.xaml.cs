@@ -1,4 +1,7 @@
-﻿using System;
+﻿using demoBand.Domen;
+using demoBand.Gui.CollaborationInstruments;
+using demoBand.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,19 +25,51 @@ namespace demoBand.Gui
     /// </summary>
     public sealed partial class CollaborationSong : Page
     {
+        List<Collaborator> voiceList;
+        List<Collaborator> guitarList;
+        List<Collaborator> drumList;
+        List<Collaborator> pianoList;
+
+
+
         public CollaborationSong()
         {
             this.InitializeComponent();
         }
 
-  
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SenderObject so = e.Parameter as SenderObject;
+
+            voiceList = so.getExtra("voicelist") as List<Collaborator>;
+            guitarList = so.getExtra("guitarlist") as List<Collaborator>;
+            drumList = so.getExtra("drumlist") as List<Collaborator>;
+            pianoList = so.getExtra("pianolist") as List<Collaborator>;
+
+
+            populatePageWithList();
+
+
+        }
+
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            
             if (Frame.CanGoBack)
                 Frame.GoBack();
         }
 
-      
+
+        private void populatePageWithList()
+        {
+
+            collaboration_Grid.Children.Add(new InstrumentCollaborators(voiceList, type.Voice));
+            collaboration_Grid.Children.Add(new InstrumentCollaborators(guitarList, type.Guitar));
+            collaboration_Grid.Children.Add(new InstrumentCollaborators(drumList, type.Drums));
+            collaboration_Grid.Children.Add(new InstrumentCollaborators(pianoList, type.Piano));
+        }
+
+
     }
 }

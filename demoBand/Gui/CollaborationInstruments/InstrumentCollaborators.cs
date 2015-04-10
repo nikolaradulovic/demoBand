@@ -16,46 +16,130 @@ namespace demoBand.Gui.CollaborationInstruments
     {
 
         private List<Collaborator> collaborators;
-        public InstrumentCollaborators() 
-        {
-            loadInstrumentList();
-            arrangeStack();            
-            createStackList();
+        private ListView listViewCollaborators;
+        private type instrumentType;
 
+       
+
+        public InstrumentCollaborators(List<Collaborator> collaborators, type instrumentType) 
+        {
+            this.collaborators = collaborators;
+            this.instrumentType = instrumentType;
+            Observer.getInstance().register(this);
+            populateListView();
+            arrangeStack();
+
+            ((global::Windows.UI.Xaml.Controls.ListViewBase)(listViewCollaborators)).ItemClick += clickItem;
         }
+
+        private void populateListView()
+        {
+            listViewCollaborators = new ListView();
+            listViewCollaborators.Items.Add(createMeAsCollaborator());
+            foreach (Collaborator coll in collaborators)
+            {
+                listViewCollaborators.Items.Add(new ListViewItemCollaborator(coll));
+            }
+
+            Children.Add(listViewCollaborators);
+            
+        }
+
+        private ListViewItemCollaborator createMeAsCollaborator()
+        {
+            Instrument ins = new Instrument();
+            string content = null;
+            switch (instrumentType) {
+                case type.Voice: content = "I sing";
+                    break;
+                case type.Guitar: content = "I play guitar";
+                    break;
+                case type.Drums: content = "I play drums";
+                    break;
+                case type.Piano: content = "I play piano";
+                    break;
+            }
+            Collaborator coll = new Collaborator();
+            coll.CollaboratorName = content;
+            
+            ListViewItemCollaborator item = new ListViewItemCollaborator(coll);
+            return item;
+        }
+
+
+        
+
+
 
         private void arrangeStack()
         {
             Orientation = Orientation.Horizontal;
 
+
+        }
+
+        public type InstrumentType
+        {
+            get { return instrumentType; }
+            set { instrumentType = value; }
+        }
+       
+
+        public void clickItem(object sender, ItemClickEventArgs e)
+        {
+            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+            {
+                Observer.getInstance().notifyAll(this);
+            }
         }
 
 
 
-        private void createStackList()
+        private class ListViewItemCollaborator 
         {
-            
-            //foreach (Instrument i in instrumentList) 
-            //{
-            //    //uzmi sve izvodjace za radio group...
-            //    RadioButton rb = new RadioButton();
-            //    StackPanel sp = new StackPanel();
-            //    sp.Margin = new Thickness(0,0,30,0);
-            //    sp.Orientation = Orientation.Vertical;
-            //    rb.FontSize = 20;
-            //    rb.Foreground = new SolidColorBrush(Colors.DodgerBlue);
+            private Instrument instrument;
+            private string text;
+
+            public Instrument Instrument
+            {
+                get { return instrument; }
+                set { instrument = value; }
+            } 
+
+            public ListViewItemCollaborator(Collaborator collaborator)
+            {
+                text = collaborator.CollaboratorName;
+                instrument = collaborator.Instrument;
+            }
+
+            private void arrange()
+            {
                 
-            //    //staviti iz izvodjaca ime samo
-            //    rb.Content = null;
-            //    Children.Add(rb);
-            //}
+            }
+
+            public override string ToString()
+            {
+                return text;
+            }
+            
+
+
         }
 
 
-
-        private void loadInstrumentList()
+        internal void notify()
         {
-            throw new NotImplementedException();
+
+            if (listViewCollaborators.SelectedItem == listViewCollaborators.Items[0])
+            {
+                listViewCollaborators.SelectedItem = -1;
+            }
         }
+
+
+
     }
+
+    
+
 }

@@ -54,6 +54,19 @@ namespace demoBand.Domen
 
         }
 
+        public static List<string> allStringInstruments()
+        {
+            List<string> list = new List<string>();
+            list.Add("Voice");
+            list.Add("Guitar");
+            list.Add("Drum");
+            list.Add("Piano");
+
+            return list;
+
+        }
+
+
     }
      public enum type
     {
