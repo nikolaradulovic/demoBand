@@ -234,8 +234,12 @@ namespace demoBand.Gui
             changeProgressText((int)progressValue);
 
             //da se prekine ako dodje do maksimuma
-            if (progressValue > progressBar.Maximum)
-                btnStop_Click(null, null);
+            if (progressBar.IsEnabled)
+            {
+                if (progressValue > progressBar.Maximum)
+                    btnStop_Click(null, null);
+            }
+            
 
 
             //
@@ -612,7 +616,7 @@ namespace demoBand.Gui
                 recordParse.ArtistSong = Session.GetInstance().getValueAt("username").ToString();
             else { } //vec je setovano u parse object
             if (choice == Choice.solo)
-                recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;
+                recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;//=========================================================ZA RECORD PUCA
             await saveSong();
 
             popunQuestion.IsOpen = false;

@@ -72,7 +72,7 @@ namespace demoBand.Gui.StropheGui
         {
             text.HorizontalAlignment = HorizontalAlignment.Center;
             text.VerticalAlignment = VerticalAlignment.Center;
-            text.FontSize = 50;
+            text.FontSize = 200;
             text.TextWrapping = TextWrapping.Wrap;
         }
 

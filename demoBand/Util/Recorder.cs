@@ -56,8 +56,8 @@ namespace demoBand.Util
             active = false;
 
         }
-
-        private async Task InitMediaCapture()
+        //stavljeno na public bilo private
+        public async Task InitMediaCapture()
         {
             captureMedia = new MediaCapture();
             var captureInitSettings = new MediaCaptureInitializationSettings();
@@ -69,7 +69,7 @@ namespace demoBand.Util
             captureMedia.RecordLimitationExceeded += MediaCaptureOnRecordLimitationExceeded;
         }
 
-        private async void MediaCaptureOnRecordLimitationExceeded(MediaCapture sender)
+        public async void MediaCaptureOnRecordLimitationExceeded(MediaCapture sender)
         {
             //await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
             //{
