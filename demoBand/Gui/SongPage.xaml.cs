@@ -85,21 +85,22 @@ namespace demoBand.Gui
         private void createBackgroundImage(type instrument)
         {
             Image img = new Image();
-            Uri uri;
+            Uri uri = null;
 
             switch (instrument)
             {
-                case type.Voice: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                case type.Voice: uri = new Uri(this.BaseUri, "../Assets/Images/Backgrounds/voice-record.png");
                     break;
-                case type.Guitar: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                case type.Guitar: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/guitar-record.png");
                     break;
-                case type.Drums: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                case type.Drums: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/drums-back.png");
                     break;
-                case type.Piano: uri = new Uri(this.BaseUri, /*song.ImagePath*/"");
+                case type.Piano: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/piano-back.png");
                     break;
+               
             }
-
-            uri = new Uri(this.BaseUri, song.ImagePath);
+            // sta si ovde hteo???
+          //uri = new Uri(this.BaseUri, song.ImagePath);
             
             BitmapImage bp = new BitmapImage();
             bp.UriSource = uri;
@@ -110,6 +111,7 @@ namespace demoBand.Gui
         private void arrangeForsolo()
         {
             //instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
+            createBackgroundImage(instrument);
             stropheGrid = new StropheText(instrument);
             setProgressBarForSolo();
             setStartPropertiesSolo();

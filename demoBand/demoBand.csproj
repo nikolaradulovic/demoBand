@@ -169,9 +169,13 @@
   <ItemGroup>
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
+    <Content Include="Assets\Images\Backgrounds\drums-back.png" />
+    <Content Include="Assets\Images\Backgrounds\guitar-record.png" />
     <Content Include="Assets\Images\Backgrounds\home background.png" />
     <Content Include="Assets\Images\Backgrounds\home-back.png" />
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
+    <Content Include="Assets\Images\Backgrounds\piano-back.png" />
+    <Content Include="Assets\Images\Backgrounds\voice-record.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0006_Stop.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0007_Pause.png" />
     <Content Include="Assets\Images\Dashboard\Buttons\dashboard_0008_Rec.png" />
