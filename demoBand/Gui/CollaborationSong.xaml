@@ -28,6 +28,7 @@
             </Grid.RowDefinitions> 
             <Grid Grid.Row="0" x:Name="gridPanels">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
                     <RowDefinition Height="5*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
@@ -38,12 +39,27 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="voiceGrid" Grid.Row="0" Grid.Column="0"/>
-                <Grid x:Name="guitarGrid" Grid.Row="0" Grid.Column="1"/>
-                <Grid x:Name="drumsGrid" Grid.Row="0" Grid.Column="2"/>
-                <Grid x:Name="pianoGrid" Grid.Row="0" Grid.Column="3"/>
-                <Button Grid.Row="1" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-
+                <Grid x:Name="voiceGrid" Margin="20,20,0,0" Grid.Row="1" Grid.Column="0"/>
+                <Grid x:Name="guitarGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="1"/>
+                <Grid x:Name="drumsGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="2"/>
+                <Grid x:Name="pianoGrid" Margin="20,20,0,0"  Grid.Row="1" Grid.Column="3"/>
+                <Button Grid.Row="2" Grid.Column="4" x:Name="btnPlay" Content="Play" Width="100" Background="DodgerBlue"  Click="btnPlay_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                    <Image x:Name="imgMic" Source="../Assets/Images/Dashboard/dashboard_0000_Forma-1.png" />
+                    <TextBlock x:Name="txtVoice" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Voice"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <Image x:Name="imgGuitar" Source="../Assets/Images/Dashboard/dashboard_0004_Layer-2.png" />
+                    <TextBlock x:Name="txtGuitar" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Guitar"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                    <Image x:Name="imgDrums" Source="../Assets/Images/Dashboard/dashboard_0002_Bass.png" />
+                    <TextBlock x:Name="txtDrums" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Drums"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
+                    <Image x:Name="imgPiano" Source="../Assets/Images/Dashboard/dashboard_0003_Piano.png" />
+                    <TextBlock x:Name="txtPiano" VerticalAlignment="Center" Margin="30,0,0,0" FontWeight="SemiBold" FontSize="30" Text="Piano"/>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>
