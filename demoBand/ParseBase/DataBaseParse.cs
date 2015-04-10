@@ -48,7 +48,10 @@ namespace demoBand.ParseBase
                 SongListItem sli = new SongListItem();
                 sli.SongName = resultObject.Get<string>("songname");
                 sli.ArtistName = resultObject.Get<string>("songartist");
-                list.Add(sli);
+                if (!list.Contains(sli))
+                    list.Add(sli);
+
+                
             }
             return list;
         }
@@ -61,21 +64,21 @@ namespace demoBand.ParseBase
                         select song;
             IEnumerable<ParseObject> results = await query.FindAsync();
             
-            List<SongListItem> sli = new List<SongListItem>();
+            
             foreach (ParseObject resultObject in results)
             {
                 
                 string songname = resultObject.Get<string>("songname");
                 string songartist = resultObject.Get<string>("songartist");
-                sli = await getAllMelodiesCollaborator(songname, songartist);
-                list.AddRange(sli);
+                await populateMelodiesCollaborator(songname, songartist, list);
+                //list.AddRange(sli);
             }
             return list;
         }
 
-        private async static Task<List<SongListItem>> getAllMelodiesCollaborator(string songname, string songartist)
+        private async static Task<List<SongListItem>> populateMelodiesCollaborator(string songname, string songartist, List<SongListItem> list)
         {
-            List<SongListItem> list = new List<SongListItem>();
+            //List<SongListItem> list = new List<SongListItem>();
             var query = from song in ParseObject.GetQuery("Record")
                         where song.Get<String>("songname") == songname
                            && song.Get<String>("songartist") == songartist
