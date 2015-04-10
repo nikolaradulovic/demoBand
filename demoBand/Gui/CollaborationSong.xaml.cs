@@ -123,7 +123,7 @@ namespace demoBand.Gui
             foreach (GridViewItemCollaborator coll in listColl)
             {
                 int insNum = getMyChoosenInstrument(coll);
-                if (insNum != 0) //izabrao je da peva/svira
+                if (insNum != 20) //izabrao je da peva/svira
                 {
                     myInstrument = convertToTypeInstrument(insNum);
                 }
@@ -183,14 +183,14 @@ namespace demoBand.Gui
         private int getMyChoosenInstrument(GridViewItemCollaborator coll)
         {
             if (coll.Text == ChoiceText.Voice)
-                return 1;
+                return (int)type.Voice;
             if (coll.Text == ChoiceText.Guitar)
-                return 2;
+                return (int)type.Guitar;
             if (coll.Text == ChoiceText.Drums)
-                return 3;
+                return (int)type.Drums;
             if (coll.Text == ChoiceText.Piano)
-                return 4;
-            return 0;
+                return (int)type.Piano;
+            return 20;
         }
 
         private type convertToTypeInstrument(int number)
