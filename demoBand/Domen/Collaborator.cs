@@ -32,5 +32,18 @@ namespace demoBand.Domen
             return collaboratorName;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() == typeof(Collaborator)) {
+                Collaborator col = obj as Collaborator;
+                if (col.CollaboratorName == collaboratorName)
+                    return true;
+
+            }
+            return false;
+                
+        }
+
+
     }
 }

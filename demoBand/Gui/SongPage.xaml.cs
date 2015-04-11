@@ -5,6 +5,7 @@ using demoBand.Model;
 using demoBand.ParseBase;
 using demoBand.SongDescription;
 using demoBand.Util;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -627,7 +628,8 @@ namespace demoBand.Gui
         {
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
 
-            
+            ParseFile songFP = new ParseFile("song.mp3", songFile);
+            await songFP.SaveAsync();
 
             foreach (string collString in collaboratorSave)
             {
@@ -638,7 +640,7 @@ namespace demoBand.Gui
                     exist = "YES";
                 }
 
-                DataBaseParse.saveSongToRecord(songFile,
+                DataBaseParse.saveSongToRecord(songFP,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
                                            recordParse.Username,

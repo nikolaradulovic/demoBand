@@ -16,14 +16,14 @@ namespace demoBand.ParseBase
     public class DataBaseParse
     {
 
-        public static async void saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
+        public static async void saveSongToRecord(ParseFile songFP, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
         {
-            ParseFile file = new ParseFile("song.mp3", song);
-            await file.SaveAsync();
+            //ParseFile file = new ParseFile("song.mp3", song);
+            //await file.SaveAsync();
 
             var record = new ParseObject("Record");
 
-            record["file"] = file;
+            record["file"] = songFP;
             record["songname"] = songName;
             record["songartist"] = artist;
             record["username"] = username;
@@ -41,6 +41,7 @@ namespace demoBand.ParseBase
             List<SongListItem> list = new List<SongListItem>();
             var query = from song in ParseObject.GetQuery("Record")
                          where song.Get<String>("songartist") == username
+                             
                          select song;
             IEnumerable<ParseObject> results = await query.FindAsync();
             foreach (ParseObject resultObject in results)
@@ -60,7 +61,8 @@ namespace demoBand.ParseBase
         {
             List<SongListItem> list = new List<SongListItem>();
             var query = from song in ParseObject.GetQuery("Record")
-                        where song.Get<String>("collaborator") == username
+                        where (song.Get<string>("collaborator") == username
+                           && song.Get<string>("songartist") != username)
                         select song;
             IEnumerable<ParseObject> results = await query.FindAsync();
             
@@ -82,7 +84,7 @@ namespace demoBand.ParseBase
             var query = from song in ParseObject.GetQuery("Record")
                         where song.Get<String>("songname") == songname
                            && song.Get<String>("songartist") == songartist
-                           && song.Get<String>("exist") == "YES" 
+                           //&& song.Get<String>("exist") == "YES" 
                         select song;
             IEnumerable<ParseObject> results = await query.FindAsync();
             foreach (ParseObject resultObject in results)
@@ -127,7 +129,8 @@ namespace demoBand.ParseBase
                 col.CollaboratorName = resultObject.Get<string>("collaborator");
                 col.Instrument = i;
                 
-                list.Add(col);
+                if(!list.Contains(col))
+                    list.Add(col);
                 
             }
             return list;
