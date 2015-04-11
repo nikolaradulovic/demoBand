@@ -16,14 +16,14 @@ namespace demoBand.ParseBase
     public class DataBaseParse
     {
 
-        public static async void saveSongToRecord(ParseFile songFP, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
+        public static async void saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
         {
-            //ParseFile file = new ParseFile("song.mp3", song);
-            //await file.SaveAsync();
+            ParseFile file = new ParseFile("song.mp3", song);
+            await file.SaveAsync();
 
             var record = new ParseObject("Record");
 
-            record["file"] = songFP;
+            record["file"] = file;
             record["songname"] = songName;
             record["songartist"] = artist;
             record["username"] = username;

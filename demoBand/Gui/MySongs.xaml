@@ -43,8 +43,8 @@
                                 <Grid.Background>
                                     <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />   
                                 </Grid.Background>
-                                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
-                                <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding SongName}"/>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
                                 </StackPanel>
                             </Grid>                         
@@ -65,8 +65,8 @@
                                     <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />
                                     
                                 </Grid.Background>
-                                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
-                                    <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding SongName}"/>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                    <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
                                     <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
                                 </StackPanel>
                             </Grid>
