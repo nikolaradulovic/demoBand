@@ -64,8 +64,8 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" x:Name="lblTitle" Foreground="DodgerBlue" FontSize="60" Text="Pick and Jam" />
-                <Image x:Name="imgLogo" Grid.Column="0" Source="../Assets/Images/logo.jpg" Grid.Row="2" />
+                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" x:Name="lblTitle" Foreground="DodgerBlue" FontSize="60" Text="CloudBand" />
+                <Image x:Name="imgLogo" Grid.Column="0" Source="../Assets/Images/Backgrounds/novilogo.png" Grid.Row="2" />
                 <TextBlock x:Name="lblMessage" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="3" Text="Dream. Create. Record." Foreground="DodgerBlue" FontSize="40" />
 
             </Grid>
