@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="demoBand.Gui.DiscoverPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:demoBand.Gui"
+    xmlns:vm ="using:demoBand.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <vm:DiscoverView x:Key="discoverView"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
+        </Grid.Background>
+        <ProgressBar x:Name="progressLoading"  VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" />
+        <Grid x:Name="mainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>             
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Discover" FontSize="42" Margin="10,0,0,0" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <GridView x:Name="gridListMy" DataContext="{Binding Source={StaticResource discoverView}}"
+                          ItemsSource="{Binding DiscoverSongs}"
+                          IsItemClickEnabled="True"
+                          ItemClick="gridList_ItemClick">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid x:Name="gridSong" Width="250" Height="100">
+                                <Grid.Background>
+                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />
+                                </Grid.Background>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                    <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
+                                    <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

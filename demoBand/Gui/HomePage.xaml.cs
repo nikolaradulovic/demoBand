@@ -64,6 +64,8 @@ namespace demoBand.Gui
             string username = Session.GetInstance().getValueAt("username").ToString();
             MySongsView.setMySongs(await DataBaseParse.getSongListItemAuthor(username));
             MySongsView.setCollaboratorSongs(await DataBaseParse.getSongListItemCollaborator(username));
+            //popuniti listu...
+            //DiscoverView.setDiscoverSongs();
             
             //MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
         }
@@ -209,6 +211,9 @@ namespace demoBand.Gui
                     break;
                 case "My songs": Frame.Navigate(typeof(MySongs));
                     break;
+                case "Discover" : Frame.Navigate(typeof(DiscoverPage));
+                    break;
+
                 //case "Discover": Frame.Navigate(typeof(CollaborationSong));
                 //    break;
 
