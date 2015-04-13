@@ -37,6 +37,7 @@
                 
             </Grid>
         </Popup>
+        <ProgressBar x:Name="progressBar" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsIndeterminate="True" Visibility="Collapsed" />
         <Hub> 
             
             <HubSection Width="400" Margin="100,-20,0,0" >
