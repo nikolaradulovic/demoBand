@@ -204,7 +204,7 @@ namespace demoBand.Gui
         {
             public static string Voice = "I sing";
             public static string Guitar = "I play guitar";
-            public static string Drums = "I play drumms";
+            public static string Drums = "I play drums";
             public static string Piano = "I play piano";
         }
 
