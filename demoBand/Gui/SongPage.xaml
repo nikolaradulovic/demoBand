@@ -349,11 +349,13 @@
         </Grid>
         <Popup x:Name="popunQuestion" Closed="popunQuestion_Closed"  IsOpen="False">
             <Grid x:Name="gridSave" Background="#2E8DEF" >          
-                <StackPanel Margin="0,20,0,0" Width="250" Height="250" HorizontalAlignment="Center" x:Name="stackButtons" Orientation="Vertical">
+                <StackPanel Margin="0,20,0,0" Width="250" Height="350" VerticalAlignment="Top" HorizontalAlignment="Center" x:Name="stackButtons" Orientation="Vertical">
                     <TextBlock Grid.Row="1" x:Name="txtQuestion" Text="Enter the song name" FontSize="20"/>
                     <TextBox x:Name="txtSongName" FontSize="20" Margin="0,10,0,0" />
                     <TextBlock x:Name="lblCollab" Margin="0,10,0,0" Text="Collaborator" FontSize="20" />           
-                    <TextBox x:Name="txtCollaborator" FontSize="20" Margin="0,10,0,0" Text="(Optional)" />
+                    <TextBox x:Name="txtCollaborator" FontSize="20" Margin="0,10,0,0" GotFocus="txtCollaborator_GotFocus" Text="(Optional)" />
+                    <TextBox x:Name="txtCollaborator2" FontSize="20" Margin="0,10,0,0" Text="(Optional)" GotFocus="txtCollaborator2_GotFocus" Visibility="Collapsed"/>
+                    <TextBox x:Name="txtCollaborator3" FontSize="20" Margin="0,10,0,0" Text="(Optional)" Visibility="Collapsed"/>
                         <Button Content="Save" HorizontalAlignment="Right" Margin="0,10,0,0"  x:Name="btnYes" Click="btnYes_Click"/>                           
                 </StackPanel>
             </Grid>

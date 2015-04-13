@@ -52,6 +52,8 @@ namespace demoBand
 
                 Session.GetInstance().insertValue("username", userParse);
 
+                
+
                 Frame.Navigate(typeof(HomePage));
               
             }

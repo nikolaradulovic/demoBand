@@ -92,6 +92,13 @@ namespace demoBand
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
+
+            var installation = ParseInstallation.CurrentInstallation;
+            installation["user"] = ParseUser.CurrentUser;
+            await installation.SaveAsync();
+            //await ParsePush.SubscribeAsync("");
+
+
             // Ensure the current window is active
             Window.Current.Activate();
         }

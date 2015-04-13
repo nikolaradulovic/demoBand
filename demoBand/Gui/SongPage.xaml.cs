@@ -517,10 +517,10 @@ namespace demoBand.Gui
             cmbBar.IsOpen = false;
             popunQuestion.IsLightDismissEnabled = true;
             gridSave.Width = mainGrid.ActualWidth;
-            if(mainGrid.ActualHeight/4 >250)
-            gridSave.Height = mainGrid.ActualHeight / 4;
+            if(mainGrid.ActualHeight/2.5 >350)
+            gridSave.Height = mainGrid.ActualHeight / 2.5;
            // double marginTop = (mainGrid.ActualHeight / 4);
-            gridSave.Margin = new Thickness(0, mainGrid.ActualHeight / 3, 0, 0);
+            gridSave.Margin = new Thickness(0, mainGrid.ActualHeight / 4, 0, 0);
 
             popunQuestion.IsOpen = true;
         }
@@ -609,8 +609,12 @@ namespace demoBand.Gui
         {
             //collaboratorSave = new List<string>();
             //collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
-            collaboratorSave.Add(txtCollaborator.Text);
-
+            if (txtCollaborator.Text != "" || txtCollaborator.Text != "(Optional)")
+                collaboratorSave.Add(txtCollaborator.Text);
+            if (txtCollaborator2.Text != "" || txtCollaborator2.Text != "(Optional)")
+                collaboratorSave.Add(txtCollaborator2.Text);
+            if (txtCollaborator3.Text != "" || txtCollaborator3.Text != "(Optional)")
+                collaboratorSave.Add(txtCollaborator3.Text);
 
             recordParse.Songname = txtSongName.Text;
             if (choice == Choice.solo)
@@ -679,6 +683,16 @@ namespace demoBand.Gui
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
+        }
+
+        private void txtCollaborator_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtCollaborator2.Visibility = Visibility.Visible;
+        }
+
+        private void txtCollaborator2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtCollaborator3.Visibility = Visibility.Visible;
         }
 
     }

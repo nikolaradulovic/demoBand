@@ -146,6 +146,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\SenderObject.cs" />
+    <Compile Include="ParseBase\PushParse.cs" />
     <Compile Include="ParseBase\RecordParse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\Registration.xaml.cs">
