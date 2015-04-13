@@ -642,7 +642,7 @@ namespace demoBand.Gui
                 {
                     exist = "YES";
                 }
-                await PushParse.sendNotification(recordParse.Songname, recordParse.ArtistSong, collString);
+                
                 await DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
@@ -652,6 +652,8 @@ namespace demoBand.Gui
                                            recordParse.Length,
                                            exist
                                            );
+                if (collString != recordParse.Username)
+                    await PushParse.sendNotification(recordParse.Songname, recordParse.ArtistSong, collString);
             }
         }
 
