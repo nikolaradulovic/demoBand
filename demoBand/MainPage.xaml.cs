@@ -17,6 +17,7 @@ using demoBand.Register;
 using demoBand.Gui;
 using demoBand.Model;
 using Windows.System;
+using demoBand.ParseBase;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -51,7 +52,14 @@ namespace demoBand
                 string userParse = ParseUser.CurrentUser.Username;
 
                 Session.GetInstance().insertValue("username", userParse);
-
+                try
+                {
+                    await PushParse.initializePush(userParse);
+                }
+                catch (Exception)
+                {
+                    lblStatus.Text = "The push failed.";
+                }
                 
 
                 Frame.Navigate(typeof(HomePage));

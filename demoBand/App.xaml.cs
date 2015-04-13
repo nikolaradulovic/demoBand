@@ -93,10 +93,20 @@ namespace demoBand
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
 
-            var installation = ParseInstallation.CurrentInstallation;
-            installation["user"] = ParseUser.CurrentUser;
-            await installation.SaveAsync();
+
             //await ParsePush.SubscribeAsync("");
+            await ParseInstallation.CurrentInstallation.SaveAsync();
+
+            //var json = ParsePush.PushJson(e);
+            //object objectId;
+            //if (json.TryGetValue("objectId", out objectId))
+            //{
+            //    DisplayRichMessageWithObjectId(objectId as string);
+            //}
+
+
+
+
 
 
             // Ensure the current window is active

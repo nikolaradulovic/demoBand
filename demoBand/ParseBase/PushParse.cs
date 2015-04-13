@@ -16,20 +16,14 @@ namespace demoBand.ParseBase
             push.Query = from user in ParseInstallation.Query
                          where user.Get<string>("username") == collaborator
                          select user;
+            push.Alert = "You have new request for collaboration\nTitle: "+songname+"\n"+"author: "+artistname;
 
-            //push.Query = from installation in ParseInstallation.Query
-            //             where installation.Get<bool>("injuryReports") == true
-            //             select installation;
-            //push.Alert = "Willie Hayes injured by own pop fly.";
-             //var query = from song in ParseObject.GetQuery("Record")
-             //           where (song.Get<string>("collaborator") == username
-             //              && song.Get<string>("songartist") != username)
-             //           select song;
             await push.SendAsync();
         }
 
         public static async Task initializePush(string username) {
             var installation = ParseInstallation.CurrentInstallation;
+            installation["user"] = ParseUser.CurrentUser;
             installation["username"] = username;
             await installation.SaveAsync();
         }

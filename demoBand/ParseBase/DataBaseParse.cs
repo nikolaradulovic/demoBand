@@ -16,7 +16,7 @@ namespace demoBand.ParseBase
     public class DataBaseParse
     {
 
-        public static async void saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
+        public static async Task saveSongToRecord(byte[] song, string songName, string artist, string username, string instrument, string collaborator, double length,string exist)
         {
             ParseFile file = new ParseFile("song.mp3", song);
             await file.SaveAsync();

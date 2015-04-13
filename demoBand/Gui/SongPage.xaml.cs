@@ -642,8 +642,8 @@ namespace demoBand.Gui
                 {
                     exist = "YES";
                 }
-
-                DataBaseParse.saveSongToRecord(songFile,
+                await PushParse.sendNotification(recordParse.Songname, recordParse.ArtistSong, collString);
+                await DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
                                            recordParse.Username,
