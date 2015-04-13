@@ -149,7 +149,35 @@ namespace demoBand.ParseBase
             return length;
 
         }
-        
+
+        public async static Task<List<SongListItem>> getDiscoverListItem(string username, List<SongListItem> shownItems)
+        {
+            List<SongListItem> list = new List<SongListItem>();
+            var query = from song in ParseObject.GetQuery("Record")
+                        where song.Get<string>("songartist") != username
+                        select song;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+
+           foreach (ParseObject resultObject in results)
+            {
+                string songname = resultObject.Get<string>("songname");
+                string songartist = resultObject.Get<string>("songartist");
+                SongListItem sli = new SongListItem();
+                sli.SongName = songname;
+                sli.ArtistName = songartist;
+                if (!list.Contains(sli))
+                {
+                    list.Add(sli);
+                    if (shownItems.Count < 20)
+                        shownItems.Add(sli);
+                }
+                    
+            }
+            return list;
+        }
+
+
+
 
 
      

@@ -9,17 +9,18 @@ namespace demoBand.ViewModel
 {
     public class DiscoverView : ViewModelBase
     {
-        private static List<SongListItem> discoverSongs;
-        public List<SongListItem> DiscoverSongs
+        private static List<SongListItem> allDiscoverSongs = new List<SongListItem>();
+        public static List<SongListItem> shownSongs;
+        public List<SongListItem> ShownSongs
         {
             get
             {
-                return discoverSongs;
+                return shownSongs;
             }
 
             set
             {
-                discoverSongs = value;
+                shownSongs = value;
                 RaisePropertyChanged("DiscoverSongs");
             }
         }
@@ -45,7 +46,7 @@ namespace demoBand.ViewModel
 
         public static void setDiscoverSongs(List<SongListItem> list)
         {
-            discoverSongs = list;
+            shownSongs = list;
         }
 
         public DiscoverView() { }

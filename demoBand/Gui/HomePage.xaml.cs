@@ -65,7 +65,7 @@ namespace demoBand.Gui
             MySongsView.setMySongs(await DataBaseParse.getSongListItemAuthor(username));
             MySongsView.setCollaboratorSongs(await DataBaseParse.getSongListItemCollaborator(username));
             //popuniti listu...
-            //DiscoverView.setDiscoverSongs();
+            DiscoverView.setDiscoverSongs(await DataBaseParse.getDiscoverListItem(username,DiscoverView.shownSongs));
             
             //MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
         }
