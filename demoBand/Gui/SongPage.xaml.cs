@@ -643,6 +643,8 @@ namespace demoBand.Gui
                     exist = "YES";
                 }
                 
+
+
                 await DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
@@ -655,6 +657,12 @@ namespace demoBand.Gui
                 if (collString != recordParse.Username)
                     await PushParse.sendNotification(recordParse.Songname, recordParse.ArtistSong, collString);
             }
+
+            if (choice == Choice.collaborator)
+            {
+                await PushParse.notifyAuthor(recordParse.Songname, recordParse.ArtistSong, recordParse.Username, instrument.ToString());
+            }
+
         }
 
         private void createCollaboratorsList()
