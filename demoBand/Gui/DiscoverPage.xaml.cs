@@ -32,6 +32,12 @@ namespace demoBand.Gui
 
         }
 
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+                Frame.GoBack();
+        }
+
         
     }
 }
