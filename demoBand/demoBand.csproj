@@ -168,6 +168,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\AppImages\novilogo_splash.scale-100.png" />
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
     <Content Include="Assets\Images\Backgrounds\drums-back.png" />
