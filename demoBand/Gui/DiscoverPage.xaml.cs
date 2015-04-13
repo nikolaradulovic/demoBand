@@ -1,10 +1,13 @@
-﻿using System;
+﻿using demoBand.Domen;
+using demoBand.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,6 +30,17 @@ namespace demoBand.Gui
             this.InitializeComponent();
         }
 
+        private Stack stack;
+        private DiscoverView discoverView;
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            stack = new Stack(DiscoverView.shownSongs);
+            discoverView = new DiscoverView();
+
+        }
+
+
         private void gridList_ItemClick(object sender, ItemClickEventArgs e)
         {
 
@@ -38,6 +52,71 @@ namespace demoBand.Gui
                 Frame.GoBack();
         }
 
+        private void searchSong_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            
+            if (e.Key == VirtualKey.Back)
+            {
+                discoverView.ShownSongs = stack.pop();
+            }
+            string text = txtSearchSong.Text;
+            List<SongListItem> result = searchByText(text);
+            stack.push(result);
+            discoverView.ShownSongs = result;
+            discoverView.refrehList();
+
+        }
+
+
+        private List<SongListItem> searchByText(string text)
+        {
+            List<SongListItem> result = new List<SongListItem>();
+            List<SongListItem> allSongs = DiscoverView.allDiscoverSongs;
+            foreach(SongListItem sli in allSongs) {
+                if (sli.ArtistName.Contains(text) || sli.SongName.Contains(text)) {
+                    result.Add(sli);
+                }
+                if (result.Count > 20)
+                    return result;
+            }
+            return result;
+        }
+
         
     }
+
+
+    public class Stack
+    {
+        
+        private List<List<SongListItem>> stack;
+
+
+        public Stack(List<SongListItem> shownSongs)
+        {
+            
+            stack = new List<List<SongListItem>>();
+            stack.Add(shownSongs);
+        }
+
+        public void push(List<SongListItem> list)
+        {
+            stack.Add(list);
+        }
+
+        public List<SongListItem> pop()
+        {
+            if (stack.Count == 1)
+            {
+                return stack.ElementAt(0);
+            }
+            List<SongListItem> last = stack.ElementAt(stack.Count-1);
+            stack.RemoveAt(stack.Count - 1);
+            return last;
+        }
+
+
+    }
+
+
 }
