@@ -19,6 +19,7 @@ using Parse;
 using demoBand.ParseBase;
 using demoBand.ViewModel;
 using demoBand.Gui.Dialog;
+using System.Threading.Tasks;
 
 // The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=321224
 
@@ -54,15 +55,16 @@ namespace demoBand.Gui
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+           
 
         }
 
-        private async void loadMyLoadMySong()
+        private async Task loadMyLoadMySong()
         {
             string username = Session.GetInstance().getValueAt("username").ToString();
             MySongsView.setMySongs(await DataBaseParse.getSongListItemAuthor(username));
             MySongsView.setCollaboratorSongs(await DataBaseParse.getSongListItemCollaborator(username));
-
+            
             //MySongsView.setMySongs (await DataBaseParse.getSongListItemsForUser(username));
         }
 
@@ -78,10 +80,13 @@ namespace demoBand.Gui
         /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
         /// a dictionary of state preserved by this page during an earlier
         /// session.  The state will be null the first time a page is visited.</param>
-        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Assign a collection of bindable groups to this.DefaultViewModel["Groups"]
-            loadMyLoadMySong();
+           progressBar.Visibility = Visibility.Visible;
+           await loadMyLoadMySong();
+           progressBar.Visibility = Visibility.Collapsed;
+           
 
 
         }
@@ -113,7 +118,7 @@ namespace demoBand.Gui
 
         private void lstSongs_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+           
 
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);

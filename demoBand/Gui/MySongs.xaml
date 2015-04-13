@@ -10,10 +10,12 @@
     <Page.Resources>
         <vm:MySongsView x:Key="mySongsView"/>
     </Page.Resources>
-    <Grid x:Name="mainGrid"> 
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
         </Grid.Background>
+        <ProgressBar x:Name="progressLoading"  VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" />
+        <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="9*"/>
@@ -23,9 +25,9 @@
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="progressLoading" Grid.Column="1" Grid.Row="0" Height="30" VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" FontSize="20" SmallChange="0.1"/>
             <AppBarButton Grid.Column="0" Grid.Row="0" Icon="Back" x:Name="btnBack" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="btnBack_Click" />
-        <TextBlock  x:Name="txtMySongs" Grid.Column="1" Grid.Row="0" Text="My songs" VerticalAlignment="Bottom" Margin="0,0,0,30" FontSize="42" />
+
+            <TextBlock  x:Name="txtMySongs" Grid.Column="1" Grid.Row="0" Text="My songs" VerticalAlignment="Bottom" Margin="0,0,0,30" FontSize="42" />
         <Grid x:Name="gridContain" Grid.Row="1" Grid.Column="1">        
             <Grid.RowDefinitions >
                 <RowDefinition Height="5*"/>
@@ -78,7 +80,7 @@
             <Grid  Grid.Row="2"></Grid>
             </Grid>
         </Grid>
-    
+    </Grid>
     <Page.BottomAppBar>
         <CommandBar Background="DodgerBlue">
             <AppBarButton Label="Exit" Icon="ClosePane" x:Name="btnClose" Click="btnClose_Click"/>
