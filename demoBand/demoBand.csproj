@@ -14,7 +14,10 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>demoBand_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>demoBand_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>76D7C26C5302E7FDB31EE065F4EB8BA2B40FD3BB</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -164,10 +167,12 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="demoBand_StoreKey.pfx" />
     <None Include="demoBand_TemporaryKey.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\AppImages\novilogo_splash.scale-100.png" />
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
     <Content Include="Assets\Images\Backgrounds\drums-back.png" />
@@ -230,6 +235,7 @@
     <Content Include="Assets\Songs\RHCP-Otherside%28Guitar%29.mp3" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
