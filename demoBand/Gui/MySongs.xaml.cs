@@ -46,7 +46,7 @@ namespace demoBand.Gui
 
             List<Collaborator> voiceList = await DataBaseParse.getCollaborator(songname, author, "Voice");
             List<Collaborator> guitarList = await DataBaseParse.getCollaborator(songname, author, "Guitar");
-            List<Collaborator> drumList = await DataBaseParse.getCollaborator(songname, author, "Drum");
+            List<Collaborator> drumList = await DataBaseParse.getCollaborator(songname, author, "Drums");
             List<Collaborator> pianoList = await DataBaseParse.getCollaborator(songname, author, "Piano");
 
             SenderObject so = new SenderObject();

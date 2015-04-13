@@ -234,6 +234,7 @@ namespace demoBand.Gui
 
         private void popupDialogChoose_Closed(object sender, object e)
         {
+            stackDialogChoose.Children.Clear();
             mainGrid.Opacity = 1;
         }
 

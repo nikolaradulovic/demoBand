@@ -609,11 +609,11 @@ namespace demoBand.Gui
         {
             //collaboratorSave = new List<string>();
             //collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
-            if (txtCollaborator.Text != "" || txtCollaborator.Text != "(Optional)")
+            if (txtCollaborator.Text != "" && txtCollaborator.Text != "(Optional)")
                 collaboratorSave.Add(txtCollaborator.Text);
-            if (txtCollaborator2.Text != "" || txtCollaborator2.Text != "(Optional)")
+            if (txtCollaborator2.Text != "" && txtCollaborator2.Text != "(Optional)")
                 collaboratorSave.Add(txtCollaborator2.Text);
-            if (txtCollaborator3.Text != "" || txtCollaborator3.Text != "(Optional)")
+            if (txtCollaborator3.Text != "" && txtCollaborator3.Text != "(Optional)")
                 collaboratorSave.Add(txtCollaborator3.Text);
 
             recordParse.Songname = txtSongName.Text;
