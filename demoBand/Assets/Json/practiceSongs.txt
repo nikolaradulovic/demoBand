@@ -3,48 +3,47 @@
         "Name": "Otherside",
         "Author": "RHCP",
         "Length": "255",
-	   "ImagePath": "../Assets/Images/Covers/img19.jpg",
-	   "songViewPath" : "../Assets/Json/otherside.txt",
+        "ImagePath": "../Assets/Images/Covers/img19.jpg",
+        "songViewPath": "../Assets/Json/otherside.txt",
         "Instruments": [
             {
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/RedHotChiliPeppers'1999-Otherside(acapella).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : "Assets/Json/otherside.txt"
+                "AudioByteArray": null,
+                "TextPath": "Assets/Json/otherside.txt"
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/RHCP-Otherside(Guitar).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : "Assets/Json/oChords.txt"
+                "AudioByteArray": null,
+                "TextPath": "Assets/Json/oChords.txt"
             },
-			{
+            {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx:///Assets/Songs/RHCP-Otherside(Drums).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
-    
     {
         "Name": "Radioactive",
         "Author": "Imagine Dragons",
         "Length": "147",
-		"ImagePath": "../Assets/Images/Covers/img16.jpg",
-		"songViewPath" : "../Assets/Json/otherside.txt",
+        "ImagePath": "../Assets/Images/Covers/img16.jpg",
+        "songViewPath": "../Assets/Json/otherside.txt",
         "Instruments": [
             {
                 "TypeOfInstrument": 3,
                 "Path": "ms-appx:///Assets/Songs/cImagineDragons-Radioactive(piano cover)(mp3cut.net)(2).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/cRadioactive(Imagine Dragons)-FingerstyleGuitar(mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
@@ -52,19 +51,19 @@
         "Name": "Get Lucky",
         "Author": "Daft Punk",
         "Length": "192",
-		"ImagePath": "../Assets/Images/Covers/img14.jpg",
+        "ImagePath": "../Assets/Images/Covers/img14.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx: ///Assets/Songs/Get Lucky - Daft Punk ft. Pharrell Williams & Nile Rodgers (cover) Jess Greenberg.mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 3,
                 "Path": "ms-appx: ///Assets/Songs/3Daft Punk - Get Lucky ft. Pharrell Williams (piano cover) (mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
@@ -72,25 +71,25 @@
         "Name": "Clocks",
         "Author": "Coldplay",
         "Length": "219",
-		"ImagePath": "../Assets/Images/Covers/img12.jpg",
+        "ImagePath": "../Assets/Images/Covers/img12.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (Guitar Track) (mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (Drum Track).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 3,
                 "Path": "ms-appx: ///Assets/Songs/Coldplay - Clocks (piano cover) improved version.mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
@@ -98,71 +97,71 @@
         "Name": "We Are Young",
         "Author": "Fun",
         "Length": "216",
-		"ImagePath": "../Assets/Images/Covers/img13.jpg",
+        "ImagePath": "../Assets/Images/Covers/img13.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/1FUN. - We Are Young (Studio Acapella) (mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx:///Assets/Songs/2F.U.N - We are Young (Drum Track) (mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
-	{
+    {
         "Name": "TNT",
         "Author": "AC/DC",
         "Length": "216",
-		"ImagePath": "../Assets/Images/Covers/img11.jpg",
+        "ImagePath": "../Assets/Images/Covers/img11.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx: ///Assets/Songs/ACDC - TNT Guitar Cover.mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx: ///Assets/Songs/TNT - drums (mp3cut.net).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
-	 {
+    {
         "Name": "Numb",
         "Author": "Linkin Park",
         "Length": "180",
-		"ImagePath": "../Assets/Images/Covers/img17.jpg",
+        "ImagePath": "../Assets/Images/Covers/img17.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Acapella Vocals Only).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Guitar Track).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Guitar Track).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 3,
                 "Path": "ms-appx: ///Assets/Songs/Linkin Park - Numb (Piano Track).mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
@@ -170,97 +169,272 @@
         "Name": "The House of the Rising Sun",
         "Author": "The Animals",
         "Length": "46",
-		"ImagePath": "../Assets/Images/Covers/img15.jpg",
+        "ImagePath": "../Assets/Images/Covers/img15.jpg",
         "Instruments": [
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx: ///Assets/Songs/house of the rising sun gt.mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             },
             {
                 "TypeOfInstrument": 2,
                 "Path": "ms-appx: ///Assets/Songs/house of the rising sun dr.mp3",
-				"AudioByteArray" : null,
-				"TextPath" : null
+                "AudioByteArray": null,
+                "TextPath": null
             }
         ]
     },
-	 {
+    {
         "Name": "Do I Wanna Know",
         "Author": "Arctic Monkeys",
-		"ImagePath": "../Assets/Images/Covers/img2.png",
+        "ImagePath": "../Assets/Images/Covers/img2.png",
         "Length": "179"
     },
-	
-      {
+    {
         "Name": "Nothing but the beat",
         "Author": "David Guetta",
-		"ImagePath": "../Assets/Images/Covers/img4.jpg",
+        "ImagePath": "../Assets/Images/Covers/img4.jpg",
         "Length": "256"
     },
-	 {
+    {
         "Name": "I see fire",
         "Author": "Ed Sheeran",
-		"ImagePath": "../Assets/Images/Covers/img7.jpg",
+        "ImagePath": "../Assets/Images/Covers/img7.jpg",
         "Length": "189"
     },
     {
         "Name": "Recovery",
         "Author": "Eminem",
-		"ImagePath": "../Assets/Images/Covers/img5.jpg",
+        "ImagePath": "../Assets/Images/Covers/img5.jpg",
         "Length": "209"
     },
-
     {
         "Name": "Waka waka",
         "Author": "Shakira",
-		"ImagePath": "../Assets/Images/Covers/img10.jpg",
+        "ImagePath": "../Assets/Images/Covers/img10.jpg",
         "Length": "256"
     },
-	
     {
         "Name": "Long road to run",
         "Author": "Foo Fighters",
-		"ImagePath": "../Assets/Images/Covers/img8.jpg",
+        "ImagePath": "../Assets/Images/Covers/img8.jpg",
         "Length": "215"
     },
-
-	
     {
         "Name": "Here and now",
         "Author": "Nickelback",
-		"ImagePath": "../Assets/Images/Covers/img9.jpg",
+        "ImagePath": "../Assets/Images/Covers/img9.jpg",
         "Length": "203"
     },
-
-	
     {
         "Name": "Lost Highway",
         "Author": "Bon Jovi",
-		"ImagePath": "../Assets/Images/Covers/img3.jpg",
+        "ImagePath": "../Assets/Images/Covers/img3.jpg",
         "Length": "188"
     },
     {
         "Name": "Abbey Road",
         "Author": "The Beatles",
-		"ImagePath": "../Assets/Images/Covers/img1.jpg",
+        "ImagePath": "../Assets/Images/Covers/img1.jpg",
         "Length": "186"
     },
-	
     {
         "Name": "Feel Good",
         "Author": "Gorillaz",
-		"ImagePath": "../Assets/Images/Covers/img6.jpg",
+        "ImagePath": "../Assets/Images/Covers/img6.jpg",
         "Length": "173"
-		
+    },
+    {
+        "Name": "Kings and Queens",
+        "Author": "30 Seconds To Mars",
+        "ImagePath": "../Assets/Images/Covers/img111.png",
+        "Length": "222"
+    },
+    {
+        "Name": "Amazing",
+        "Author": "Inna",
+        "ImagePath": "../Assets/Images/Covers/img112.jpg",
+        "Length": "246"
+    },
+    {
+        "Name": "Exile",
+        "Author": "Hurts",
+        "ImagePath": "../Assets/Images/Covers/img113.png",
+        "Length": "276"
+    },
+    {
+        "Name": "I love it loud",
+        "Author": "Kiss",
+        "ImagePath": "../Assets/Images/Covers/img114.jpg",
+        "Length": "256"
+    },
+    {
+        "Name": "Vertigo",
+        "Author": "U2",
+        "ImagePath": "../Assets/Images/Covers/img115.jpg",
+        "Length": "230"
+    },
+    {
+        "Name": "Desert rose",
+        "Author": "Sting",
+        "ImagePath": "../Assets/Images/Covers/img116.jpg",
+        "Length": "256"
+    },
+    {
+        "Name": "Summer in the city",
+        "Author": "Joe Cocker",
+        "ImagePath": "../Assets/Images/Covers/img117.jpg",
+        "Length": "226"
+    },
+    {
+        "Name": "Unforgiven",
+        "Author": "Metallica",
+        "ImagePath": "../Assets/Images/Covers/img118.jpg",
+        "Length": "266"
+    },
+    {
+        "Name": "A place with no name",
+        "Author": "Michael Jackson",
+        "ImagePath": "../Assets/Images/Covers/img119.jpg",
+        "Length": "256"
+    },
+    {
+        "Name": "Grenade",
+        "Author": "Bruno mars",
+        "ImagePath": "../Assets/Images/Covers/img210.jpg",
+        "Length": "256"
+    },
+    {
+        "Name": "Hurt",
+        "Author": "Christina Aguilera",
+        "ImagePath": "../Assets/Images/Covers/img211.jpg",
+        "Length": "206"
+    },
+    {
+        "Name": "Wicked game",
+        "Author": "Chris Isaak",
+        "ImagePath": "../Assets/Images/Covers/img212.jpg",
+        "Length": "222"
+    },
+    {
+        "Name": "Dangerous",
+        "Author": "David Guetta",
+        "ImagePath": "../Assets/Images/Covers/img213.jpg",
+        "Length": "185"
+    },
+    {
+        "Name": "Yeah",
+        "Author": "Usher",
+        "ImagePath": "../Assets/Images/Covers/img214.jpg",
+        "Length": "170"
+    },
+    {
+        "Name": "Stairway to Heaven",
+        "Author": "Led Zeppelin",
+        "ImagePath": "../Assets/Images/Covers/img215.jpg",
+        "Length": "270"
+    },
+    {
+        "Name": "Supermassive Black Hole",
+        "Author": "Muse",
+        "ImagePath": "../Assets/Images/Covers/img216.jpg",
+        "Length": "280"
+    },
+    {
+        "Name": "Killers",
+        "Author": "Iron Maiden",
+        "ImagePath": "../Assets/Images/Covers/img217.jpg",
+        "Length": "290"
+    },
+    {
+        "Name": "Forever young",
+        "Author": "Jay-Z",
+        "ImagePath": "../Assets/Images/Covers/img218.jpg",
+        "Length": "256"
+    },
+    {
+        "Name": "Love Me Again",
+        "Author": "John Newman",
+        "ImagePath": "../Assets/Images/Covers/img219.jpg",
+        "Length": "240"
+    },
+    {
+        "Name": "Hurt",
+        "Author": "Johnny Cash",
+        "ImagePath": "../Assets/Images/Covers/img310.png",
+        "Length": "249"
+    },
+    {
+        "Name": "Kick In The Teeth",
+        "Author": "Papa Roach",
+        "ImagePath": "../Assets/Images/Covers/img311.jpg",
+        "Length": "222"
+    },
+    {
+        "Name": "What A Wonderful World",
+        "Author": "Louis Armstrong",
+        "ImagePath": "../Assets/Images/Covers/img312.jpg",
+        "Length": "240"
+    },
+    {
+        "Name": "Na na na",
+        "Author": "My Chemical Romance",
+        "ImagePath": "../Assets/Images/Covers/img313.jpg",
+        "Length": "240"
+    },
+    {
+        "Name": "All The Right Moves",
+        "Author": "One Republic",
+        "ImagePath": "../Assets/Images/Covers/img314.jpg",
+        "Length": "260"
+    },
+    {
+        "Name": "We Will Rock You",
+        "Author": "Queen",
+        "ImagePath": "../Assets/Images/Covers/img315.jpg",
+        "Length": "200"
+    },
+    {
+        "Name": "It Was Always You",
+        "Author": "Maroon 5",
+        "ImagePath": "../Assets/Images/Covers/img316.jpg",
+        "Length": "240"
+    },
+    {
+        "Name": "Shake It Out",
+        "Author": "Florence + Machine",
+        "ImagePath": "../Assets/Images/Covers/img317.png",
+        "Length": "270"
+    },
+    {
+        "Name": "Human",
+        "Author": "The Killers",
+        "ImagePath": "../Assets/Images/Covers/img318.jpg",
+        "Length": "190"
+    },
+    {
+        "Name": "The Sound Of Broken Strings",
+        "Author": "James Morrison",
+        "ImagePath": "../Assets/Images/Covers/img319.jpg",
+        "Length": "170"
+    },
+    {
+        "Name": "Is This Love",
+        "Author": "Whitesnake",
+        "ImagePath": "../Assets/Images/Covers/img410.jpg",
+        "Length": "180"
+    },
+    {
+        "Name": "7 Nation army",
+        "Author": "The White Stripes",
+        "ImagePath": "../Assets/Images/Covers/img411.jpg",
+        "Length": "240"
+    },
+    {
+        "Name": "You're Beautiful",
+        "Author": "James Blunt",
+        "ImagePath": "../Assets/Images/Covers/img412.jpg",
+        "Length": "190"
     }
-
-
-
-
-
-
-	
-	
 ]
