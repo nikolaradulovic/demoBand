@@ -2,6 +2,7 @@
 using demoBand.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -30,13 +31,12 @@ namespace demoBand.Gui
             this.InitializeComponent();
         }
 
-        private Stack stack;
-        private DiscoverView discoverView;
+     //   private Stack stack;
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            stack = new Stack(DiscoverView.shownSongs);
-            discoverView = new DiscoverView();
+         //   stack = new Stack(DiscoverView.shownSongs);
+            //discoverView = new DiscoverView();
 
         }
 
@@ -54,24 +54,36 @@ namespace demoBand.Gui
 
         private void searchSong_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            
-            if (e.Key == VirtualKey.Back)
+            //SongListItem sl = new SongListItem();
+            //sl.ArtistName = "Proba";
+            //sl.SongName = "Proba";
+            //DiscoverView.shownSongs.Add(sl);
+
+            //ovde nesto ne radi
+            //if (e.Key == VirtualKey.Back)
+            //{
+            //    DiscoverView.shownSongs = stack.pop();
+            //}
+            string text = txtSearchSong.QueryText;
+            ObservableCollection<SongListItem> result = searchByText(text);
+          //  stack.push(result);
+
+            DiscoverView.shownSongs.Clear();
+            foreach (SongListItem sl in result)
             {
-                discoverView.ShownSongs = stack.pop();
+                DiscoverView.shownSongs.Add(sl);
             }
-            string text = txtSearchSong.Text;
-            List<SongListItem> result = searchByText(text);
-            stack.push(result);
-            discoverView.ShownSongs = result;
-            discoverView.refrehList();
+            //ovako ne moze da se puni ObservableCollection a da se to vidi u gridu u real time
+         //   DiscoverView.shownSongs = result;
+     
 
         }
 
 
-        private List<SongListItem> searchByText(string text)
+        private ObservableCollection<SongListItem> searchByText(string text)
         {
-            List<SongListItem> result = new List<SongListItem>();
-            List<SongListItem> allSongs = DiscoverView.allDiscoverSongs;
+            ObservableCollection<SongListItem> result = new ObservableCollection<SongListItem>();
+            ObservableCollection<SongListItem> allSongs = DiscoverView.AllDiscoverSongs;
             foreach(SongListItem sli in allSongs) {
                 if (sli.ArtistName.Contains(text) || sli.SongName.Contains(text)) {
                     result.Add(sli);
@@ -82,41 +94,43 @@ namespace demoBand.Gui
             return result;
         }
 
+      
+
         
     }
 
 
-    public class Stack
-    {
-        
-        private List<List<SongListItem>> stack;
+    //public class Stack
+    //{
+
+    //    private ObservableCollection<ObservableCollection<SongListItem>> stack;
 
 
-        public Stack(List<SongListItem> shownSongs)
-        {
-            
-            stack = new List<List<SongListItem>>();
-            stack.Add(shownSongs);
-        }
+    //    public Stack(ObservableCollection<SongListItem> shownSongs)
+    //    {
 
-        public void push(List<SongListItem> list)
-        {
-            stack.Add(list);
-        }
+    //        stack = new ObservableCollection<ObservableCollection<SongListItem>>();
+    //        stack.Add(shownSongs);
+    //    }
 
-        public List<SongListItem> pop()
-        {
-            if (stack.Count == 1)
-            {
-                return stack.ElementAt(0);
-            }
-            List<SongListItem> last = stack.ElementAt(stack.Count-1);
-            stack.RemoveAt(stack.Count - 1);
-            return last;
-        }
+    //    public void push(ObservableCollection<SongListItem> list)
+    //    {
+    //        stack.Add(list);
+    //    }
+
+    //    public ObservableCollection<SongListItem> pop()
+    //    {
+    //        if (stack.Count == 1)
+    //        {
+    //            return stack.ElementAt(0);
+    //        }
+    //        ObservableCollection<SongListItem> last = stack.ElementAt(stack.Count - 1);
+    //        stack.RemoveAt(stack.Count - 1);
+    //        return last;
+    //    }
 
 
-    }
+    //}
 
 
 }

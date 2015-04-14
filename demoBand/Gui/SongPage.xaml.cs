@@ -90,13 +90,13 @@ namespace demoBand.Gui
 
             switch (instrument)
             {
-                case type.Voice: uri = new Uri(this.BaseUri, "../Assets/Images/Backgrounds/voice-record.png");
+                case type.Voice: uri = new Uri(this.BaseUri, "../Assets/Images/Instruments/voice-back.png");
                     break;
-                case type.Guitar: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/guitar-record.png");
+                case type.Guitar: uri = new Uri(this.BaseUri,"../Assets/Images/Instruments/guitar-back.png");
                     break;
-                case type.Drums: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/drums-back.png");
+                case type.Drums: uri = new Uri(this.BaseUri, "../Assets/Images/Instruments/drums-back.png");
                     break;
-                case type.Piano: uri = new Uri(this.BaseUri,"../Assets/Images/Backgrounds/piano-back.png");
+                case type.Piano: uri = new Uri(this.BaseUri, "../Assets/Images/Instruments/piano-back.png");
                     break;
                
             }

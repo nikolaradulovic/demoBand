@@ -10,6 +10,7 @@ using Windows.Storage.Streams;
 using System.IO;
 using System.Net.Http;
 using demoBand.Util;
+using System.Collections.ObjectModel;
 
 namespace demoBand.ParseBase
 {
@@ -150,9 +151,9 @@ namespace demoBand.ParseBase
 
         }
 
-        public async static Task<List<SongListItem>> getDiscoverListItem(string username, List<SongListItem> shownItems)
+        public async static Task<ObservableCollection<SongListItem>> getDiscoverListItem(string username, ObservableCollection<SongListItem> shownItems)
         {
-            List<SongListItem> list = new List<SongListItem>();
+            ObservableCollection<SongListItem> list = new ObservableCollection<SongListItem>();
             var query = from song in ParseObject.GetQuery("Record")
                         where song.Get<string>("songartist") != username
                         select song;
