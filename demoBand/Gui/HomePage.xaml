@@ -32,10 +32,17 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
+        <StackPanel x:Name="User" Orientation="Horizontal" HorizontalAlignment="Right" Width="150" Height="50" VerticalAlignment="Top" Margin="50,75" >
+            <TextBlock Text="User" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" ></TextBlock>
+
+            <Image Source="../Assets/Images/User/default-user-icon-profile.png"  Margin="10,0,0,0"></Image>
+
+        </StackPanel>
         <Popup x:Name="popupDialogChoose" IsOpen="False" Closed="popupDialogChoose_Closed" VerticalAlignment="Center">
             <Grid x:Name="stackDialogChoose" Background="DodgerBlue" >
                 
             </Grid>
+            
         </Popup>
         <ProgressBar x:Name="progressBar" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsIndeterminate="True" Visibility="Collapsed" />
         <Hub> 
@@ -49,6 +56,7 @@
                 </HubSection.HeaderTemplate>
                 <DataTemplate>
                    
+                    
                     <Grid Margin="0,20,0,0">
                         <GridView HorizontalAlignment="Stretch" DataContext="{Binding Source={StaticResource menuView}}" x:Name="lstMenu" FontSize="20" 
                                    ItemsSource="{Binding ListItems}"  
@@ -70,12 +78,13 @@
                                             <Image  x:Name="imgSlika" Source="{Binding ImagePath}" Margin="0,10,0,10" Height="60" />
                                         </StackPanel>
                                         <TextBlock Grid.Column="1" Margin="20,0,0,0" Text="{Binding Name}" FontSize="25" Foreground="White" VerticalAlignment="Center"/>
-
+                                        
                                     </Grid>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
                         </GridView>
                     </Grid>
+                    
                 </DataTemplate>
             </HubSection>
             <HubSection  Margin="0,-20,0,0">
@@ -116,6 +125,8 @@
                     </StackPanel>
                 </DataTemplate>
             </HubSection>
+            
+           
             
         </Hub>
     </Grid>
