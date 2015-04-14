@@ -16,7 +16,7 @@ namespace demoBand.ParseBase
             push.Query = from user in ParseInstallation.Query
                          where user.Get<string>("username") == collaborator
                          select user;
-            push.Alert = "You have new request for collaboration\nTitle: "+songname+"\n"+"author: "+artistname;
+            push.Alert = "Collaboration request\nTitle:/t"+songname+"\n"+"Author:\t"+artistname;
 
             await push.SendAsync();
         }
