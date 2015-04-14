@@ -180,14 +180,10 @@
     <Content Include="Assets\Images\AppImages\novilogo_splash.scale-100.png" />
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
-    <Content Include="Assets\Images\Backgrounds\drums-back.png" />
-    <Content Include="Assets\Images\Backgrounds\guitar-record.png" />
     <Content Include="Assets\Images\Backgrounds\home background.png" />
     <Content Include="Assets\Images\Backgrounds\home-back.png" />
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
     <Content Include="Assets\Images\Backgrounds\novilogo.png" />
-    <Content Include="Assets\Images\Backgrounds\piano-back.png" />
-    <Content Include="Assets\Images\Backgrounds\voice-record.png" />
     <Content Include="Assets\Images\Covers\img1.jpg" />
     <Content Include="Assets\Images\Covers\img2.png" />
     <Content Include="Assets\Images\Covers\img3.jpg" />
@@ -220,8 +216,10 @@
     <Content Include="Assets\Images\Icons\new-song-small.png" />
     <Content Include="Assets\Images\Icons\new-song.png" />
     <Content Include="Assets\Images\Icons\settings.png" />
-    <Content Include="Assets\Images\Instruments\guitar.png" />
-    <Content Include="Assets\Images\Instruments\mic.png" />
+    <Content Include="Assets\Images\Instruments\drums-back.png" />
+    <Content Include="Assets\Images\Instruments\guitar-back.png" />
+    <Content Include="Assets\Images\Instruments\piano-back.png" />
+    <Content Include="Assets\Images\Instruments\voice-back.png" />
     <Content Include="Assets\Images\logo.jpg" />
     <Content Include="Assets\Images\Dashboard\Buttons\play.png" />
     <Content Include="Assets\Images\MySongs\mysongs.png" />
