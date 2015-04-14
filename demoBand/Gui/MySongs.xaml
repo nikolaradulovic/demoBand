@@ -22,8 +22,8 @@
             </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <!--<ColumnDefinition Width="1*"/>-->
         </Grid.ColumnDefinitions>
             <AppBarButton Grid.Column="0" Grid.Row="0" Icon="Back" x:Name="btnBack" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="btnBack_Click" />
 
@@ -34,23 +34,32 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" HorizontalAlignment="Stretch">
                 <GridView x:Name="gridListMy" DataContext="{Binding Source={StaticResource mySongsView}}"
                           ItemsSource="{Binding MySongs}"
                           IsItemClickEnabled="True"
                           ItemClick="gridList_ItemClick">        
                     <GridView.ItemTemplate>
                         <DataTemplate>
+                                <Border BorderBrush="White" BorderThickness="2">
                             <Grid x:Name="gridSong" Width="250" Height="100">
                                 <Grid.Background>
-                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />   
-                                </Grid.Background>
+                                        <SolidColorBrush Color="DodgerBlue" Opacity="0.2"/>
+                                    </Grid.Background>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
                                 <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
+                                        <StackPanel Orientation="Horizontal" Height="20" Margin="20,0,0,0">
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                        </StackPanel>
                                 </StackPanel>
-                            </Grid>                         
-                        </DataTemplate>
+                            </Grid>
+                                </Border>
+                            </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView> 
             </Grid>
@@ -61,18 +70,26 @@
                           ItemClick="gridList_ItemClick">
                     <GridView.ItemTemplate>
                         <DataTemplate>
+                                <Border BorderBrush="White" BorderThickness="2">
                             <Grid x:Name="gridSong" Width="250" Height="100">
                                 
                                 <Grid.Background>
-                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />
-                                    
-                                </Grid.Background>
+                                        <SolidColorBrush Color="DodgerBlue" Opacity="0.2"/>
+                                    </Grid.Background>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                                     <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
                                     <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
-                                </StackPanel>
-                            </Grid>
-                        </DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                                </Border>
+                            </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
             </Grid>

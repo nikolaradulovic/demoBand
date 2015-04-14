@@ -13,7 +13,7 @@
     </Page.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/discover.png"/>
         </Grid.Background>
         <ProgressBar x:Name="progressLoading"  VerticalAlignment="Top" Visibility="Collapsed" IsIndeterminate="True" />
         <Grid x:Name="mainGrid">
@@ -28,24 +28,44 @@
             </Grid.ColumnDefinitions>
             <AppBarButton Icon="Back" x:Name="btnBack" Click="btnBack_Click" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             <TextBlock Text="Discover" FontSize="42" Margin="0,0,0,30" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom"/>
-            <SearchBox Grid.Column="1" Grid.Row="1" x:Name="txtSearchSong" Width="200" Height="40" HorizontalAlignment="Left" KeyUp="searchSong_KeyUp"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="1"  Grid.Column="1">
+            <SearchBox x:Name="txtSearchSong" Width="200" Height="40" HorizontalAlignment="Left" KeyUp="searchSong_KeyUp"/>
+                <ComboBox x:Name="cmbNew"  Margin="20,0,0,0" Height="40" PlaceholderText="New">
+                    <ComboBox.Background>
+                        <ImageBrush Opacity="0.1"/>
+                    </ComboBox.Background> 
+                </ComboBox>
+                <ComboBox x:Name="cmbPopular" Margin="20,0,0,0" Height="40" PlaceholderText="Popular">
+                    <ComboBox.Background>
+                        <ImageBrush Opacity="0.1"/>
+                    </ComboBox.Background>
+                </ComboBox>
+            </StackPanel>
             <Grid Grid.Row="2" Grid.Column="1">
-                <GridView x:Name="gridListMy" DataContext="{Binding Source={StaticResource discoverView}}"
-                          
+                <GridView x:Name="gridListMy" DataContext="{Binding Source={StaticResource discoverView}}"                       
                           ItemsSource="{Binding ShownSongs }"
                           IsItemClickEnabled="True"
                           ItemClick="gridList_ItemClick">
                     <GridView.ItemTemplate>
                         <DataTemplate>
+                            <Border BorderBrush="White" BorderThickness="2">
                             <Grid x:Name="gridSong" Width="250" Height="100">
                                 <Grid.Background>
-                                    <ImageBrush ImageSource="../Assets/Images/MySongs/songback.png"  Opacity="0.7" />
-                                </Grid.Background>
+                                        <SolidColorBrush Color="Blue" Opacity="0.1"/>
+                                    </Grid.Background>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                                     <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" FontWeight="SemiBold" Text="{Binding SongName}"/>
                                     <TextBlock FontSize="20" Margin="20,0,0,0" TextWrapping="WrapWholeWords" Text="{Binding ArtistName}"/>
-                                </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                            <SymbolIcon Symbol="Favorite" Opacity="0.1" />
+                                        </StackPanel>
+                                    </StackPanel>
                             </Grid>
+                            </Border>
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
