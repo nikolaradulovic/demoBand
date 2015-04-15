@@ -259,6 +259,7 @@
     <Content Include="Assets\Images\MySongs\mysongs.png" />
     <Content Include="Assets\Images\MySongs\songback.png" />
     <Content Include="Assets\Images\User\default-user-icon-profile.png" />
+    <Content Include="Assets\Images\User\user.png" />
     <Content Include="Assets\Json\oChords.txt" />
     <Content Include="Assets\Json\otherside.txt" />
     <Content Include="Assets\Json\practiceSongs.txt" />

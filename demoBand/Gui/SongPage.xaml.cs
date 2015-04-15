@@ -609,6 +609,8 @@ namespace demoBand.Gui
         {
             //collaboratorSave = new List<string>();
             //collaboratorSave.Add(Session.GetInstance().getValueAt("username").ToString());
+            txtUploading.Visibility = Visibility.Visible;
+            progressRing.IsActive = true;
             if (txtCollaborator.Text != "" && txtCollaborator.Text != "(Optional)")
                 collaboratorSave.Add(txtCollaborator.Text);
             if (txtCollaborator2.Text != "" && txtCollaborator2.Text != "(Optional)")
@@ -623,7 +625,8 @@ namespace demoBand.Gui
             if (choice == Choice.solo)
                 recordParse.Length = mediaRecording.NaturalDuration.TimeSpan.Seconds;//=========================================================ZA RECORD PUCA
             await saveSong();
-
+            txtUploading.Visibility = Visibility.Collapsed;
+            progressRing.IsActive = false;
             popunQuestion.IsOpen = false;
 
         }

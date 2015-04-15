@@ -59,9 +59,10 @@ namespace demoBand.Gui
 
         }
 
-        private async Task loadMyLoadMySong()
+        private async Task loadMyLoadMySong(string username)
         {
-            string username = Session.GetInstance().getValueAt("username").ToString();
+            //ovo zakomentarisano da se ne zove 2 puta
+           // string username = Session.GetInstance().getValueAt("username").ToString();
             MySongsView.setMySongs(await DataBaseParse.getSongListItemAuthor(username));
             MySongsView.setCollaboratorSongs(await DataBaseParse.getSongListItemCollaborator(username));
             //popuniti listu...
@@ -85,9 +86,12 @@ namespace demoBand.Gui
         /// session.  The state will be null the first time a page is visited.</param>
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            //prebacen session ovde da se ne poziva 2 puta i onda sam dodao loadMySong parametar string
+            string username = Session.GetInstance().getValueAt("username").ToString();
+            txtName.Text = username;  
             // TODO: Assign a collection of bindable groups to this.DefaultViewModel["Groups"]
            progressBar.Visibility = Visibility.Visible;
-           await loadMyLoadMySong();
+           await loadMyLoadMySong(username);
            progressBar.Visibility = Visibility.Collapsed;
            
 
