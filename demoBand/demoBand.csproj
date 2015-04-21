@@ -277,6 +277,8 @@
     <Content Include="Assets\Songs\2F.U.N - We are Young %28Drum Track%29 %28mp3cut.net%29.mp3" />
     <Content Include="Assets\Songs\cImagineDragons-Radioactive%28piano cover%29%28mp3cut.net%29%282%29.mp3" />
     <Content Include="Assets\Songs\cRadioactive%28Imagine Dragons%29-Fingerstyle Guitar%28mp3cut.net%29.mp3" />
+    <Content Include="Assets\Songs\Guitar.mp3" />
+    <Content Include="Assets\Songs\Piano.mp3" />
     <Content Include="Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3" />
     <Content Include="Assets\Songs\RHCP-Otherside%28Drums%29.mp3" />
     <Content Include="Assets\Songs\RHCP-Otherside%28Guitar%29.mp3" />

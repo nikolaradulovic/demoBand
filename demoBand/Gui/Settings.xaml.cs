@@ -41,6 +41,7 @@ namespace demoBand.Gui
         private type instrument;
         private int micValue;
 
+
         private void btnRecord_Click(object sender, RoutedEventArgs e)
         {
             recorder = new Recorder();
@@ -75,11 +76,28 @@ namespace demoBand.Gui
         private void btnPlaySample_Click(object sender, RoutedEventArgs e)
         {
             // inicijalizacija source za playerSample
-            //playerSample.Source = new Uri("");
-            playerSample.Volume = ((double)sliderVolume.Value)/100;
+            playerSample.Source = new Uri(createInstrumentUri(),UriKind.RelativeOrAbsolute);
+            playerSample.Volume = 100;
             playerSample.Play();
             
         }
+
+        private string createInstrumentUri()
+        {
+            if (cmbInstrumentPicker != null)
+            {
+                int index = cmbInstrumentPicker.SelectedIndex;
+                switch (index)
+                {
+                    case 0: return "ms-appx:///Assets/Songs/Voice.mp3";
+                    case 1: return "ms-appx:///Assets/Songs/Guitar.mp3";
+                    case 2: return "ms-appx:///Assets/Songs/Piano.mp3";
+                    case 3: return "ms-appx:///Assets/Songs/Voice.mp3";
+                }
+            }
+            return null;
+        }
+
 
         private void btnStopSample_Click(object sender, RoutedEventArgs e)
         {
@@ -117,6 +135,14 @@ namespace demoBand.Gui
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             DataBaseParse.insertOrUpdateVolume(instrument.ToString(), micValue);
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
     }
 }
