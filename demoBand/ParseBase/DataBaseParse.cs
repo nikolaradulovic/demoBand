@@ -178,12 +178,32 @@ namespace demoBand.ParseBase
         }
 
 
+        public static void insertOrUpdateVolume(string instrument, int value)
+        {
+            ParseObject user = ParseUser.CurrentUser;
+            user[instrument] = value;
+            user.SaveAsync();
+        }
+
+        public static int getMicVolume(string instrument) 
+        {
+            ParseObject user = ParseUser.CurrentUser;
+            int volumePercentage;
+
+            try
+            {
+                volumePercentage = user.Get<int>(instrument);
+            }
+            catch (Exception)
+            {
+                volumePercentage = 90;
+                
+            }  
+            return volumePercentage;
+        }
+       
 
 
-
-     
-
-        
 
     }
 }

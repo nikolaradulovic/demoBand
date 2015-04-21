@@ -44,11 +44,23 @@ namespace demoBand.Util
         {
             await InitMediaCapture();
             encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.High);
-            captureMedia.AudioDeviceController.VolumePercent = 90;
+            captureMedia.AudioDeviceController.VolumePercent = 100;
             await captureMedia.StartRecordToStreamAsync(encodingProfile, audioStream);
             active = true;
            
         }
+
+        public async void startRecording(int volumePercent)
+        {
+            await InitMediaCapture();
+            encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.High);
+            captureMedia.AudioDeviceController.VolumePercent = (float)volumePercent/100;
+            await captureMedia.StartRecordToStreamAsync(encodingProfile, audioStream);
+            active = true;
+
+        }
+
+
 
         public async void stopRecording()
         {

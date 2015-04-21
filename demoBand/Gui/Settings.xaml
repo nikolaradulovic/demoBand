@@ -184,6 +184,7 @@
         </ControlTemplate>
     </Page.Resources>
     <Grid>
+        
         <Grid.Background>
             <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
         </Grid.Background>
@@ -208,30 +209,32 @@
             <TextBlock Grid.Row="0" Text="Audio settings:" VerticalAlignment="Bottom" FontSize="42"/> 
             <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
             <TextBlock  Text="Choose your instrument:" FontSize="20"/>
-                <ComboBox Height="30" Width="200" Margin="30,0,0,0" SelectedIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="cmbInstrumentPicker" FontSize="20">
+                <ComboBox Height="30" Width="200" Margin="30,0,0,0" SelectedIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="cmbInstrumentPicker" FontSize="20" SelectionChanged="cmbInstrumentPicker_SelectionChanged">
                     <ComboBoxItem Content="Voice"/>
-                    <ComboBoxItem Content="Piano"/>
                     <ComboBoxItem Content="Guitar"/>
+                    <ComboBoxItem Content="Piano"/>
                     <ComboBoxItem Content="Drums"/>
                 </ComboBox>
             </StackPanel>
             <StackPanel VerticalAlignment="Center" Grid.Row="2" Orientation="Horizontal">
+                <MediaElement x:Name="playerRec" AutoPlay="False"/>
                 <TextBlock VerticalAlignment="Center" Text="Your sound:" FontSize="20"/>
-                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnRecord"  Template="{StaticResource ButtonControlTemplate1}"/>
-                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnStop" Template="{StaticResource ButtonControlTemplate2}"/>
-                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnPlay" Template="{StaticResource ButtonControlTemplate4}"/>
+                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnRecord"  Template="{StaticResource ButtonControlTemplate1}" Click="btnRecord_Click"/>
+                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnStop" Template="{StaticResource ButtonControlTemplate2}" Click="btnStop_Click"/>
+                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnPlay" Template="{StaticResource ButtonControlTemplate4}" Click="btnPlay_Click"/>
             </StackPanel>
             <StackPanel Grid.Row="3" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="Test sample:" VerticalAlignment="Center" FontSize="20"/>
-                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnPlaySample"  Template="{StaticResource ButtonControlTemplate4}"/>
-                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnStopSample"  Template="{StaticResource ButtonControlTemplate2}"/>
+                <MediaElement x:Name="playerSample" AutoPlay="False"/>
+                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnPlaySample"  Template="{StaticResource ButtonControlTemplate4}" Click="btnPlaySample_Click"/>
+                <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnStopSample"  Template="{StaticResource ButtonControlTemplate2}" Click="btnStopSample_Click"/>
             </StackPanel>
             <StackPanel Grid.Row="4" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Text="Set up your volume:" FontSize="20"/>
-                <Slider Margin="30,0,0,0" Value="50" Height="40" Width="150" x:Name="sliderVolume"/>
+                <Slider Margin="30,0,0,0" Value="100" Height="40" Width="150" x:Name="sliderVolume" ValueChanged="sliderVolume_ValueChanged"  />
             </StackPanel>
             <StackPanel Grid.Row="5">
-                <Button x:Name="btnSave" Content="Save" FontSize="20" Background="DodgerBlue"/>    
+                <Button x:Name="btnSave" Content="Save" FontSize="20" Background="DodgerBlue" Click="btnSave_Click"/>    
             </StackPanel>
             </Grid>
     </Grid>

@@ -53,7 +53,7 @@ namespace demoBand.Gui
         string username; 
 
         //private bool progressEnabled;
-
+        private int volumePercent;
 
 
         public SongPage()
@@ -71,7 +71,8 @@ namespace demoBand.Gui
             players = new Dictionary<type, Player>();
             instrument = (type)Enum.Parse(typeof(type), (string)Session.GetInstance().getValueAt("instrument"));
             //createBackgroundImage(instrument);
-
+            
+            volumePercent = DataBaseParse.getMicVolume(instrument.ToString());
 
             progressValue = 0;
 
@@ -595,7 +596,7 @@ namespace demoBand.Gui
         private void startRecording()
         {
             recorder = new Recorder();
-            recorder.startRecording();
+            recorder.startRecording(volumePercent);
         }
 
         private void popunQuestion_Closed(object sender, object e)
