@@ -228,7 +228,7 @@
             </StackPanel>
             <StackPanel Grid.Row="3" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="Test sample:" VerticalAlignment="Center" FontSize="20"/>
-                <MediaElement x:Name="playerSample" AutoPlay="False"/>
+                <MediaElement x:Name="playerSample"/>
                 <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnPlaySample"  Template="{StaticResource ButtonControlTemplate4}" Click="btnPlaySample_Click"/>
                 <Button Margin="30,0,0,0" HorizontalAlignment="Center" x:Name="btnStopSample"  Template="{StaticResource ButtonControlTemplate2}" Click="btnStopSample_Click"/>
             </StackPanel>
