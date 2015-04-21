@@ -282,6 +282,7 @@
     <Content Include="Assets\Songs\RedHotChiliPeppers%271999-Otherside%28acapella%29.mp3" />
     <Content Include="Assets\Songs\RHCP-Otherside%28Drums%29.mp3" />
     <Content Include="Assets\Songs\RHCP-Otherside%28Guitar%29.mp3" />
+    <Content Include="Assets\Songs\Voice.mp3.mp3" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <None Include="Package.StoreAssociation.xml" />

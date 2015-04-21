@@ -47,6 +47,7 @@ namespace demoBand.Gui
             recorder = new Recorder();
             recorder.startRecording();
             btnRecord.IsEnabled = false;
+            btnPlay.IsEnabled = false;
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
@@ -62,6 +63,7 @@ namespace demoBand.Gui
                 playerRec.Position = new TimeSpan(0);
             }
             btnRecord.IsEnabled = true;
+            btnPlay.IsEnabled = true;
 
         }
 
@@ -77,7 +79,7 @@ namespace demoBand.Gui
         {
             // inicijalizacija source za playerSample
             playerSample.Source = new Uri(createInstrumentUri(),UriKind.RelativeOrAbsolute);
-            playerSample.Volume = 100;
+            playerSample.Volume = 1;
             playerSample.Play();
             
         }
@@ -128,6 +130,7 @@ namespace demoBand.Gui
             if (sliderVolume != null)
             {
                 micValue = (int)sliderVolume.Value;
+                playerRec.Volume = sliderVolume.Value/100;
             }
             
         }
