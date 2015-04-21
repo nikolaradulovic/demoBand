@@ -140,6 +140,9 @@
     <Compile Include="Gui\NewSong.xaml.cs">
       <DependentUpon>NewSong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Gui\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gui\SongPage.xaml.cs">
       <DependentUpon>SongPage.xaml</DependentUpon>
     </Compile>
@@ -298,6 +301,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Gui\NewSong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

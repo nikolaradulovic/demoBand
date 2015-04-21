@@ -32,7 +32,7 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        <StackPanel x:Name="User" Orientation="Horizontal" HorizontalAlignment="Right" Width="150" Height="50" VerticalAlignment="Top" Margin="50,75" >
+        <StackPanel x:Name="User" Orientation="Horizontal" HorizontalAlignment="Right" Width="250" Height="50" VerticalAlignment="Top" Margin="50,75" >
             <TextBlock x:Name="txtName" Text="User" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" ></TextBlock>
             <Image Source="../Assets/Images/User/user.png"  Margin="10,0,0,0"></Image>
         </StackPanel>
