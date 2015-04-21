@@ -115,6 +115,7 @@
     <Compile Include="Component\SliderStackPanel.cs" />
     <Compile Include="Domen\Collaborator.cs" />
     <Compile Include="Domen\Comment.cs" />
+    <Compile Include="Domen\HelpElement.cs" />
     <Compile Include="Domen\Instrument.cs" />
     <Compile Include="Domen\MenuItem.cs" />
     <Compile Include="Domen\Player.cs" />
@@ -130,6 +131,9 @@
     <Compile Include="Gui\Dialog\InstrumentStackPanel.cs" />
     <Compile Include="Gui\DiscoverPage.xaml.cs">
       <DependentUpon>DiscoverPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -166,6 +170,7 @@
     <Compile Include="Util\InstrumentPicture.cs" />
     <Compile Include="Util\Recorder.cs" />
     <Compile Include="ViewModel\DiscoverView.cs" />
+    <Compile Include="ViewModel\HelpView.cs" />
     <Compile Include="ViewModel\MenuView.cs" />
     <Compile Include="ViewModel\MySongsView.cs" />
     <Compile Include="ViewModel\PracticeView.cs" />
@@ -289,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Gui\DiscoverPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\HelpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

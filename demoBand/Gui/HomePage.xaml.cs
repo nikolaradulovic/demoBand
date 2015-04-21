@@ -220,6 +220,8 @@ namespace demoBand.Gui
                     break;
                 case "Settings": Frame.Navigate(typeof(Settings));
                     break;
+                case "Help": Frame.Navigate(typeof(HelpPage));
+                    break;
 
                 //case "Discover": Frame.Navigate(typeof(CollaborationSong));
                 //    break;
