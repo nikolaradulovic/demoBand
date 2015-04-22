@@ -186,7 +186,7 @@
     <Grid>
         
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/MySongs/mysongs.png"/>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/settings.png"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>

@@ -196,6 +196,7 @@
     <Content Include="Assets\Images\Backgrounds\home-back.png" />
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
     <Content Include="Assets\Images\Backgrounds\novilogo.png" />
+    <Content Include="Assets\Images\Backgrounds\settings.png" />
     <Content Include="Assets\Images\Covers\img1.jpg" />
     <Content Include="Assets\Images\Covers\img111.png" />
     <Content Include="Assets\Images\Covers\img112.jpg" />
