@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -108,22 +109,31 @@ namespace demoBand.Gui
 
         private void cmbInstrumentPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            BitmapImage bp = new BitmapImage();
             if (cmbInstrumentPicker != null)
             {
                 int index = cmbInstrumentPicker.SelectedIndex;
                 switch (index)
                 {
                     case 0: instrument = type.Voice;
+                        bp.UriSource = InstrumentPicture.getImageUri(type.Voice);
                         break;
                     case 1: instrument = type.Guitar;
+                        bp.UriSource = InstrumentPicture.getImageUri(type.Guitar);
                         break;
                     case 2: instrument = type.Piano;
+                        bp.UriSource = InstrumentPicture.getImageUri(type.Piano);
                         break;
                     case 3: instrument = type.Drums;
+                        bp.UriSource = InstrumentPicture.getImageUri(type.Drums);
                         break;
                 }
+
+                imgInstrument.Source = bp;
             }   
         }
+
 
         private void sliderVolume_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
