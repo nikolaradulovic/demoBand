@@ -185,6 +185,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\background.png" />
+    <Content Include="Assets\background1.png" />
+    <Content Include="Assets\background2.png" />
     <Content Include="Assets\Images\AppImages\novilogo_splash.scale-100.png" />
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
@@ -285,6 +288,8 @@
     <Content Include="Assets\Songs\Voice.mp3.mp3" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\unsplash-kitsune-40.jpg" />
+    <Content Include="Assets\unsplash-kitsune-41.jpg" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
