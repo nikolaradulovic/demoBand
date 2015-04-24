@@ -45,6 +45,7 @@ namespace demoBand.Gui
 
         private async void gridList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            progressLoading.Visibility = Visibility.Visible;
             SongListItem songItem = e.ClickedItem as SongListItem;
 
             List<string> allInstruments = Instrument.allStringInstruments();
@@ -75,6 +76,7 @@ namespace demoBand.Gui
             Session.GetInstance().insertValue("instrument", type.Voice.ToString());
             //
             Frame.Navigate(typeof(CollaborationSong), so);
+            progressLoading.Visibility = Visibility.Collapsed;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
