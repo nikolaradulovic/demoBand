@@ -54,7 +54,7 @@ namespace demoBand.Util
         {
             await InitMediaCapture();
             encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.High);
-            captureMedia.AudioDeviceController.VolumePercent = (float)volumePercent/100;
+            captureMedia.AudioDeviceController.VolumePercent = (float)volumePercent;
             await captureMedia.StartRecordToStreamAsync(encodingProfile, audioStream);
             active = true;
 

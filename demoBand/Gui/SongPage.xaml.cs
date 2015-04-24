@@ -634,9 +634,8 @@ namespace demoBand.Gui
 
         private async Task saveSong()
         {
+            //==========================================================================================
             byte[] songFile = await Converter.AudioStreamToByteArray(recorder.AudioStream);
-
-            
 
             foreach (string collString in collaboratorSave)
             {
@@ -648,7 +647,13 @@ namespace demoBand.Gui
                 }
                 
 
+            //==========================================================================================
 
+
+
+
+
+            //==========================================================================================
                 await DataBaseParse.saveSongToRecord(songFile,
                                            recordParse.Songname,
                                            recordParse.ArtistSong,
