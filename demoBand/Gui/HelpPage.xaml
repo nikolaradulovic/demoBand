@@ -19,7 +19,10 @@
 
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/settings.png"/>
+        </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -42,7 +45,9 @@
                                             <RowDefinition Height="5*"/>
                                         </Grid.RowDefinitions>
                                         <TextBlock FontSize="20" Grid.Row="0" Text="{Binding Text}"/>
-                                        <Image Grid.Row="1" HorizontalAlignment="Left" Source="{Binding ImagePath}"/>
+                                        <Border HorizontalAlignment="Left" Grid.Row="1" Width="380" Height="200" BorderThickness="2" BorderBrush="White">
+                                        <Image   Source="{Binding ImagePath}"/>
+                                        </Border>
                                     </Grid>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
@@ -65,7 +70,9 @@
                                             <RowDefinition Height="5*"/>
                                         </Grid.RowDefinitions>
                                         <TextBlock FontSize="20" Grid.Row="0" Text="{Binding Text}"/>
-                                        <Image Grid.Row="1" HorizontalAlignment="Left" Source="{Binding ImagePath}"/>
+                                        <Border HorizontalAlignment="Left" Grid.Row="1" Width="380" Height="200" BorderThickness="2" BorderBrush="White">
+                                            <Image   Source="{Binding ImagePath}"/>
+                                        </Border>
                                     </Grid>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
