@@ -1,4 +1,6 @@
 ﻿using demoBand.Domen;
+using demoBand.Model;
+using demoBand.ParseBase;
 using demoBand.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -41,9 +43,38 @@ namespace demoBand.Gui
         }
 
 
-        private void gridList_ItemClick(object sender, ItemClickEventArgs e)
+        private async void gridList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            SongListItem songItem = e.ClickedItem as SongListItem;
 
+            List<string> allInstruments = Instrument.allStringInstruments();
+
+            string songname = songItem.SongName;
+            string author = songItem.ArtistName;
+            int length = await DataBaseParse.getLengthOfSong(songname, author);
+
+            List<Collaborator> voiceList = await DataBaseParse.getCollaborator(songname, author, "Voice");
+            List<Collaborator> guitarList = await DataBaseParse.getCollaborator(songname, author, "Guitar");
+            List<Collaborator> drumList = await DataBaseParse.getCollaborator(songname, author, "Drums");
+            List<Collaborator> pianoList = await DataBaseParse.getCollaborator(songname, author, "Piano");
+
+            SenderObject so = new SenderObject();
+            so.putExtra("voicelist", voiceList);
+            so.putExtra("guitarlist", guitarList);
+            so.putExtra("drumlist", drumList);
+            so.putExtra("pianolist", pianoList);
+            so.putExtra("songname", songname);
+            so.putExtra("author", author);
+            so.putExtra("length", length);
+
+
+            Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
+
+
+            //hardkodovan instrument
+            Session.GetInstance().insertValue("instrument", type.Voice.ToString());
+            //
+            Frame.Navigate(typeof(CollaborationSong), so);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
