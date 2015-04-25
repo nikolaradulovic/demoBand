@@ -188,7 +188,7 @@
     {
         "Name": "Do I Wanna Know",
         "Author": "Arctic Monkeys",
-        "ImagePath": "../Assets/Images/Covers/img2.png",
+        "ImagePath": "../Assets/Images/Covers/img2.jpg",
         "Length": "179"
     },
     {
@@ -248,7 +248,7 @@
     {
         "Name": "Kings and Queens",
         "Author": "30 Seconds To Mars",
-        "ImagePath": "../Assets/Images/Covers/img111.png",
+        "ImagePath": "../Assets/Images/Covers/img111.jpg",
         "Length": "222"
     },
     {
@@ -260,7 +260,7 @@
     {
         "Name": "Exile",
         "Author": "Hurts",
-        "ImagePath": "../Assets/Images/Covers/img113.png",
+        "ImagePath": "../Assets/Images/Covers/img113.jpg",
         "Length": "276"
     },
     {
@@ -362,7 +362,7 @@
     {
         "Name": "Hurt",
         "Author": "Johnny Cash",
-        "ImagePath": "../Assets/Images/Covers/img310.png",
+        "ImagePath": "../Assets/Images/Covers/img310.jpg",
         "Length": "249"
     },
     {
@@ -404,7 +404,7 @@
     {
         "Name": "Shake It Out",
         "Author": "Florence + Machine",
-        "ImagePath": "../Assets/Images/Covers/img317.png",
+        "ImagePath": "../Assets/Images/Covers/img317.jpg",
         "Length": "270"
     },
     {

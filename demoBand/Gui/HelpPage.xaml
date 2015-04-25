@@ -21,7 +21,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/Images/Backgrounds/settings.png"/>
+            <ImageBrush ImageSource="../Assets/Images/Backgrounds/collaborator picker background.png"/>
         </Grid.Background>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
