@@ -30,16 +30,7 @@
             <TextBlock Text="Discover" FontSize="42" Margin="0,0,0,30" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom"/>
             <StackPanel Orientation="Horizontal" Grid.Row="1"  Grid.Column="1">
             <SearchBox x:Name="txtSearchSong" Width="200" Height="40" HorizontalAlignment="Left" KeyUp="searchSong_KeyUp"/>
-                <ComboBox x:Name="cmbNew"  Margin="20,0,0,0" Height="40" PlaceholderText="New">
-                    <ComboBox.Background>
-                        <ImageBrush Opacity="0.1"/>
-                    </ComboBox.Background> 
-                </ComboBox>
-                <ComboBox x:Name="cmbPopular" Margin="20,0,0,0" Height="40" PlaceholderText="Popular">
-                    <ComboBox.Background>
-                        <ImageBrush Opacity="0.1"/>
-                    </ComboBox.Background>
-                </ComboBox>
+              
             </StackPanel>
             <Grid Grid.Row="2" Grid.Column="1">
                 <GridView x:Name="gridListMy" DataContext="{Binding Source={StaticResource discoverView}}"                       
