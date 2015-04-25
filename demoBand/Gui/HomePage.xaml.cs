@@ -176,29 +176,31 @@ namespace demoBand.Gui
         }
 
 
-        private void probaInvokedHanler(IUICommand command)
-        {
-            Session.GetInstance().insertValue("instrument", command.Label);
-            Session.GetInstance().insertValue("choice", Choice.solo.ToString());
-            Frame.Navigate(typeof(SongPage));
-        }
+        //private void probaInvokedHanler(IUICommand command)
+        //{
+        //    Session.GetInstance().insertValue("instrument", command.Label);
+        //    Session.GetInstance().insertValue("choice", Choice.solo.ToString());
+        //    Frame.Navigate(typeof(SongPage));
+
+        //}
 
 
-        private void CommandInvokedHanler(IUICommand command)
-        {
-            string label = command.Label;
-            //Session.GetInstance().insertValue("instrument", command.Label);
-            //Frame.Navigate(typeof(SongPage));
-            type instrument = (type) Enum.Parse(typeof (type), label);
-            navigateToSongPage(instrument);
-        }
+        //private void CommandInvokedHanler(IUICommand command)
+        //{
+        //    string label = command.Label;
+        //    //Session.GetInstance().insertValue("instrument", command.Label);
+        //    //Frame.Navigate(typeof(SongPage));
+        //    type instrument = (type) Enum.Parse(typeof (type), label);
+        //    navigateToSongPage(instrument);
+        //}
 
-        private void navigateToSongPage(type instrument)
-        {
-            Session.GetInstance().insertValue("instrument", instrument.ToString());
+        //private void navigateToSongPage(type instrument)
+        //{
+        //    Session.GetInstance().insertValue("instrument", instrument.ToString());
             
-            Frame.Navigate(typeof(SongPage));
-        }
+        //    Frame.Navigate(typeof(SongPage));
+            
+        //}
 
 
 

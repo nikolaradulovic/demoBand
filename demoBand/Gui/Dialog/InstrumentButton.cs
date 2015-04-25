@@ -25,6 +25,7 @@ namespace demoBand.Gui.Dialog
             Session.GetInstance().insertValue("instrument",instrument);
             if (NavigateEvent != null)
                 NavigateEvent();
+            NavigateEvent = null;
         
         }
 
