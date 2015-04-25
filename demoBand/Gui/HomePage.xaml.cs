@@ -125,14 +125,18 @@ namespace demoBand.Gui
 
         private void lstSongs_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
 
+            try { 
             Song song = e.ClickedItem as Song;
             Session.GetInstance().insertValue("song", song);
             //CreateMEssageDialog(song);
             createChooseInstrumentDialogForSong(song);
             Session.GetInstance().insertValue("choice", Choice.collaborator.ToString());
             //Frame.Navigate(typeof(SongPage));
+            } catch(Exception ex)
+            {
+
+            }
         }
 
        
@@ -223,9 +227,7 @@ namespace demoBand.Gui
                 case "Help": Frame.Navigate(typeof(HelpPage));
                     break;
 
-                //case "Discover": Frame.Navigate(typeof(CollaborationSong));
-                //    break;
-
+               
 
 
             }
