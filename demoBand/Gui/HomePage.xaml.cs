@@ -135,7 +135,7 @@ namespace demoBand.Gui
             //Frame.Navigate(typeof(SongPage));
             } catch(Exception ex)
             {
-
+                InstrumentButton.NavigateEvent -= goToSongPage;
             }
         }
 
