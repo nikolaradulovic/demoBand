@@ -233,6 +233,7 @@
                 <StackPanel Grid.Row="4">
                     <Button x:Name="btnSave" Content="Save changes" FontSize="20" Background="DodgerBlue" Click="btnSave_Click"/>
                 </StackPanel>
+                <TextBlock Grid.Row="5" x:Name="txtMessage" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>

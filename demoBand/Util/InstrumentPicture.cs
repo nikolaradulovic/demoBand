@@ -9,10 +9,10 @@ namespace demoBand.Util
 {
     public class InstrumentPicture
     {
-        private static Uri guitar = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0004_Layer-2.png");
-        private static Uri piano = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0003_Piano.png");
-        private static Uri drums = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0002_Bass.png");
-        private static Uri voice = new Uri("ms-appx:///Assets/Images/Dashboard/dashboard_0000_Forma-1.png");
+        private static Uri guitar = new Uri("ms-appx:///Assets/Images/Small_Inst/guitar150x150.png");
+        private static Uri piano = new Uri("ms-appx:///Assets/Images/Small_Inst/piano150x150.png");
+        private static Uri drums = new Uri("ms-appx:///Assets/Images/Small_Inst/bass150x150.png");
+        private static Uri voice = new Uri("ms-appx:///Assets/Images/Small_Inst/mic150x150.png");
 
         private static Uri guitarLarge = new Uri("ms-appx:///Assets/Images/Instruments/guitar.png");
         private static Uri voiceLarge = new Uri("ms-appx:///Assets/Images/Instruments/guitar.png");

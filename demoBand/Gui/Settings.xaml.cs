@@ -148,6 +148,9 @@ namespace demoBand.Gui
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             DataBaseParse.insertOrUpdateVolume(instrument.ToString(), micValue);
+            txtMessage.Text = "Changes are successfully saved";
+
+
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
