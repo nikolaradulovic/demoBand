@@ -36,21 +36,21 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="2*"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="lblRegistration" Foreground="DodgerBlue"  Grid.Row="1" FontSize="40" />
                 <TextBlock x:Name="lblUser" Foreground="DodgerBlue" VerticalAlignment="Center" Grid.Row="2" Text="Username:"  FontSize="20" />
                 <TextBox x:Name="txtUser"  VerticalAlignment="Center" Grid.Row="3" FontSize="20"  />
                 <TextBlock Foreground="DodgerBlue" Text="Email" VerticalAlignment="Center" Grid.Row="4" FontSize="20" />
-                <TextBox x:Name="txtEmail" Text="Enter your email" VerticalAlignment="Center" Grid.Row="5" FontSize="20"/>
+                <TextBox x:Name="txtEmail" VerticalAlignment="Center" Grid.Row="5" FontSize="20"/>
                 <TextBlock x:Name="lblPass" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="6" Text="Password:"  FontSize="20"/>
                 <PasswordBox x:Name="txtPassword" VerticalAlignment="Center" Grid.Row="7" FontSize="20" />
                 <TextBlock x:Name="lblPass2" Foreground="DodgerBlue" VerticalAlignment="Bottom" Grid.Row="8" Text="Retype Password:"  FontSize="20"/>
                 <PasswordBox x:Name="txtPassword2" VerticalAlignment="Center" Grid.Row="9" FontSize="20" />
                 <TextBlock x:Name="lblLogin" Tapped="lblLogin_Tapped"  Foreground="DodgerBlue" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="11" Text="Login" FontSize="20" />
                 <Button x:Name="btnCreate" Background="DodgerBlue" Content="Create account" Grid.Row="11" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnCreate_Click"  />
-                <TextBlock x:Name="lblStatus" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" Grid.Row="12"/>
+                <TextBlock x:Name="lblStatus" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Grid.Row="12"/>
             </Grid>
             <Grid Grid.RowSpan="5" Grid.Column="1" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>

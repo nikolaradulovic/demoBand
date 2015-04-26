@@ -64,6 +64,8 @@ namespace demoBand.Register
             try
             {
                 await user.SignUpAsync();
+                lblStatus.Text = "Well done, you can login now.";
+                //Frame.Navigate(typeof(MainPage));
             }
             catch (Exception)
             {
