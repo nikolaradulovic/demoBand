@@ -683,6 +683,9 @@ namespace demoBand.Gui
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             //dodati da ne moze da se uradi save ako nije snimio nista
+            if (mediaRecording.NaturalDuration.TimeSpan == new TimeSpan(0))
+                return;
+
             createCollaboratorsList();
             if (choice == Choice.solo)
                 showPopupDialog();
