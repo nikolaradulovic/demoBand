@@ -10,13 +10,13 @@
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/Otherside/RedHotChiliPeppers'1999-Otherside(acapella).mp3",
                 "AudioByteArray": null,
-                "TextPath": "Assets/Json/otherside.txt"
+                "TextPath": "Assets/Json/Otherside/oText(done) - Copy.txt"
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/Otherside/RHCP-Otherside(Guitar).mp3",
                 "AudioByteArray": null,
-                "TextPath": "Assets/Json/oChords.txt"
+                "TextPath": "Assets/Json/Otherside/oChords(done).txt"
             },
             {
                 "TypeOfInstrument": 2,
@@ -37,13 +37,13 @@
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/BeatIt/mjvoix.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/BeatIt/beat it(text).txt"
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/BeatIt/mjguitare.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/BeatIt/beat it(chords).txt"
             },
             {
                 "TypeOfInstrument": 2,
@@ -71,13 +71,13 @@
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/HotelCalifornia/hcvoix.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/HotelCalifornia/hotel california(text).txt"
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/HotelCalifornia/hcguitare.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/HotelCalifornia/hotel california(chords).txt"
             },
             {
                 "TypeOfInstrument": 2,
@@ -98,13 +98,13 @@
                 "TypeOfInstrument": 0,
                 "Path": "ms-appx:///Assets/Songs/Champions/qvoix.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/Champions/queen text.txt"
             },
             {
                 "TypeOfInstrument": 1,
                 "Path": "ms-appx:///Assets/Songs/Champions/qguitare.mp3",
                 "AudioByteArray": null,
-                "TextPath": null
+                "TextPath": "Assets/Json/Champions/queen chords.txt"
             },
             {
                 "TypeOfInstrument": 2,

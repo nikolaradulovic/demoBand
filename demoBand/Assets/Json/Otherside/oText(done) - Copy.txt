@@ -1,0 +1,128 @@
+[
+    {
+        "Text": " ",
+        "Start": 0,
+        "End": 7
+    },
+    {
+        "Text": "How long how long will I slide\nSeparate my side I don't",
+        "Start": 7,
+        "End": 21
+    },
+	 {
+        "Text": "I don't believe it's bad\nSlit my throat It's all I ever",
+        "Start": 21,
+        "End": 32
+    },
+	
+    {
+        "Text": "I heard your voice through a photograph\nI thought it up it brought up the past",
+        "Start": 32,
+        "End": 41
+    },
+	{
+        "Text": "Once you know you can never go back\nI've got to take it on the otherside",
+        "Start": 41,
+        "End": 49
+    },
+    {
+        "Text": "Centuries are what it meant to me\nA cemetery where I marry the sea",
+        "Start": 49,
+        "End": 58
+    },
+	{
+        "Text": "Stranger things could never change my mind\nI've got to take it on the otherside",
+        "Start": 58,
+        "End": 66
+    },
+    {
+        "Text": "Take it on the otherside\nTake it on Take it on",
+        "Start": 66,
+        "End": 76
+    },
+    {
+        "Text": "How long how long will I slide\nSeparate my side I don't",
+        "Start": 76,
+        "End": 90
+    },
+	{
+        "Text": "I don't believe it's bad\nSlit my throat It's all I ever",
+        "Start": 90,
+        "End": 100
+    },
+    {
+        "Text": "Pour my life into a paper cup\nThe ashtray's full and I'm spillin' my guts",
+        "Start": 100,
+        "End": 108
+    },
+	{
+        "Text": "She wants to know am I still a slut\nI've got to take it on the otherside",
+        "Start": 108,
+        "End": 116
+    },
+    {
+        "Text": "Scarlet starlet and she's in my bed\nA candidate for my soulmate bled",
+        "Start": 116,
+        "End": 128
+    },
+	{
+        "Text": "Push the trigger and pull the thread\nI've got to take it on the otherside",
+        "Start": 128,
+        "End": 135
+    },
+    {
+        "Text": "Take it on the otherside\nTake it on Take it on ",
+        "Start": 135,
+        "End": 146
+    },
+    {
+        "Text": "How long how long will I slide\nSeparate my side I don't",
+        "Start": 146,
+        "End": 160
+    },
+	{
+        "Text": "I don't believe it's bad\nSlit my throat It's all I ever",
+        "Start": 160,
+        "End": 170
+    },
+    {
+        "Text": " ",
+        "Start": 170,
+        "End": 186
+    },
+    {
+        "Text": "Turn me on take me for a hard ride\nBurn me out leave me on the otherside",
+        "Start": 186,
+        "End": 193
+    },
+	{
+        "Text": "I yell and tell it that\nIt's not my friend",
+        "Start": 193,
+        "End": 196
+    },
+    {
+        "Text": "I tear it down I tear it down\nAnd then it's born again ",
+        "Start": 196,
+        "End": 200
+    },
+    {
+        "Text": " ",
+        "Start": 200,
+        "End": 207
+    },
+    {
+        "Text": "How long how long will I slide\nSeparate my side I don't",
+        "Start": 207,
+        "End": 220
+    },
+	{
+        "Text": "I don't believe it's bad\nSlit my throat It's all I ever",
+        "Start": 220,
+        "End": 230
+    },
+    {
+        "Text": "How long I don't believe it's bad\nSlit my throat It's all I ever",
+        "Start": 230,
+        "End": 248
+    }
+]

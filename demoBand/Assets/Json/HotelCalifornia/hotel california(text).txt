@@ -1,0 +1,72 @@
+[
+    {
+        "Text": " ",
+        "Start": 0,
+        "End": 55
+    },
+    {
+        "Text": "On a dark desert highway, cool wind in my hair\nWarm smell of colitas rising up through the air",
+        "Start": 55,
+        "End": 67
+    },
+	{
+        "Text": "Up ahead in the distance, I saw a shimmering light\nMy head grew heavy and my sight grew dim",
+        "Start": 67,
+        "End": 77
+    },
+    {
+        "Text": "I had to stop for the night",
+        "Start": 77,
+        "End": 80
+    },
+	{
+        "Text": "There she stood in the doorway;  I heard the mission bell\nAnd I was thinking to myself this could be heaven or this could be hell",
+        "Start": 80,
+        "End": 93
+    },
+    {
+        "Text": "Then she lit up a candle, and she showed me the way\nThere were voices down the corridor, I thought I heard them say",
+        "Start": 93,
+        "End": 106
+    },
+    {
+        "Text": "Welcome to the Hotel California.\nSuch a lovely place, such a lovely face",
+        "Start": 106,
+        "End": 118
+    },
+    {
+        "Text": "Plenty of room at the Hotel California\nAny time of year (any time of year) you can find it here",
+        "Start": 118,
+        "End": 130
+    },
+	{
+        "Text": "Her mind is Tiffany twisted, She got a mercedes bends\nShe got alot of pretty pretty boys that she calls friends",
+        "Start": 130,
+        "End": 145
+    },
+	{
+        "Text": "How they danced in the court yard sweet summer sweat\nSome dance to remember some dance to forget",
+        "Start": 145,
+        "End": 158
+    },
+	{
+        "Text": "So I called up the captain; Please bring me my wine (he said)\nWe haven't had that spirit here since nineteen sixtynine",
+        "Start": 158,
+        "End": 171
+    },
+	{
+        "Text": "and still those voice are calling from far away\nWake you up in the middle of the night, just to hear them say",
+        "Start": 171,
+        "End": 184
+    },
+	{
+        "Text": "Welcome to the Hotel California.\nSuch a lovely place, such a lovely face",
+        "Start": 184,
+        "End": 196
+    },
+    {
+        "Text": "There's Plenty of room at the Hotel California\nAnytime of year,(anytime of year) You can find us here...",
+        "Start": 196,
+        "End": 210
+    }
+]

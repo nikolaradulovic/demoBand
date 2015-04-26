@@ -1,0 +1,93 @@
+[
+    {
+        "Text": " F      ",
+        "Start": 0,
+        "End": 6
+    },
+    {
+        "Text": "              Cm  Gm7/C\n  I ve paid my dues\n                Cm  Gm7/C\n  And time after time",
+        "Start": 6,
+        "End": 12
+    },
+	 {
+        "Text": "              Cm     Gm7/C\n  I ve done my sentence\n                 Cm  Gm7/C\n  But commited no crime",
+        "Start": 12,
+        "End": 20
+    },
+	
+    {
+        "Text": "            Eb  Ab\n  And bad mistakes\n             Eb  Ab\n  I ve made a few",
+        "Start": 20,
+        "End": 28
+    },
+	{
+        "Text": "             Eb            Bb/D        Cm\n  I ve had my share of sand kicked in my face\n     F7          Bb   C\n  But I ve come through",
+        "Start": 28,
+        "End": 35
+    },
+	{
+        "Text": " ",
+        "Start": 35,
+        "End": 40
+    },
+    {
+        "Text": " F          Am            Dm  Bb C\n  We are the champions, my friend\n     F           Am                 Bb  D/F#\n  And we ll keep on fighting till the end",
+        "Start": 40,
+        "End": 53
+    },
+	{
+        "Text": " Gm                   Bbm           Bbo\n  We are the champions, we are the champions\n F           Eb/G          Ab6         Bb7     Cm7\n  No time for loosers  cause we are the champions",
+        "Start": 53,
+        "End": 70
+    },
+    {
+        "Text": "      ( Fm7  Gm7/C )\n  Of the world",
+        "Start": 70,
+        "End": 78
+    },
+	{
+        "Text": " ",
+        "Start": 78,
+        "End": 82
+    },
+    {
+        "Text": "               Cm  Gm7/C\n  I ve taken my bows\n                Cm  Gm7/C\n  And my curtain calls",
+        "Start": 82,
+        "End": 89
+    },
+	{
+        "Text": "              Cm\n  You brought me fame and fortune \n                               Gm7/C\n  And everything that goes with it",
+        "Start": 89,
+        "End": 94
+    },
+    {
+        "Text": "             Cm  Gm7/C\n  I thank you all\n                         Eb  Ab\n  But it s been no bed of roses",
+        "Start": 94,
+        "End": 100
+    },
+	{
+        "Text": "             Eb  Ab\n  No pleasure cruise\n                 Eb\n  I consider it a challenge ",
+        "Start": 100,
+        "End": 106
+    },
+    {
+        "Text": "                 Bb/D  Cm\n  Before the whole human race\n     F7            Bb   C\n  And I ain t gonna lose ",
+        "Start": 106,
+        "End": 111
+    },
+	{
+        "Text": " F          Am            Dm  Bb C\n  We are the champions, my friend\n     F           Am                 Bb  D/F#\n  And we ll keep on fighting till the end",
+        "Start": 111,
+        "End": 129
+    },
+	{
+        "Text": " Gm                   Bbm           Bbo\n  We are the champions, we are the champions\n F           Eb/G          Ab6         Bb7     Cm7\n  No time for loosers  cause we are the champions",
+        "Start": 129,
+        "End": 145
+    },
+    {
+        "Text": "      ( Fm7  Gm7/C )\n  Of the world",
+        "Start": 145,
+        "End": 148
+    }
+]

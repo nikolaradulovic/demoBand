@@ -1,0 +1,128 @@
+[
+    {
+        "Text": " ",
+        "Start": 0,
+        "End": 7
+    },
+    {
+        "Text": "Am\tF\tC\nHow long how long will I slide\nG         Am  F    C  \nSeparate my side I don't",
+        "Start": 7,
+        "End": 21
+    },
+	 {
+        "Text": "G                Am F \nI don't believe it's bad\nC                   G         \nSlit my throat It's all I ever",
+        "Start": 21,
+        "End": 32
+    },
+	
+    {
+        "Text": "Am                            Em\nI heard your voice through a photograph\nAm                          Em\nI thought it up it brought up the past",
+        "Start": 32,
+        "End": 41
+    },
+	{
+        "Text": "Am                     Em\nOnce you know you can never go back\n             G              Am\nI've got to take it on the otherside",
+        "Start": 41,
+        "End": 49
+    },
+    {
+        "Text": "Am                     Em   \nCenturies are what it meant to me\nAm                  Em \nA cemetery where I marry the sea",
+        "Start": 49,
+        "End": 58
+    },
+	{
+        "Text": "Am                           Em\nStranger things could never change my mind\n             G              Am\nI've got to take it on the otherside",
+        "Start": 58,
+        "End": 66
+    },
+    {
+        "Text": "G              Am\nTake it on the otherside\n G          Am\nTake it on Take it on",
+        "Start": 66,
+        "End": 76
+    },
+    {
+        "Text": "Am\tF\tC\nHow long how long will I slide\nG         Am  F    C  \nSeparate my side I don't",
+        "Start": 76,
+        "End": 90
+    },
+	{
+        "Text": "G                Am F \nI don't believe it's bad\nC                   G         \nSlit my throat It's all I ever",
+        "Start": 90,
+        "End": 100
+    },
+    {
+        "Text": "Am                   Em \nPour my life into a paper cup\nAm                          Em\nThe ashtray's full and I'm spillin' my guts",
+        "Start": 100,
+        "End": 108
+    },
+	{
+        "Text": "Am                      Em  \nShe wants to know am I still a slut\n             G              Am\nI've got to take it on the otherside",
+        "Start": 108,
+        "End": 116
+    },
+    {
+        "Text": "Am                         Em\nScarlet starlet and she's in my bed\nAm                  Em    \nA candidate for my soulmate bled",
+        "Start": 116,
+        "End": 128
+    },
+	{
+        "Text": "Am                   Em\nPush the trigger and pull the thread\n                      G              Am\nI've got to take it on the otherside",
+        "Start": 128,
+        "End": 135
+    },
+    {
+        "Text": " G              Am \nTake it on the otherside\n G          Am        Em C x 2  \nTake it on Take it on ",
+        "Start": 135,
+        "End": 146
+    },
+    {
+        "Text": "Am\tF\tC\nHow long how long will I slide\nG         Am  F    C  \nSeparate my side I don't",
+        "Start": 146,
+        "End": 160
+    },
+	{
+        "Text": "G                Am F \nI don't believe it's bad\nC                   G         \nSlit my throat It's all I ever",
+        "Start": 160,
+        "End": 170
+    },
+    {
+        "Text": " ",
+        "Start": 170,
+        "End": 186
+    },
+    {
+        "Text": " Em                        \nTurn me on take me for a hard ride\nC                       \nBurn me out leave me on the otherside",
+        "Start": 186,
+        "End": 193
+    },
+	{
+        "Text": "   Em                        \nI yell and tell it that\nIt's not my friend",
+        "Start": 193,
+        "End": 196
+    },
+    {
+        "Text": "           C              \nI tear it down I tear it down\n                    Am F C G\nAnd then it's born again ",
+        "Start": 196,
+        "End": 200
+    },
+    {
+        "Text": " ",
+        "Start": 200,
+        "End": 207
+    },
+    {
+        "Text": "Am\tF\tC\nHow long how long will I slide\nG         Am  F    C  \nSeparate my side I don't",
+        "Start": 207,
+        "End": 220
+    },
+	{
+        "Text": "G                Am F \nI don't believe it's bad\nC                   G         \nSlit my throat It's all I ever",
+        "Start": 220,
+        "End": 230
+    },
+    {
+        "Text": "Am   F      C       G                 Am  F\nHow long I don't believe it's bad\nC                    G          Am\nSlit my throat It's all I ever",
+        "Start": 230,
+        "End": 248
+    }
+]

@@ -192,6 +192,7 @@
     <Content Include="Assets\Images\background-now-playing.png" />
     <Content Include="Assets\Images\Backgrounds\collaborator picker background.png" />
     <Content Include="Assets\Images\Backgrounds\discover.png" />
+    <Content Include="Assets\Images\Backgrounds\help-back.png" />
     <Content Include="Assets\Images\Backgrounds\home background.png" />
     <Content Include="Assets\Images\Backgrounds\home-back.png" />
     <Content Include="Assets\Images\Backgrounds\login-background.png" />
@@ -278,7 +279,14 @@
     <Content Include="Assets\Images\MySongs\songback.png" />
     <Content Include="Assets\Images\User\default-user-icon-profile.png" />
     <Content Include="Assets\Images\User\user.png" />
-    <Content Include="Assets\Json\oChords.txt" />
+    <Content Include="Assets\Json\BeatIt\beat it%28chords%29.txt" />
+    <Content Include="Assets\Json\BeatIt\beat it%28text%29.txt" />
+    <Content Include="Assets\Json\HotelCalifornia\hotel california%28chords%29.txt" />
+    <Content Include="Assets\Json\HotelCalifornia\hotel california%28text%29.txt" />
+    <Content Include="Assets\Json\Otherside\oChords%28done%29.txt" />
+    <Content Include="Assets\Json\Otherside\oText%28done%29 - Copy.txt" />
+    <Content Include="Assets\Json\Champions\queen chords.txt" />
+    <Content Include="Assets\Json\Champions\queen text.txt" />
     <Content Include="Assets\Json\otherside.txt" />
     <Content Include="Assets\Json\practiceSongs.txt" />
     <Content Include="Assets\Logo.scale-100.png" />

@@ -1,0 +1,117 @@
+[
+    {
+        "Text": " ",
+        "Start": 0,
+        "End": 38
+    },
+    {
+        "Text": "They told him, Don't you ever come around here.\nDon't wanna see your face\n",
+        "Start": 38,
+        "End": 44
+    },
+	{
+        "Text": "You better disappear.",
+        "Start": 43,
+        "End": 44
+    },
+    {
+        "Text": "The fires in their eyes and their words are really clear\nSo beat it",
+        "Start": 44,
+        "End": 49
+    },
+	{
+        "Text": "Just beat it",
+        "Start": 49,
+        "End": 51
+    },
+    {
+        "Text": "You better run\nYou better do what you can",
+        "Start": 51,
+        "End": 55
+    },
+    {
+        "Text": "Don't wanna see no blood\nDon't be a macho man",
+        "Start": 55,
+        "End": 58
+    },
+    {
+        "Text": "You wanna though\nBetter do what you can",
+        "Start": 58,
+        "End": 62
+    },
+    {
+        "Text": "So beat it\nBut you wanna be bad",
+        "Start": 62,
+        "End": 65
+    },
+    {
+        "Text": "Just beat (beat it)\nBeat it (Beat it)",
+        "Start": 65,
+        "End": 69
+    },
+    {
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 69,
+        "End": 75
+    },
+    {
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 75,
+        "End": 80
+    },
+    {
+        "Text": "Just beat it\nJust beat it",
+        "Start": 80,
+        "End": 83
+    },
+	{
+        "Text": "Just beat it\nJust beat it",
+        "Start": 83,
+        "End": 86
+    },
+    {
+        "Text": "They're out to get you\nBetter leave while you can",
+        "Start": 86,
+        "End": 90
+    },
+    {
+        "Text": "Don't wanna be a boy\nYou wanna be a man",
+        "Start": 90,
+        "End": 92
+    },
+    {
+        "Text": "You wanna stay alive\nBetter do what you can",
+        "Start": 92,
+        "End": 96
+    },
+    {
+        "Text": "So beat it\nJust beat it",
+        "Start": 96,
+        "End": 99
+    },
+    {
+        "Text": "You have to show them that you're really not scared\nYou're playin' with your life",
+        "Start": 99,
+        "End": 107
+    },
+	{
+        "Text": "This ain't no truth or dare",
+        "Start": 105,
+        "End": 107
+    },
+    {
+        "Text": "They'll kick you, then they beat you, then they'll tell you its fair\nSo beat it",
+        "Start": 107,
+        "End": 111
+    },
+    {
+        "Text": "But you wanna be bad\n",
+        "Start": 111,
+        "End": 114
+    },
+    {
+        "Text": "(Repeat Chorus and fade) ",
+        "Start": 114,
+        "End": 150
+    }
+]

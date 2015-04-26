@@ -1,0 +1,117 @@
+[
+    {
+        "Text": " ",
+        "Start": 0,
+        "End": 38
+    },
+    {
+        "Text": "Em                                              D\nThey told him, Don't you ever come around here.\n           Em\nDon't wanna see your face\n",
+        "Start": 38,
+        "End": 44
+    },
+	{
+        "Text": "                D\nYou better disappear.",
+        "Start": 43,
+        "End": 44
+    },
+    {
+        "Text": "        C                                        D\nThe fires in their eyes and their words are really clear\nEm\nSo beat it",
+        "Start": 44,
+        "End": 49
+    },
+	{
+        "Text": "       Em\nJust beat it",
+        "Start": 49,
+        "End": 51
+    },
+    {
+        "Text": "Em       \nYou better run\n                  D\nYou better do what you can",
+        "Start": 51,
+        "End": 55
+    },
+    {
+        "Text": "           Em\nDon't wanna see no blood\n                  D\nDon't be a macho man",
+        "Start": 55,
+        "End": 58
+    },
+    {
+        "Text": "        C\nYou wanna though\n           D\nBetter do what you can",
+        "Start": 58,
+        "End": 62
+    },
+    {
+        "Text": "     Em\nSo beat it\n              D\nBut you wanna be bad",
+        "Start": 62,
+        "End": 65
+    },
+    {
+        "Text": "Em        \nJust beat (beat it)\nD             \nBeat it (Beat it)",
+        "Start": 65,
+        "End": 69
+    },
+    {
+        "Text": "Em                                  D\nNo one wants to be defeated\n          Em                                 D\nShowin' how funky and strong is your fight",
+        "Start": 69,
+        "End": 75
+    },
+    {
+        "Text": "   Em                              D\nIt doesn't matter who's wrong or right\n        Em\nJust beat it",
+        "Start": 75,
+        "End": 80
+    },
+    {
+        "Text": "        D\nJust beat it\n        Em\nJust beat it",
+        "Start": 80,
+        "End": 83
+    },
+	{
+        "Text": "        D\nJust beat it\n        Em\nJust beat it",
+        "Start": 83,
+        "End": 86
+    },
+    {
+        "Text": "Em               \nThey're out to get you\n           D\nBetter leave while you can",
+        "Start": 86,
+        "End": 90
+    },
+    {
+        "Text": "           Em\nDon't wanna be a boy\n                   D\nYou wanna be a man",
+        "Start": 90,
+        "End": 92
+    },
+    {
+        "Text": "        C\nYou wanna stay alive\n           D\nBetter do what you can",
+        "Start": 92,
+        "End": 96
+    },
+    {
+        "Text": "      Em\nSo beat it\n        D\nJust beat it",
+        "Start": 96,
+        "End": 99
+    },
+    {
+        "Text": "Em                                                    D\nYou have to show them that you're really not scared\n            Em\nYou're playin' with your life",
+        "Start": 99,
+        "End": 107
+    },
+	{
+        "Text": "                      D\nThis ain't no truth or dare",
+        "Start": 105,
+        "End": 107
+    },
+    {
+        "Text": "C                                                                D\nThey'll kick you, then they beat you, then they'll tell you its fair\n      Em\nSo beat it",
+        "Start": 107,
+        "End": 111
+    },
+    {
+        "Text": "             D\nBut you wanna be bad\n",
+        "Start": 111,
+        "End": 114
+    },
+    {
+        "Text": "(Repeat Chorus and fade) ",
+        "Start": 114,
+        "End": 150
+    }
+]
