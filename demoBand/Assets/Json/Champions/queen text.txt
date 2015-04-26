@@ -9,23 +9,22 @@
         "Start": 6,
         "End": 12
     },
-	 {
+    {
         "Text": "I ve done my sentence\n But commited no crime",
         "Start": 12,
         "End": 20
     },
-	
     {
         "Text": "And bad mistakes\nI ve made a few",
         "Start": 20,
         "End": 28
     },
-	{
+    {
         "Text": "I ve had my share of sand kicked in my face\nBut I ve come through",
         "Start": 28,
         "End": 35
     },
-	{
+    {
         "Text": " ",
         "Start": 35,
         "End": 40
@@ -35,7 +34,7 @@
         "Start": 40,
         "End": 53
     },
-	{
+    {
         "Text": "We are the champions, we are the champions\nNo time for loosers  cause we are the champions",
         "Start": 53,
         "End": 70
@@ -45,7 +44,7 @@
         "Start": 70,
         "End": 78
     },
-	{
+    {
         "Text": " ",
         "Start": 78,
         "End": 82
@@ -55,7 +54,7 @@
         "Start": 82,
         "End": 89
     },
-	{
+    {
         "Text": "You brought me fame and fortune \nAnd everything that goes with it",
         "Start": 89,
         "End": 94
@@ -65,7 +64,7 @@
         "Start": 94,
         "End": 100
     },
-	{
+    {
         "Text": "No pleasure cruise\nI consider it a challenge ",
         "Start": 100,
         "End": 106
@@ -75,12 +74,12 @@
         "Start": 106,
         "End": 111
     },
-	{
+    {
         "Text": "We are the champions, my friend\n And we ll keep on fighting till the end",
         "Start": 111,
         "End": 129
     },
-	{
+    {
         "Text": "We are the champions, we are the champions\nNo time for loosers  cause we are the champions",
         "Start": 129,
         "End": 145
@@ -89,5 +88,15 @@
         "Text": "Of the world",
         "Start": 145,
         "End": 148
+    },
+    {
+        "Text": " We are the champions, my friend\nAnd we ll keep on fighting till the end",
+        "Start": 148,
+        "End": 161
+    },
+    {
+        "Text": "We are the champions, we are the champions\nNo time for loosers  cause we are the champions",
+        "Start": 161,
+        "End": 177
     }
 ]

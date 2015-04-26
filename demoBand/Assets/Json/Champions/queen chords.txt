@@ -89,5 +89,15 @@
         "Text": "      ( Fm7  Gm7/C )\n  Of the world",
         "Start": 145,
         "End": 148
+    },
+	{
+        "Text": " F          Am            Dm  Bb C\n  We are the champions, my friend\n     F           Am                 Bb  D/F#\n  And we ll keep on fighting till the end",
+        "Start": 148,
+        "End": 161
+    },
+	{
+        "Text": " Gm                   Bbm           Bbo\n  We are the champions, we are the champions\n F           Eb/G          Ab6         Bb7     Cm7\n  No time for loosers  cause we are the champions",
+        "Start": 161,
+        "End": 177
     }
 ]

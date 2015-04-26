@@ -110,8 +110,105 @@
         "End": 114
     },
     {
-        "Text": "(Repeat Chorus and fade) ",
+        "Text": "Just beat it\nBeat it",
         "Start": 114,
-        "End": 150
+        "End": 117
+    },
+	{
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 117,
+        "End": 124
+    },
+	{
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 124,
+        "End": 129
+    },
+	{
+        "Text": "Beat it\nNo one wants to be defeated",
+        "Start": 129,
+        "End": 134
+    },
+	{
+        "Text": "Showin' how funky and strong is your fight\nIt doesn't matter who's wrong or right",
+        "Start": 134,
+        "End": 144
+    },
+	{
+        "Text": "Just beat it\nBeat it",
+        "Start": 144,
+        "End": 146
+    },
+	{
+        "Text": "Just beat it\nBeat it",
+        "Start": 144,
+        "End": 146
+    },
+	{
+        "Text": " ",
+        "Start": 146,
+        "End": 199
+    },
+	{
+        "Text": "Beat it\nBeat it",
+        "Start": 199,
+        "End": 202
+    },
+	{
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 202,
+        "End": 208
+    },
+	{
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 208,
+        "End": 214
+    },
+	{
+        "Text": "Beat it\nBeat it",
+        "Start": 214,
+        "End": 215
+    },
+	{
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 215,
+        "End": 221
+    },
+	{
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 221,
+        "End": 227
+    },
+	{
+        "Text": "Beat it\nBeat it",
+        "Start": 227,
+        "End": 228
+    },
+	{
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 228,
+        "End": 235
+    },
+	{
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 235,
+        "End": 241
+    },
+	{
+        "Text": "Beat it\nBeat it",
+        "Start": 241,
+        "End": 242
+    },
+	{
+        "Text": "No one wants to be defeated\nShowin' how funky and strong is your fight",
+        "Start": 242,
+        "End": 250
+    },
+	{
+        "Text": "It doesn't matter who's wrong or right\nJust beat it",
+        "Start": 250,
+        "End": 254
     }
+	
+	
 ]

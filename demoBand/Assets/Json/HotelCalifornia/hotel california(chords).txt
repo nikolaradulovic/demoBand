@@ -9,7 +9,7 @@
         "Start": 55,
         "End": 67
     },
-	{
+    {
         "Text": " G                         D\n Up ahead in the distance, I saw a shimmering light\n Em\n My head grew heavy and my sight grew dim",
         "Start": 67,
         "End": 77
@@ -19,7 +19,7 @@
         "Start": 77,
         "End": 80
     },
-	{
+    {
         "Text": " Bm                               F#\n There she stood in the doorway;  I heard the mission bell\n A                                          E\n And I was thinking to myself this could be heaven or this could be hell",
         "Start": 80,
         "End": 93
@@ -38,5 +38,80 @@
         "Text": "G                               D\n Plenty of room at the Hotel California\n Em                                      F#\n Any time of year (any time of year) you can find it here",
         "Start": 118,
         "End": 130
+    },
+    {
+        "Text": "Bm                        F#\nHer mind is Tiffany twisted, She got a mercedes bends\n A                     E\nShe got alot of pretty pretty boys that she calls friends",
+        "Start": 130,
+        "End": 145
+    },
+    {
+        "Text": " G                         D\n How they danced in the court yard sweet summer sweat\n Em\n Some dance to remember some dance to forget",
+        "Start": 145,
+        "End": 158
+    },
+    {
+        "Text": " Bm                               F#\nSo I called up the captain; Please bring me my wine (he said)\nA                                          E\n We haven't had that spirit here since nineteen sixtynine",
+        "Start": 158,
+        "End": 171
+    },
+    {
+        "Text": " G                        D\n and still those voice are calling from far away\nEm                                   F#\n Wake you up in the middle of the night, just to hear them say",
+        "Start": 171,
+        "End": 184
+    },
+    {
+        "Text": " G                        D\n Welcome to the Hotel California.\n        Em                   Bm7\n Such a lovely place, such a lovely face",
+        "Start": 184,
+        "End": 196
+    },
+    {
+        "Text": "G                               D\nThey livin' it up at the Hotel California\n Em                                      F#\n What a nice surprise (what a nice surprise)",
+        "Start": 196,
+        "End": 207
+    },
+    {
+        "Text": "F#\n Bring your alibis",
+        "Start": 207,
+        "End": 210
+    },
+    {
+        "Text": "Bm                        F#\nMirrors on the ceiling\n A                     E\nThe pink champagne on ice",
+        "Start": 210,
+        "End": 216
+    },
+    {
+        "Text": "G                         D\n And she said We are all just prisoners here, of our own device\n Em\n And in the master's chambers",
+        "Start": 216,
+        "End": 226
+    },
+    {
+        "Text": " Bm                               F#\nThey gathered for the feast\nA                                          E\n They stab it with their steely knives",
+        "Start": 226,
+        "End": 233
+    },
+    {
+        "Text": "F#\nBut they just can't kill the beast",
+        "Start": 233,
+        "End": 236
+    },
+    {
+        "Text": "Bm                        F#\nLast thing I remember I was\n A                     E\nRunning for the door",
+        "Start": 236,
+        "End": 242
+    },
+    {
+        "Text": " G                         D\n I had to find the passage back\n Em\n To the place I was before",
+        "Start": 242,
+        "End": 248
+    },
+    {
+        "Text": " Bm                               F#\nRelax said the nightman\nA                                          E\n We are programmed to receive",
+        "Start": 248,
+        "End": 255
+    },
+    {
+        "Text": " G                         D\nYou can check-out any time you like,\nEm\n But you can never leave! ",
+        "Start": 255,
+        "End": 262
     }
 ]
